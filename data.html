@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./data.html">Data Converter</a>
+        <a href="./length.html">Length Converter</a>
+        <a href="./time.html">Time Converter</a>
+        <a href="./mass.html">Mass Converter</a>
+        <a href="./temperature.html">Temperature Converter</a>
+        <a href="./numbersystem.html">Number System Converter</a>
+        <a href="./discount.html">Discount Calculator</a>
+        <a href="./power.html">Power mod Calculator</a>
+    </nav>
+
+    <div class="container">
+        <h1>Data Converter</h1>
+        <input type="text" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired data">
+        <select name="input-type" id="input-type" title="Select data type">
+            <option value="bit">Bit</option>
+            <option value="b">Byte (b)</option>
+            <option value="kb">Kilobytes (kb)</option>
+            <option value="mb">Megabytes (mb)</option>
+            <option value="gb">Gigabytes (gb)</option>
+            <option value="tb">Terabyte (tb)</option>
+            <option value="pb">Petabyte (pb)</option>
+        </select> <br>
+        <input type="text" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
+        <select name="output-type" id="output-type" title="Select data type">
+            <option value="bit">Bit</option>
+            <option value="b">Byte (b)</option>
+            <option value="kb">Kilobytes (kb)</option>
+            <option value="mb">Megabytes (mb)</option>
+            <option value="gb">Gigabytes (gb)</option>
+            <option value="tb">Terabyte (tb)</option>
+            <option value="pb">Petabyte (pb)</option>
+        </select>
+    </div>
+
+    <script>
+        const inputType = document.getElementById("input-type");
+        const outputType = document.getElementById("output-type");
+        const inputValue = document.getElementById("input-value");
+        const outputValue = document.getElementById("output-value");
+        inputType.selectedIndex = 3;
+        outputType.selectedIndex = 2;
+
+        inputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(inputValue.value, 0, inputType.value, outputType.value);
+            }
+        });
+        outputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(0, outputValue.value, outputType.value, inputType.value);
+            }
+        });
+        inputValue.addEventListener("keyup", () => {
+            if (inputValue.value !== "")
+                change(inputValue.value, 0, inputType.value, outputType.value);
+            else
+                outputValue.value = "";
+        });
+        outputValue.addEventListener("keyup", () => {
+            if (outputValue.value !== "")
+                change(0, outputValue.value, outputType.value, inputType.value);
+            else
+                inputValue.value = "";
+        });
+
+        function change(num, result, inputType, outputType) {
+            let input = true;
+            if (result != 0) {
+                num = result;
+                input = false;
+            }
+
+            switch (inputType) {
+                case "bit":
+                    num = num / (8 * 1024 * 1024);
+                    break;
+                case "b":
+                    num = num / 1048576;
+                    break;
+                case "kb":
+                    num = num / 1024;
+                    break;
+                case "mb":
+                    num = num;
+                    break;
+                case "gb":
+                    num = num * 1024;
+                    break;
+                case "tb":
+                    num = num * 1048576;
+                    break;
+                case "pb":
+                    num = num * (1024 * 1024 * 1024);
+                    break;
+                default:
+                    num = NaN;
+            }
+
+            switch (outputType) {
+                case "bit":
+                    num = num * (8 * 1024 * 1024);
+                    break;
+                case "b":
+                    num = num * 1048576;
+                    break;
+                case "kb":
+                    num = num * 1024;
+                    break;
+                case "mb":
+                    num = num;
+                    break;
+                case "gb":
+                    num = num / 1024;
+                    break;
+                case "tb":
+                    num = num / 1048576;
+                    break;
+                case "pb":
+                    num = num / (1024 * 1024 * 1024);
+                    break;
+                default:
+                    num = NaN;
+            }
+
+            if (input) {
+                outputValue.value = num;
+            }
+            else {
+                inputValue.value = num;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./data.html">Data Converter</a>
+        <a href="./length.html">Length Converter</a>
+        <a href="./time.html">Time Converter</a>
+        <a href="./mass.html">Mass Converter</a>
+        <a href="./temperature.html">Temperature Converter</a>
+        <a href="./numbersystem.html">Number System Converter</a>
+        <a href="./discount.html">Discount Calculator</a>
+        <a href="./power.html">Power mod Calculator</a>
+    </nav>
+    <div class="container">
+        <h1>Discount Calculator</h1>
+        <div>
+            <label for="original-price">Original Price</label><br>
+            <input type="text" placeholder="Enter original amount" title="Enter original price" id="original-price">
+        </div>
+        <br>
+        <div>
+            <label for="discount-percentage">Discount percentage</label> <br>
+            <input type="text" placeholder="Enter discount percentage" title="Enter discount percentage"
+                id="discount-percentage">
+        </div>
+        <br>
+        <p id="after-amount">Save amount : 0.00<br> Amount after discount : 0.00</p>
+    </div>
+    <script>
+        const originalPrice = document.getElementById('original-price');
+        const discountPercentage = document.getElementById("discount-percentage");
+        const afterAmount = document.getElementById('after-amount');
+
+        originalPrice.addEventListener("keyup", () => {
+            if (discountPercentage.value != "") {
+                afterDiscount(originalPrice.value, discountPercentage.value);
+            }
+        });
+        discountPercentage.addEventListener("keyup", () => {
+            if (originalPrice.value != "") {
+                afterDiscount(originalPrice.value, discountPercentage.value);
+            }
+        });
+
+        function afterDiscount(op, dp) {
+            let discount = op * dp / 100;
+            let after = op - discount;
+            afterAmount.innerHTML = "Discount amount:  " + discount + "<br>" + "Price after discount : " + after;
+        }
+    </script>
+</body>
+
+</html>

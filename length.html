@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./data.html">Data Converter</a>
+        <a href="./length.html">Length Converter</a>
+        <a href="./time.html">Time Converter</a>
+        <a href="./mass.html">Mass Converter</a>
+        <a href="./temperature.html">Temperature Converter</a>
+        <a href="./numbersystem.html">Number System Converter</a>
+        <a href="./discount.html">Discount Calculator</a>
+        <a href="./power.html">Power mod Calculator</a>
+    </nav>
+
+    <div class="container">
+        <h1>Length Converter</h1>
+        <input type="text" title="Enter length" name="input-value" id="input-value" placeholder="Enter length">
+        <select name="input-type" id="input-type" title="Click to select">
+            <option value="nm">Nanometer</option>
+            <option value="mmm">Micrometer</option>
+            <option value="mm">Millimeter (mm)</option>
+            <option value="cm">Centimeter (cm)</option>
+            <option value="m">Meter (m)</option>
+            <option value="km">Kilometer (km)</option>
+            <option value="in">Inch (in)</option>
+            <option value="ft">Foot (ft)</option>
+            <option value="yd">Yard (yd)</option>
+            <option value="mi">Mile (mi)</option>
+            <option value="nmi">Nautical Mile</option>
+            <option value="fr">Furlong</option>
+            <option value="au">Astronomical Unit (AU)</option>
+            <option value="ly">Light Year (ly)</option>
+            <option value="pc">Parsec (pc)</option>
+            <option value="fa">Fathom</option>
+            <option value="A">Angstrom</option>
+        </select>
+<br>
+        <input type="text" name="output-value" id="output-value" title="Output" placeholder="Converted Length">
+
+        <Select name="output-type" id="output-type" title="Click to select">
+            <option value="nm">Nanometer</option>
+            <option value="mmm">Micrometer</option>
+            <option value="mm">Millimeter (mm)</option>
+            <option value="cm">Centimeter (cm)</option>
+            <option value="m">Meter (m)</option>
+            <option value="km">Kilometer (km)</option>
+            <option value="in">Inch (in)</option>
+            <option value="ft">Foot (ft)</option>
+            <option value="yd">Yard (yd)</option>
+            <option value="mi">Mile (mi)</option>
+            <option value="nmi">Nautical Mile</option>
+            <option value="fr">Furlong</option>
+            <option value="au">Astronomical Unit (AU)</option>
+            <option value="ly">Light Year (ly)</option>
+            <option value="pc">Parsec (pc)</option>
+            <option value="fa">Fathom</option>
+            <option value="A">Angstrom</option>
+        </select>
+    </div>
+
+    <script>
+        const inputType = document.getElementById("input-type");
+        const outputType = document.getElementById("output-type");
+        const inputValue = document.getElementById("input-value");
+        const outputValue = document.getElementById("output-value");
+        inputType.selectedIndex = 4;
+        outputType.selectedIndex = 3;
+
+        inputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(parseFloat(inputValue.value), 0, inputType, outputType);
+            }
+        });
+        outputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(0, parseFloat(outputValue.value), outputType, inputType);
+            }
+        });
+        inputValue.addEventListener("keyup", () => {
+            if (inputValue.value !== "")
+                change(parseFloat(inputValue.value), 0, inputType, outputType);
+            else
+                outputValue.value = "";
+        });
+        outputValue.addEventListener("keyup", () => {
+            if (outputValue.value !== "")
+                change(0, parseFloat(outputValue.value), outputType, inputType);
+            else
+                inputValue.value = "";
+        });
+
+        function change(m, result, inputType, outputType) {
+            let input = true;
+            if (result != 0) {
+                m = result;
+                input = false;
+            }
+            m = parseFloat(m);
+            switch (inputType.value) {
+                case "mm":
+                    m = m / 1000;
+                    break;
+                case "m":
+                    m = m;
+                    break;
+                case "cm":
+                    m = m / 100;;
+                    break;
+                case "km":
+                    m = m * 1000;
+                    break;
+                case "mmm":
+                    m = m / 1000000;
+                    break;
+                case "nm":
+                    m /= 1000000000;
+                    break;
+                case "in":
+                    m *= 0.0254;
+                    break;
+                case "ft":
+                    m = m * 0.3048;
+                    break;
+                case "yd":
+                    m *= 0.9144;
+                    break;
+                case "mi":
+                    m = m * 1609.34;
+                    break;
+                case "nmi":
+                    m = m * 1852;
+                    break;
+                case "fr":
+                    m = m * 201.168;
+                    break;
+                case "amu":
+                    m = m * 149600000000;
+                    break;
+                case "ly":
+                    m = m * 9461000000000000;
+                    break;
+                case "pc":
+                    m = m * 30860000000000000;
+                    break;
+                case "fa":
+                    m = m * 1.8288;
+                    break;
+                case "A":
+                    m = m / 10000000000;
+                    break;
+            }
+
+            switch (outputType.value) {
+                case "mm":
+                    m = m * 1000;
+                    break;
+                case "m":
+                    m = m;
+                    break;
+                case "cm":
+                    m = m * 100;;
+                    break;
+                case "km":
+                    m = m / 1000;
+                    break;
+                case "mmm":
+                    m = m / 1000000;
+                    break;
+                case "nm":
+                    m *= 1000000000;
+                    break;
+                case "in":
+                    m /= 0.0254;
+                    break;
+                case "ft":
+                    m = m / 0.3048;
+                    break;
+                case "yd":
+                    m *= 0.9144;
+                    break;
+                case "mi":
+                    m = m / 1609.34;
+                    break;
+                case "nmi":
+                    m = m / 1852;
+                    break;
+                case "fr":
+                    m = m / 201.168;
+                    break;
+                case "amu":
+                    m = m / 149600000000;
+                    break;
+                case "ly":
+                    m = m / 9461000000000000;
+                    break;
+                case "pc":
+                    m = m / 30860000000000000;
+                    break;
+                case "fa":
+                    m = m / 1.8288;
+                    break;
+                case "A":
+                    m = m * 10000000000;
+                    break;
+            }
+
+            if (input) {
+                outputValue.value = m;
+            }
+            else {
+                inputValue.value = m;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Converter</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./data.html">Data Converter</a>
+        <a href="./length.html">Length Converter</a>
+        <a href="./time.html">Time Converter</a>
+        <a href="./mass.html">Mass Converter</a>
+        <a href="./temperature.html">Temperature Converter</a>
+        <a href="./numbersystem.html">Number System Converter</a>
+        <a href="./discount.html">Discount Calculator</a>
+        <a href="./power.html">Power mod Calculator</a>
+    </nav>
+
+    <div class="container">
+        <h1>Mass Converter</h1>
+        <input type="text" name="input-value" id="input-value" placeholder="Enter mass" title="Enter desired mass">
+        <select name="input-type" id="input-type" title="Select mass type">
+            <option value="mmg">Microgram(mmg)</option>
+            <option value="mg">Milligram(mg)</option>
+            <option value="g">Gram(g)</option>
+            <option value="kg">Kilogram(kg)</option>
+            <option value="t">Tonne(t)</option>
+            <option value="oz">Ounce (oz)</option>
+            <option value="lb">Pound (lb)</option>
+            <option value="st">Stone (st)</option>
+            <option value="St">Short ton (St)</option>
+            <option value="Lt">Long ton (Lt)</option>
+            <option value="ct">Carat (ct)</option>
+            <option value="gr">Grain (gr)</option>
+        </select>
+        <br>
+        <input type="text" id="output-value" placeholder="Result" name="output-value" title="Result box" readonly>
+        <select name="output-type" id="output-type" title="Select mass type">
+            <option value="mmg">Microgram(mmg)</option>
+            <option value="mg">Milligram(mg)</option>
+            <option value="g">Gram(g)</option>
+            <option value="kg">Kilogram(kg)</option>
+            <option value="t">Tonne(t)</option>
+            <option value="oz">Ounce</option>
+            <option value="lb">Pound</option>
+            <option value="st">Stone</option>
+            <option value="St">Short ton (St)</option>
+            <option value="Lt">Long ton (Lt)</option>
+            <option value="ct">Carat (ct)</option>
+            <option value="gr">Grain (gr)</option>
+        </select>
+    </div>
+
+    <script>
+        const inputType = document.getElementById("input-type");
+        const outputType = document.getElementById("output-type");
+        const inputValue = document.getElementById("input-value");
+        const outputValue = document.getElementById("output-value");
+        inputType.selectedIndex = 3;
+        outputType.selectedIndex = 2;
+
+        function change() {
+            inputType1 = document.getElementById("input-type").value;
+            outputType1 = document.getElementById("output-type").value;
+            inputValue1 = document.getElementById("input-value").value;
+            let g = parseFloat(inputValue1);
+            let result = 0;
+
+            switch (inputType1) {
+                case "g":
+                    g = g;
+                    break;
+                case "kg":
+                    g *= 1000;
+                    break;
+                case "mg":
+                    g /= 1000;
+                    break;
+                case "mmg":
+                    g /= 1000000;
+                    break;
+                case "t":
+                    g *= 1000000;
+                    break;
+                case "oz":
+                    g *= 28.3495;
+                    break;
+                case "lb":
+                    g *= 453.592;
+                    break;
+                case "st":
+                    g *= 6350.29;
+                    break;
+                case "St":
+                    g *= 907185;
+                    break;
+                case "Lt":
+                    g *= 1016047;
+                    break;
+                case "ct":
+                    g *= 0.2;
+                    break;
+                case "gr":
+                    g *= 0.0648;
+                    break;
+                default:
+                    g = "error";
+                    break;
+            }
+            if (g != "error") {
+                switch (outputType1) {
+                    case "g":
+                        result = g;
+                        break;
+                    case "kg":
+                        result = g / 1000;
+                        break;
+                    case "mg":
+                        result = g * 1000;
+                        break;
+                    case "mmg":
+                        result = g * 1000000;
+                        break;
+                    case "t":
+                        result = g / 1000000;
+                        break;
+                    case "oz":
+                        result = g / 28.3495;
+                        break;
+                    case "lb":
+                        result = g / 453.592;
+                        break;
+                    case "st":
+                        result = g / 6350.29;
+                        break;
+                    case "St":
+                        result = g / 907185;
+                        break;
+                    case "Lt":
+                        result = g / 1016047;
+                        break;
+                    case "ct":
+                        result = g * 5;
+                        break;
+                    case "gr":
+                        result = g / 0.0648;
+                        break;
+                    default:
+                        result = "error";
+                        break;
+                }
+
+            }
+
+            else {
+                result = "error";
+            }
+            if (result != "error") {
+                result = parseFloat(result.toFixed(4));
+            }
+            outputValue.value = result;
+        }
+        inputValue.addEventListener("keyup", () => {
+            if (inputValue.value !== "") {
+                change();
+            }
+            else {
+                outputValue.value = "";
+            }
+        });
+        inputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change();
+            }
+        });
+        outputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change();
+            }
+        });
+    </script>
+</body>
+
+</html>

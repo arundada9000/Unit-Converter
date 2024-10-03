@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./data.html">Data Converter</a>
+        <a href="./length.html">Length Converter</a>
+        <a href="./time.html">Time Converter</a>
+        <a href="./mass.html">Mass Converter</a>
+        <a href="./temperature.html">Temperature Converter</a>
+        <a href="./numbersystem.html">Number System Converter</a>
+        <a href="./discount.html">Discount Calculator</a>
+        <a href="./power.html">Power mod Calculator</a>
+    </nav>
+
+    <div class="container">
+        <h1>Time Converter</h1>
+        <input type="text" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired mass">
+        <select name="input-type" id="input-type" title="Select time type">
+            <option value="fs">femtosecond (fs)</option>
+            <option value="ns">Nanosecond (ns)</option>
+            <option value="ps">Picosecond</option>
+            <option value="mms">Microsecond (Ms)</option>
+            <option value="ms">Millisecond (ms)</option>
+            <option value="s">Second (s)</option>
+            <option value="m">Minute (m)</option>
+            <option value="h">Hour (h)</option>
+            <option value="d">Day (d)</option>
+            <option value="w">Week (w)</option>
+            <option value="month">Month </option>
+            <option value="yr">Year</option>
+            <option value="decade">Decade</option>
+            <option value="yr">Century</option>
+            <option value="millennium">Millennium</option>
+        </select>
+        <br>
+        <input type="text" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
+        <select name="output-type" id="output-type" title="Select time type">
+            <option value="fs">femtosecond (fs)</option>
+            <option value="ns">Nanosecond (ns)</option>
+            <option value="ps">Picosecond</option>
+            <option value="mms">Microsecond (Ms)</option>
+            <option value="ms">Millisecond (ms)</option>
+            <option value="s">Second (s)</option>
+            <option value="m">Minute (m)</option>
+            <option value="h">Hour (h)</option>
+            <option value="d">Day (d)</option>
+            <option value="w">Week (w)</option>
+            <option value="fn">Fortnight (fn)</option>
+            <option value="month">Month </option>
+            <option value="yr">Year</option>
+            <option value="decade">Decade</option>
+            <option value="century">Century</option>
+            <option value="millennium">Millennium</option>
+        </select>
+    </div>
+
+    <script>
+        const inputType = document.getElementById("input-type");
+        const outputType = document.getElementById("output-type");
+        const inputValue = document.getElementById("input-value");
+        const outputValue = document.getElementById("output-value");
+        inputType.selectedIndex = 6;
+        outputType.selectedIndex = 5;
+
+        inputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(parseFloat(inputValue.value), 0, inputType, outputType);
+            }
+        });
+        outputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(0, parseFloat(outputValue.value), outputType, inputType);
+            }
+        });
+        inputValue.addEventListener("keyup", () => {
+            if (inputValue.value !== "")
+                change(parseFloat(inputValue.value), 0, inputType, outputType);
+            else
+                outputValue.value = "";
+        });
+        outputValue.addEventListener("keyup", () => {
+            if (outputValue.value !== "")
+                change(0, parseFloat(outputValue.value), outputType, inputType);
+            else
+                inputValue.value = "";
+        });
+
+        function change(m, result, inputType, outputType) {
+            let input = true;
+            if (result != 0) {
+                m = result;
+                input = false;
+            }
+            m = parseFloat(m);
+            switch (inputType.value) {
+                case "s":
+                    m = m;
+                    break;
+                case "m":
+                    m = m * 60;
+                    break;
+                case "ms":
+                    m = m / 1000;;
+                    break;
+                case "mms":
+                    m = m / 1000000;
+                    break;
+                case "ns":
+                    m = m / 1000000000;
+                    break;
+                case "ps":
+                    m /= 1000000000000;
+                    break;
+                case "fs":
+                    m = m / 1000000000000000;
+                    break;
+                case "h":
+                    m = m * 60 * 60;
+                    break;
+                case "d":
+                    m = m * 86400;
+                    break;
+                case "w":
+                    m = m * 604800;
+                    break;
+                case "fn":
+                    m = m * 1209600;
+                    break;
+                case "month":
+                    m = m * 2629746;
+                    break;
+                case "yr":
+                    m = m * 31557600;
+                    break;
+                case "decade":
+                    m = m * 315576600;
+                    break;
+                case "century":
+                    m = m * 3155760000;
+                    break;
+                case "millennium":
+                    m = m * 31557600000;
+                    break;
+
+            }
+
+            switch (outputType.value) {
+                case "s":
+                    m = m;
+                    break;
+                case "m":
+                    m = m / 60;
+                    break;
+                case "ms":
+                    m = m * 1000;;
+                    break;
+                case "mms":
+                    m = m * 1000000;
+                    break;
+                case "ns":
+                    m = m * 1000000000;
+                    break;
+                case "ps":
+                    m *= 1000000000000;
+                    break;
+                case "fs":
+                    m = m * 1000000000000000;
+                    break;
+                case "h":
+                    m = m / 3600;
+                    break;
+                case "d":
+                    m = m / 86400;
+                    break;
+                case "w":
+                    m = m / 604800;
+                    break;
+                case "fn":
+                    m = m / 1209600;
+                    break;
+                case "month":
+                    m = m / 2629746;
+                    break;
+                case "yr":
+                    m = m / 31557600;
+                    break;
+                case "decade":
+                    m = m / 315576600;
+                    break;
+                case "century":
+                    m = m / 3155760000;
+                    break;
+                case "millennium":
+                    m = m / 31557600000;
+                    break;
+            }
+
+            if (input) {
+                outputValue.value = m;
+            }
+            else {
+                inputValue.value = m;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

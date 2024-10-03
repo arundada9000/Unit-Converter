@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./data.html">Data Converter</a>
+        <a href="./length.html">Length Converter</a>
+        <a href="./time.html">Time Converter</a>
+        <a href="./mass.html">Mass Converter</a>
+        <a href="./temperature.html">Temperature Converter</a>
+        <a href="./numbersystem.html">Number System Converter</a>
+        <a href="./discount.html">Discount Calculator</a>
+        <a href="./power.html">Power mod Calculator</a>
+    </nav>
+
+    <div class="container">
+        <h1>Power Mod Calculator</h1>
+        <label for="Enter base">Base</label> <br>
+        <input type="text" placeholder="Base" id="base"> <br>
+        <label for="exponent">Exponent</label> <br>
+        <input type="text" id="exponent" placeholder="Enter exponent"> <br>
+        <label for="mod">Mod</label> <br>
+        <input type="text" name="mod" id="mod" placeholder="Enter mod"> <br>
+        <p id="result">Result </p>
+    </div>
+
+    <script>
+        const base = document.getElementById("base");
+        const exponent = document.getElementById("exponent");
+        const mode = document.getElementById('mod');
+        const result = document.getElementById("result");
+
+        base.addEventListener("keyup", () => {
+            if ((base.value == "" || exponent.value == "") && (base.value == "" || mode.value == "")) {
+                result.innerHTML = "Result : ";
+            }
+            else {
+                powerCalculator(parseFloat(base.value), parseFloat(exponent.value), parseFloat(mode.value));
+            }
+        });
+        exponent.addEventListener("keyup", () => {
+            if (base.value == "" || exponent.value == "") {
+                result.innerHTML = "Result : ";
+            }
+            else {
+                powerCalculator(parseFloat(base.value), parseFloat(exponent.value), parseFloat(mode.value));
+            }
+        });
+        mode.addEventListener("keyup", () => {
+            if ((base.value == "" || exponent.value == "") && (base.value == "" || mode.value == "")) {
+                result.innerHTML = "Result : ";
+            }
+            else {
+                powerCalculator(parseFloat(base.value), parseFloat(exponent.value), parseFloat(mode.value));
+            }
+        });
+        function powerCalculator(b, exp, m) {
+            console.log(b, exp, m);
+
+            if (exp == "" || isNaN(exp)) {
+                exp = 1;
+            }
+            let res = Math.pow(b, exp);
+            result.innerHTML = `${b}<sup>${exp}</sup> = ${res}`;
+            if (m != "" && !isNaN(m)) {
+                let mod = res % m;
+                result.innerHTML = `${b}<sup>${exp}</sup> = ${res} <br> ${res} mod ${m} = ${mod}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

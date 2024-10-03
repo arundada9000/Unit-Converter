@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./data.html">Data Converter</a>
+        <a href="./length.html">Length Converter</a>
+        <a href="./time.html">Time Converter</a>
+        <a href="./mass.html">Mass Converter</a>
+        <a href="./temperature.html">Temperature Converter</a>
+        <a href="./numbersystem.html">Number System Converter</a>
+        <a href="./discount.html">Discount Calculator</a>
+        <a href="./power.html">Power mod Calculator</a>
+    </nav>
+
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <input type="text" name="input-value" id="input-value" placeholder="Enter temperature"
+            title="Enter desired type">
+        <select name="input-type" id="input-type" title="Select temperature type">
+            <option value="c">Celsius (&deg;c)</option>
+            <option value="f">Fahrenheit (&deg;F)</option>
+            <option value="K">Kelvin (&deg;K)</option>
+            <option value="R">Rankine (&deg;R)</option>
+            <option value="Re">Reaumur (&deg;Re)</option>
+        </select>
+        <br>
+        <input type="text" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
+        <select name="output-type" id="output-type" title="Select temperature type">
+            <option value="c">Celsius (&deg;c)</option>
+            <option value="f">Fahrenheit (&deg;F)</option>
+            <option value="K">Kelvin (&deg;K)</option>
+            <option value="R">Rankine (&deg;R)</option>
+            <option value="Re">Reaumur (&deg;Re)</option>
+        </select>
+    </div>
+
+    <script>
+        const inputType = document.getElementById("input-type");
+        const outputType = document.getElementById("output-type");
+        const inputValue = document.getElementById("input-value");
+        const outputValue = document.getElementById("output-value");
+        inputType.selectedIndex = 2;
+        outputType.selectedIndex = 0;
+
+        inputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(inputValue.value, 0, inputType.value, outputType.value);
+            }
+        });
+        outputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(0, outputValue.value, outputType.value, inputType.value);
+            }
+        });
+        inputValue.addEventListener("keyup", () => {
+            if (inputValue.value !== "")
+                change(inputValue.value, 0, inputType.value, outputType.value);
+            else
+                outputValue.value = "";
+        });
+        outputValue.addEventListener("keyup", () => {
+            if (outputValue.value !== "")
+                change(0, outputValue.value, outputType.value, inputType.value);
+            else
+                inputValue.value = "";
+        });
+
+        function change(num, result, inputType, outputType) {
+            let input = true;
+            if (result != 0) {
+                num = result;
+                input = false;
+            }
+            num = parseFloat(num);
+            switch (inputType) {
+                case "c":
+                    num = num + 273.15;
+                    break;
+                case "f":
+                    num = (num + 459.67) * 5 / 9;
+                    break;
+                case "R":
+                    num = num * 5 / 9;
+                    break;
+                case "Re":
+                    num = (num * 5 / 4) + 273.15;
+                    break;
+                case "K":
+                    num = num;
+                    break;
+
+            }
+
+            switch (outputType) {
+                case "c":
+                    num = num - 273.15;
+                    break;
+                case "f":
+                    num = (num - 273.15) * 9 / 5 + 32;
+                    break;
+                case "R":
+                    num = num * 9 / 5;
+                    break;
+                case "Re":
+                    num = (num - 273.15) * 4 / 5;
+                    break;
+                case "K":
+                    num = num;
+                    break;
+            }
+
+            if (input) {
+                outputValue.value = num;
+            }
+            else {
+                inputValue.value = num;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./data.html">Data Converter</a>
+        <a href="./length.html">Length Converter</a>
+        <a href="./time.html">Time Converter</a>
+        <a href="./mass.html">Mass Converter</a>
+        <a href="./temperature.html">Temperature Converter</a>
+        <a href="./numbersystem.html">Number System Converter</a>
+        <a href="./discount.html">Discount Calculator</a>
+        <a href="./power.html">Power mod Calculator</a>
+    </nav>
+    <div class="container">
+        <h1>Number System Converter</h1>
+        <input type="text" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired mass">
+        <select name="input-type" id="input-type" title="Select number type">
+            <option value="10">Decimal</option>
+            <option value="2">Binary</option>
+            <option value="8">Octal</option>
+            <option value="16">Hexa-Decimal</option>
+        </select>
+        <br>
+        <input type="text" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
+        <select name="output-type" id="output-type" title="Select number type">
+            <option value="2">Binary</option>
+            <option value="10">Decimal</option>
+            <option value="8">Octal</option>
+            <option value="16">Hexa-Decimal</option>
+        </select>
+    </div>
+
+    <script>
+        const inputType = document.getElementById("input-type");
+        const outputType = document.getElementById("output-type");
+        const inputValue = document.getElementById("input-value");
+        const outputValue = document.getElementById("output-value");
+
+        inputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(inputValue.value, 0, inputType.value, outputType.value);
+            }
+        });
+        outputType.addEventListener("change", () => {
+            if (inputValue.value !== "") {
+                change(0, outputValue.value, outputType.value, inputType.value);
+            }
+        });
+        inputValue.addEventListener("keyup", () => {
+            if (inputValue.value !== "")
+                change(inputValue.value, 0, inputType.value, outputType.value);
+            else
+                outputValue.value = "";
+        });
+        outputValue.addEventListener("keyup", () => {
+            if (outputValue.value !== "")
+                change(0, outputValue.value, outputType.value, inputType.value);
+            else
+                inputValue.value = "";
+        });
+
+        function change(num, result, inputType, outputType) {
+            let input = true;
+            if (result != 0) {
+                num = result;
+                input = false;
+            }
+            num = parseFloat(num);
+            switch (inputType) {
+                case "2":
+                    num = parseInt(num, 2);
+                    break;
+                case "10":
+                    num = parseInt(num, 10);
+                    break;
+                case "8":
+                    num = parseInt(num, 8);
+                    break;
+                case "16":
+                    num = parseInt(num, 16);
+                    break;
+                default:
+                    num = NaN;
+            }
+
+            switch (outputType) {
+                case "2":
+                    num = num.toString(2);
+                    break;
+                case "10":
+                    num = num.toString(10);
+                    break;
+                case "8":
+                    num = num.toString(8);
+                    break;
+                case "16":
+                    num = num.toString(16);
+                    break;
+            }
+
+            if (input) {
+                outputValue.value = num;
+            }
+            else {
+                inputValue.value = num;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
