@@ -22,10 +22,22 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  z-index: 1000;
 }
 
-nav a {
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
@@ -79,7 +91,28 @@ label {
   font-size: 1.1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid #555;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -92,10 +125,5 @@ label {
 
   h1 {
     font-size: 2rem;
-  }
-
-  input[type="text"],
-  select {
-    width: 100%;
   }
 }

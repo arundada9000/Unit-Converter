@@ -10,15 +10,18 @@
 
 <body>
     <nav>
-        <a href="./index.html">Home</a>
-        <a href="./data.html">Data Converter</a>
-        <a href="./length.html">Length Converter</a>
-        <a href="./time.html">Time Converter</a>
-        <a href="./mass.html">Mass Converter</a>
-        <a href="./temperature.html">Temperature Converter</a>
-        <a href="./numbersystem.html">Number System Converter</a>
-        <a href="./discount.html">Discount Calculator</a>
-        <a href="./power.html">Power mod Calculator</a>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./data.html">Data Converter</a>
+            <a href="./length.html">Length Converter</a>
+            <a href="./time.html">Time Converter</a>
+            <a href="./mass.html">Mass Converter</a>
+            <a href="./temperature.html">Temperature Converter</a>
+            <a href="./numbersystem.html">Number System Converter</a>
+            <a href="./discount.html">Discount Calculator</a>
+            <a href="./power.html">Power mod Calculator</a>
+        </div>
     </nav>
 
     <div class="container">
@@ -63,6 +66,7 @@
         </select>
     </div>
 
+    <script src="nav.js"></script>
     <script>
         const inputType = document.getElementById("input-type");
         const outputType = document.getElementById("output-type");
