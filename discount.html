@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discount calculator</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./footer.css">
 </head>
 
 <body>
     <nav>
         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links1">
+            <a href="./index.html">Home</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Number System</a>
+            <a href="./discount.html" class="bb">Discount</a>
+            <a href="./power.html">Power mod</a>
+            <a href="./text.html">Text</a>
+            <a href="./contact.html">Contact</a>
+        </div>
         <div class="nav-links">
             <a href="./index.html">Home</a>
             <a href="./data.html">Data Converter</a>
@@ -21,9 +35,11 @@
             <a href="./numbersystem.html">Number System Converter</a>
             <a href="./discount.html">Discount Calculator</a>
             <a href="./power.html">Power mod Calculator</a>
+            <a href="./text.html">Text Styler</a>
+            <a href="./contact.html">Contact Me</a>
         </div>
     </nav>
-    
+
     <div class="container">
         <h1>Discount Calculator</h1>
         <div>
@@ -39,7 +55,21 @@
         <br>
         <p id="after-amount">Save amount : 0.00<br> Amount after discount : 0.00</p>
     </div>
-    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2024 Arun Neupane. All rights reserved.</p>
+                <p>Made with ❤️ by Arun Neupane</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+
     <script src="nav.js"></script>
     <script>
         const originalPrice = document.getElementById('original-price');

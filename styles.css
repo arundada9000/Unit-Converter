@@ -5,24 +5,24 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  gap: 10vh;
   background-color: #f5f5f5;
+  overflow-y: auto;
+  padding-top: 10vh;
 }
 
 nav {
   background-color: #333;
-  padding: 1em;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   z-index: 1000;
 }
 
@@ -33,13 +33,46 @@ nav {
   cursor: pointer;
 }
 
-.nav-links {
+.nav-links,
+.nav-links1 {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.nav-links a {
+.bb {
+  border-bottom: 5px solid rgb(235, 24, 133);
+  transition: all 1s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #00b4d8;
+}
+
+.nav-links {
+  display: none;
+}
+.nav-links a,
+.nav-links1 a {
+  padding: 1em;
   color: white;
-  margin: 0 15px;
+  margin: 0 1rem;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .container {
@@ -48,6 +81,7 @@ nav {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  margin-top: 3rem;
 }
 
 h1 {
@@ -60,7 +94,6 @@ input[type="text"],
 input[type="tel"],
 textarea,
 select {
-  width: 250px;
   padding: 12px;
   margin: 10px;
   border: 2px solid #ddd;
@@ -102,13 +135,16 @@ label {
   .menu-toggle {
     display: block;
   }
-
+  .nav-links1 {
+    display: none;
+  }
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     background-color: #333;
   }
+
   .nav-links a {
     padding: 10px;
     text-align: center;
@@ -119,17 +155,27 @@ label {
   .nav-links.active {
     display: flex;
   }
+
   .container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
   }
 
   body {
-    padding: 10px;
+    padding-top: 10vh;
   }
 
   h1 {
     font-size: 2rem;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+    min-width: 300px;
+    max-width: 700px;
+    width: 50%;
   }
 }

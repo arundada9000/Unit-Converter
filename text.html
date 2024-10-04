@@ -6,22 +6,267 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text styling</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./footer.css">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #444;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            resize: none;
+        }
+
+        button {
+            display: inline-block;
+            font-size: 16px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            margin: 5px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .copy-btn,
+        .paste-btn {
+            background-color: #2196f3;
+        }
+
+        .copy-btn:hover,
+        .paste-btn:hover {
+            background-color: #1e88e5;
+        }
+
+        .bold-btn {
+            background-color: #ff9800;
+        }
+
+        .bold-btn:hover {
+            background-color: #fb8c00;
+        }
+
+        .italic-btn {
+            background-color: #9c27b0;
+        }
+
+        .italic-btn:hover {
+            background-color: #8e24aa;
+        }
+
+        .options {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            font-size: 16px;
+        }
+
+        .count-status {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            select {
+                min-width: 10ch !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links1">
+            <a href="./index.html">Home</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Number System</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power mod</a>
+            <a href="./text.html" class="bb">Text</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./data.html">Data Converter</a>
+            <a href="./length.html">Length Converter</a>
+            <a href="./time.html">Time Converter</a>
+            <a href="./mass.html">Mass Converter</a>
+            <a href="./temperature.html">Temperature Converter</a>
+            <a href="./numbersystem.html">Number System Converter</a>
+            <a href="./discount.html">Discount Calculator</a>
+            <a href="./power.html">Power mod Calculator</a>
+            <a href="./text.html">Text Styler</a>
+            <a href="./contact.html">Contact Me</a>
+        </div>
+    </nav>
     <div class="container">
         <h1>Text Styling</h1>
         <textarea name="input-text" id="input-text" title="Enter text here" placeholder="Enter text here ...." rows="10"
-            cols="50"></textarea>
+            cols="50" onkeyup="countTextStats()"></textarea>
+        <div class="options">
+            <button onclick="copyText()" class="copy-btn">&#128203; Copy</button> <!-- Copy symbol -->
+            <button onclick="pasteText()" class="paste-btn">&#128203; Paste</button>
+            <button onclick="toggleBold()" class="bold-btn" title="Bold">B</button>
+            <button onclick="toggleItalic()" class="italic-btn" title="Italic">I</button>
+            <select name="transform" id="transform" title="Change case" onchange="changeCase()">
+                <option value="default">case change</option>
+                <option value="uppercase">Uppercase</option>
+                <option value="lowercase">Lowercase</option>
+                <option value="capitalize">Capitalize</option>
+                <option value="sentence">Sentence case</option>
+            </select>
+        </div>
 
-        <select name="transform" id="transform" title="Change case">
-            <option value="uc">Uppercase</option>
-            <option value="lc">Lowercase</option>
-            <option value="cp">Capitalize</option>
-        </select>
+        <p class="count-status"></p>
+
     </div>
-    <script>
 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2024 Arun Neupane. All rights reserved.</p>
+                <p>Made with ❤️ by Arun Neupane</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./nav.js"></script>
+    <script>
+        const inputText = document.getElementById('input-text');
+
+        function toggleBold() {
+            inputText.style.fontWeight = inputText.style.fontWeight === 'bold' ? 'normal' : "bold";
+        }
+        function toggleItalic() {
+            inputText.style.fontStyle = inputText.style.fontStyle === 'italic' ? 'normal' : "italic";
+        }
+        function changeCase() {
+            document.querySelector(".copy-btn").textContent = "Copy";
+
+            switch (document.getElementById("transform").value) {
+                case "sentence":
+                    inputText.style.textTransform = "none";
+                    inputText.value = toSentenceCase(inputText.value);
+                    break;
+
+                case "uppercase":
+                    inputText.value = inputText.value.toUpperCase();
+                    break;
+                case "lowercase":
+                    inputText.value = inputText.value.toLowerCase();
+                    break;
+                case "capitalize":
+                    inputText.value = inputText.value.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+                    break;
+            }
+        }
+
+        function toSentenceCase(text) {
+            const sentences = text.split(/([.!?]+)(\s*|\n*)/g);
+
+            for (let i = 0; i < sentences.length; i += 3) {
+                sentences[i] = sentences[i].charAt(0).toUpperCase() + sentences[i].slice(1).toLowerCase();
+            }
+            return sentences.join('');
+        }
+
+        function countTextStats() {
+            document.querySelector(".copy-btn").textContent = "Copy";
+            let text = inputText.value;
+            const wordCount = text.match(/\b\w+\b/g)?.length || 0;
+            const letterCount = text.match(/[a-zA-Z]/g)?.length || 0;
+            const lineCount = text.split(/\r\n|\r|\n/).length;
+            const sentenceCount = text.match(/[.!?]+/g)?.length || 0;
+            const spaceCount = text.match(/\s/g)?.length || 0;
+            const numberCount = text.match(/\d/g)?.length || 0;
+            const symbolCount = text.match(/[^a-zA-Z0-9\s]/g)?.length || 0;
+            const stats = {
+                words: wordCount,
+                letters: letterCount,
+                lines: lineCount,
+                sentences: sentenceCount,
+                spaces: spaceCount,
+                numbers: numberCount,
+                symbols: symbolCount
+            };
+            let status = "";
+            for (const stat in stats) {
+                if (stats[stat] !== 0) {   // Check if the count is non-zero
+                    status += `${stat.charAt(0).toUpperCase() + stat.slice(1)}: ${stats[stat]} `;
+                }
+            }
+            document.querySelector(".count-status").textContent = status;
+        }
+
+        function copyText() {
+            inputText.select();
+            inputText.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+            document.querySelector(".copy-btn").textContent = "Copied";
+        }
+
+        function pasteText() {
+            if (navigator.clipboard && navigator.clipboard.readText) {
+                navigator.clipboard.readText().then(text => inputText.value = text);
+            }
+        }
     </script>
 </body>
 
