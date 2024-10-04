@@ -36,7 +36,6 @@ nav {
 .nav-links {
   display: flex;
 }
-
 .nav-links a {
   color: white;
   margin: 0 15px;
@@ -58,6 +57,8 @@ h1 {
 }
 
 input[type="text"],
+input[type="tel"],
+textarea,
 select {
   width: 250px;
   padding: 12px;
@@ -69,12 +70,16 @@ select {
 }
 
 input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
 select:focus {
   border-color: #00b4d8;
   outline: none;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="tel"],
+textarea {
   background-color: #f0f8ff;
 }
 
@@ -83,7 +88,9 @@ select {
   cursor: pointer;
 }
 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder {
   color: #aaa;
 }
 
@@ -102,7 +109,6 @@ label {
     width: 100%;
     background-color: #333;
   }
-
   .nav-links a {
     padding: 10px;
     text-align: center;

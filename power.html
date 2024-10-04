@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Calculator</title>
+    <title>Power Mod Calculator</title>
     <link rel="stylesheet" href="./styles.css">
+    <style>
+        @media (max-width:768px) {
+            .container {
+                margin-top: 3rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -26,12 +33,18 @@
 
     <div class="container">
         <h1>Power Mod Calculator</h1>
-        <label for="Enter base">Base</label> <br>
-        <input type="text" placeholder="Base" id="base"> <br>
-        <label for="exponent">Exponent</label> <br>
-        <input type="text" id="exponent" placeholder="Enter exponent"> <br>
-        <label for="mod">Mod</label> <br>
-        <input type="text" name="mod" id="mod" placeholder="Enter mod"> <br>
+        <div>
+            <label for="Enter base">Base</label> <br>
+            <input type="text" placeholder="Base" id="base">
+        </div>
+        <div>
+            <label for="exponent">Exponent</label> <br>
+            <input type="text" id="exponent" placeholder="Enter exponent">
+        </div>
+        <div>
+            <label for="mod">Mod</label> <br>
+            <input type="text" name="mod" id="mod" placeholder="Enter mod">
+        </div>
         <p id="result">Result </p>
     </div>
 
