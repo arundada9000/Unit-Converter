@@ -26,8 +26,7 @@
 
     <div class="container">
         <h1>Data Converter</h1>
-        <input type="tel" pattern="[0-9]*" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-            name="input-value" id="input-value" placeholder="Enter number" title="Enter desired data">
+        <input type="text" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired data">
         <select name="input-type" id="input-type" title="Select data type">
             <option value="bit">Bit</option>
             <option value="b">Byte (b)</option>
@@ -37,8 +36,7 @@
             <option value="tb">Terabyte (tb)</option>
             <option value="pb">Petabyte (pb)</option>
         </select> <br>
-        <input type="tel" pattern="[0-9]*" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-            id="output-value" placeholder="Converted value" name="output-value" title="Result box">
+        <input type="text" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
         <select name="output-type" id="output-type" title="Select data type">
             <option value="bit">Bit</option>
             <option value="b">Byte (b)</option>
