@@ -153,6 +153,7 @@
     </nav>
     <div class="container">
         <h1>Text Styling</h1>
+        <p class="info">Simple text styler, use buttons or simply copy paste.</p>
         <textarea name="input-text" id="input-text" title="Enter text here" placeholder="Enter text here ...." rows="10"
             cols="50" onkeyup="countTextStats()"></textarea>
         <div class="options">
@@ -192,13 +193,15 @@
         const inputText = document.getElementById('input-text');
 
         function toggleBold() {
+            document.querySelector(".copy-btn").innerHTML = "&#128203; Copy";
             inputText.style.fontWeight = inputText.style.fontWeight === 'bold' ? 'normal' : "bold";
         }
         function toggleItalic() {
+            document.querySelector(".copy-btn").innerHTML = "&#128203; Copy";
             inputText.style.fontStyle = inputText.style.fontStyle === 'italic' ? 'normal' : "italic";
         }
         function changeCase() {
-            document.querySelector(".copy-btn").textContent = "Copy";
+            document.querySelector(".copy-btn").innerHTML = "&#128203; Copy";
 
             switch (document.getElementById("transform").value) {
                 case "sentence":
@@ -228,7 +231,7 @@
         }
 
         function countTextStats() {
-            document.querySelector(".copy-btn").textContent = "Copy";
+            document.querySelector(".copy-btn").innerHTML = "&#128203; Copy";
             let text = inputText.value;
             const wordCount = text.match(/\b\w+\b/g)?.length || 0;
             const letterCount = text.match(/[a-zA-Z]/g)?.length || 0;
@@ -259,7 +262,7 @@
             inputText.select();
             inputText.setSelectionRange(0, 99999);
             document.execCommand('copy');
-            document.querySelector(".copy-btn").textContent = "Copied";
+            document.querySelector(".copy-btn").innerHTML = "Copied";
         }
 
         function pasteText() {

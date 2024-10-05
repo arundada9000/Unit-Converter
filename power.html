@@ -49,19 +49,22 @@
 
     <div class="container">
         <h1>Power Mod Calculator</h1>
+        <p>Enter the terms as x to the power y mod n = res <br>and it will automatically calculate the result.</p>
         <div>
-            <label for="Enter base">Base</label> <br>
+            <label for="Enter base">Base (x)</label> <br>
             <input type="text" placeholder="Base" id="base">
         </div>
         <div>
-            <label for="exponent">Exponent</label> <br>
+            <label for="exponent">Exponent (y)</label> <br>
             <input type="text" id="exponent" placeholder="Enter exponent">
         </div>
         <div>
-            <label for="mod">Mod</label> <br>
+            <label for="mod">Mod (n)</label> <br>
             <input type="text" name="mod" id="mod" placeholder="Enter mod">
         </div>
-        <p id="result">Result </p>
+        <p id="result"><span id="x">x</span> <sup><span id="y">y</span></sup> <span id="n">mod n</span> <span id="res">=
+                res</span>
+        </p>
     </div>
 
     <footer>
@@ -79,6 +82,7 @@
     </footer>
 
     <script src="nav.js"></script>
+
     <script>
         const base = document.getElementById("base");
         const exponent = document.getElementById("exponent");
@@ -86,43 +90,66 @@
         const result = document.getElementById("result");
 
         base.addEventListener("keyup", () => {
-            if ((base.value == "" || exponent.value == "") && (base.value == "" || mode.value == "")) {
-                result.innerHTML = "Result : ";
-            }
-            else {
-                powerCalculator(parseFloat(base.value), parseFloat(exponent.value), parseFloat(mode.value));
-            }
+            handleInput();
         });
-        exponent.addEventListener("keyup", () => {
-            if (base.value == "" || exponent.value == "") {
-                result.innerHTML = "Result : ";
-            }
-            else {
-                powerCalculator(parseFloat(base.value), parseFloat(exponent.value), parseFloat(mode.value));
-            }
-        });
-        mode.addEventListener("keyup", () => {
-            if ((base.value == "" || exponent.value == "") && (base.value == "" || mode.value == "")) {
-                result.innerHTML = "Result : ";
-            }
-            else {
-                powerCalculator(parseFloat(base.value), parseFloat(exponent.value), parseFloat(mode.value));
-            }
-        });
-        function powerCalculator(b, exp, m) {
-            console.log(b, exp, m);
 
-            if (exp == "" || isNaN(exp)) {
-                exp = 1;
-            }
-            let res = Math.pow(b, exp);
-            result.innerHTML = `${b}<sup>${exp}</sup> = ${res}`;
-            if (m != "" && !isNaN(m)) {
-                let mod = res % m;
-                result.innerHTML = `${b}<sup>${exp}</sup> = ${res} <br> ${res} mod ${m} = ${mod}`;
+        exponent.addEventListener("keyup", () => {
+            handleInput();
+        });
+
+        mode.addEventListener("keyup", () => {
+            handleInput();
+        });
+
+        function handleInput() {
+            const b = parseFloat(base.value);
+            const exp = parseFloat(exponent.value);
+            const m = parseFloat(mode.value);
+
+            if (isNaN(b)) {
+                result.innerHTML = `<span id="x">x</span> <sup><span id="y">y</span></sup> <span id="n">mod n</span> <span id="res">= res</span>`;
+                updateDisplay(base.value, exponent.value, mode.value);
+            } else {
+                if (!isNaN(exp) && isNaN(m)) {
+                    let res = Math.pow(b, exp);
+                    result.innerHTML = `${b}<sup>${exp}</sup> = ${res}`;
+                } else if (isNaN(exp) && !isNaN(m)) {
+                    let res = b % m;
+                    result.innerHTML = `${b} mod ${m} = ${res}`;
+                } else if (!isNaN(exp) && !isNaN(m)) {
+                    let res = Math.pow(b, exp);
+                    let modResult = res % m;
+                    result.innerHTML = `${b}<sup>${exp}</sup> mod ${m} = ${modResult}`;
+                } else {
+                    updateDisplay(base.value, exponent.value, mode.value);
+                }
             }
         }
+
+        function updateDisplay(baseVal, expVal, modVal) {
+            if (baseVal !== "") {
+                document.getElementById("x").textContent = baseVal;
+            } else {
+                document.getElementById("x").textContent = "x";
+            }
+
+            if (expVal !== "") {
+                document.getElementById("y").textContent = expVal;
+            } else {
+                document.getElementById("y").textContent = "y";
+            }
+
+            if (modVal !== "") {
+                document.getElementById("n").textContent = "mod " + modVal;
+            } else {
+                document.getElementById("n").textContent = "mod n";
+            }
+
+        }
     </script>
+
+
+
 </body>
 
 </html>
