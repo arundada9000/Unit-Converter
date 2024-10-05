@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./footer.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #0044cc;
+            margin-bottom: 1.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        label {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            background-color: #0044cc;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003399;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+
+        .social-media img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links1">
+            <a href="./index.html">Home</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Number System</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power mod</a>
+            <a href="./text.html">Text</a>
+            <a href="./contact.html" class="bb">Contact</a>
+            <a href="./privacy.html">Privacy Policy</a>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./data.html">Data Converter</a>
+            <a href="./length.html">Length Converter</a>
+            <a href="./time.html">Time Converter</a>
+            <a href="./mass.html">Mass Converter</a>
+            <a href="./temperature.html">Temperature Converter</a>
+            <a href="./numbersystem.html">Number System Converter</a>
+            <a href="./discount.html">Discount Calculator</a>
+            <a href="./power.html">Power mod Calculator</a>
+            <a href="./text.html">Text Styler</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./contact.html" class="bb">Contact me </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form action="mailto:arunneupane0000@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+
+        <div class="social-media">
+            <h2>Follow Me</h2>
+            <a href="https://www.instagram.com/arunneupane20" target="_blank"><img
+                    src="https://th.bing.com/th/id/OIP.eLIOZiuzO49YP3M_B8528QHaHT?rs=1&pid=ImgDetMain"
+                    alt="Instagram"></a>
+            <a href="https://www.youtube.com/@code_with_ease" target="_blank"><img
+                    src="https://www.interstellarrift.com/wiki/images/d/d8/Youtube-logo-png-photo-0.png"
+                    alt="YouTube"></a>
+            <a href="https://github.com/arundada9000" target="_blank"><img
+                    src="https://cdn.afterdawn.fi/v3/news/original/github-logo.png" alt="GitHub"></a>
+            <a href="https://www.facebook.com/arunneupane20/" target="_blank"><img
+                    src="https://static.vecteezy.com/system/resources/previews/018/930/476/original/facebook-logo-facebook-icon-transparent-free-png.png"
+                    alt="Facebook"></a>
+        </div>
+
+        <div class="contact-info">
+            <p>Alternatively, you can reach me at:</p>
+            <p><strong>Email:</strong> <a href="mailto:arunneupane0000@gmail.com">arunneupane0000@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2024 Arun Neupane. All rights reserved.</p>
+                <p>Made with ❤️ by Arun Neupane</p>
+            </div>
+            <div class="footer-links">
+                <a href="./about.html">About</a>
+                <a href="./privacy.html">Privacy Policy</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./nav.js"></script>
+</body>
+
+</html>
