@@ -52,7 +52,14 @@ h1 {
   font-size: 2.5em;
   color: #007bff;
 }
-
+.convert-logo-div {
+  display: flex;
+  justify-content: center;
+}
+.description-image {
+  height: 50px;
+  width: 50px;
+}
 @media (max-width: 600px) {
   h1 {
     font-size: 2em;

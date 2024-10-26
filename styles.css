@@ -141,7 +141,14 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none; /* Chrome, Safari, Edge */
   margin: 0;
 }
-
+.convert-logo-div {
+  display: flex;
+  justify-content: center;
+}
+.description-image {
+  height: 50px;
+  width: 50px;
+}
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;

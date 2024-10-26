@@ -66,6 +66,11 @@
             animation: fadeSlideIn 1s ease-out forwards;
         }
 
+        .catchphrase {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
         @keyframes fadeSlideIn {
             from {
                 opacity: 0;
@@ -189,9 +194,27 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        .convert-logo-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .convert-logo-div h3 {
+            padding-top: 15px;
+        }
+
+        .convert-logo-div img {
+            border-radius: 50%;
+        }
+
         @media (max-width:768px) {
             .contact-page {
                 flex-direction: column-reverse;
+            }
+
+            .follow-me-section {
+                padding: 0;
             }
         }
     </style>
@@ -228,7 +251,10 @@
     <div class="contact-page">
         <!-- Contact Form Section -->
         <div class="contact-form">
-            <h1>Contact Me</h1>
+            <div class="convert-logo-div">
+                <h1>Contact Me</h1>
+                <img src="./images/animated/phone-contact.gif" alt="Contact" class="description-image">
+            </div>
             <p>Feel free to reach out through this form for any inquiries or support requests!</p>
             <form action="mailto:arunneupane0000@gmail.com" method="post" enctype="text/plain">
                 <label for="name">Your Name:</label>
@@ -248,7 +274,12 @@
         <div class="follow-me-section">
             <p class="catchphrase">"Connecting with you is just the beginning. Let's turn your ideas into reality!"</p>
             <img src="./images/me-in-the-pool.jpg" alt="Profile Photo" class="profile-photo">
-            <h3>Follow Me On</h3>
+
+            <div class="convert-logo-div">
+                <img src="./images/animated/add.gif" alt="Contact" class="description-image">
+                <h3>Follow Me On</h3>
+            </div>
+
             <div class="social-icons">
                 <div class="socials">
                     <img src="./images/socials/instagram.png" alt="Instagram" class="icon"
