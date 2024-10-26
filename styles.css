@@ -18,7 +18,7 @@ body {
 }
 
 nav {
-  background-color: #333;
+  background-color: #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -91,6 +91,7 @@ h1 {
 }
 
 input[type="text"],
+input[type="number"],
 input[type="tel"],
 textarea,
 select {
@@ -103,6 +104,7 @@ select {
 }
 
 input[type="text"]:focus,
+input[type="number"]:focus,
 input[type="tel"]:focus,
 textarea:focus,
 select:focus {
@@ -111,6 +113,7 @@ select:focus {
 }
 
 input[type="text"],
+input[type="number"],
 input[type="tel"],
 textarea {
   background-color: #f0f8ff;
@@ -122,6 +125,7 @@ select {
 }
 
 input[type="text"]::placeholder,
+input[type="number"]::placeholder,
 input[type="tel"]::placeholder,
 textarea::placeholder {
   color: #aaa;
@@ -129,6 +133,13 @@ textarea::placeholder {
 
 label {
   font-size: 1.1rem;
+}
+/* removing annoying icons inside input number type */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -142,7 +153,6 @@ label {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #333;
   }
 
   .nav-links a {
@@ -171,6 +181,7 @@ label {
     font-size: 2rem;
   }
   input[type="text"],
+  input[type="number"],
   input[type="tel"],
   input[type="number"],
   select {

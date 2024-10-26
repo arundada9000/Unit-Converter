@@ -4,96 +4,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Unit Converter</title>
-    <meta name="description"
-        content="Get in touch with us for support or inquiries about our unit converter app. We're here to help." />
-    <meta name="keywords" content="contact us, support, inquiry, unit converter help, reach out" />
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Me</title>
+    <meta name="description" content="Get in touch for support or inquiries. I'm here to help!" />
+    <meta name="keywords" content="contact, support, inquiry, unit converter help, reach out" />
+
+    <link rel="shortcut icon" href="./images/contact.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./footer.css">
 
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        /* General Page Styling */
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #f4f4f9;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        h1 {
-            text-align: center;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f7f9fc, #cfe0f7);
+        }
+
+        .contact-page {
+            display: flex;
+            flex-direction: row;
+            max-width: 1000px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        /* Contact Form Section */
+        .contact-form {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #f1f7ff;
+        }
+
+        .contact-form h1 {
             font-size: 2.5rem;
             color: #0044cc;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form p,
+        .catchphrase {
+            font-size: 1rem;
+            color: #000000;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeSlideIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
         label {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #333;
         }
 
         input,
+        input[type="text"],
         textarea {
-            width: 100%;
             padding: 0.8rem;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
+            width: 100%;
+            outline: none;
+            background-color: white;
         }
 
         input[type="submit"] {
             background-color: #0044cc;
             color: white;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: transform 0.2s, box-shadow 0.2s;
             border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
         }
 
         input[type="submit"]:hover {
-            background-color: #003399;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         textarea {
             resize: vertical;
-            min-height: 150px;
+            min-height: 120px;
         }
 
-        .contact-info {
-            margin-top: 2rem;
+        /* Follow Me Section */
+        .follow-me-section {
+            flex: 0.7;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e3ecff;
             text-align: center;
+            position: relative;
         }
 
-        .contact-info p {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+        .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 1.5rem 0;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
 
-        .social-media {
-            text-align: center;
-            margin-top: 2rem;
+        .profile-photo:hover {
+            transform: translateY(-5px);
         }
 
-        .social-media a {
-            margin: 0 10px;
-            text-decoration: none;
+        .follow-me-section h3 {
+            font-size: 1.8rem;
+            color: #0044cc;
+            margin-bottom: 1rem;
         }
 
-        .social-media img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s;
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-direction: column;
         }
 
-        .social-media img:hover {
+        .socials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .icon {
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border-radius: 50%;
+            background-color: white;
+            padding: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon:hover {
             transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width:768px) {
+            .contact-page {
+                flex-direction: column-reverse;
+            }
         }
     </style>
 </head>
@@ -112,8 +211,6 @@
             <a href="./discount.html">Discount</a>
             <a href="./power.html">Power mod</a>
             <a href="./text.html">Text</a>
-            <a href="./contact.html" class="bb">Contact</a>
-            <a href="./privacy.html">Privacy Policy</a>
         </div>
         <div class="nav-links">
             <a href="./index.html">Home</a>
@@ -126,52 +223,61 @@
             <a href="./discount.html">Discount Calculator</a>
             <a href="./power.html">Power mod Calculator</a>
             <a href="./text.html">Text Styler</a>
-            <a href="./privacy.html">Privacy Policy</a>
-            <a href="./contact.html" class="bb">Contact me </a>
         </div>
     </nav>
+    <div class="contact-page">
+        <!-- Contact Form Section -->
+        <div class="contact-form">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out through this form for any inquiries or support requests!</p>
+            <form action="mailto:arunneupane0000@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <div class="container">
-        <h1>Contact Me</h1>
-        <form action="mailto:arunneupane0000@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-
-            <input type="submit" value="Send Message">
-        </form>
-
-        <div class="social-media">
-            <h2>Follow Me</h2>
-            <a href="https://www.instagram.com/arundada9000" target="_blank"><img
-                    src="https://th.bing.com/th/id/OIP.eLIOZiuzO49YP3M_B8528QHaHT?rs=1&pid=ImgDetMain"
-                    alt="Instagram"></a>
-            <a href="https://www.youtube.com/@code_with_ease" target="_blank"><img
-                    src="https://www.interstellarrift.com/wiki/images/d/d8/Youtube-logo-png-photo-0.png"
-                    alt="YouTube"></a>
-            <a href="https://github.com/arundada9000" target="_blank"><img
-                    src="https://cdn.afterdawn.fi/v3/news/original/github-logo.png" alt="GitHub"></a>
-            <a href="https://www.facebook.com/arunneupane9000/" target="_blank"><img
-                    src="https://static.vecteezy.com/system/resources/previews/018/930/476/original/facebook-logo-facebook-icon-transparent-free-png.png"
-                    alt="Facebook"></a>
+                <input type="submit" value="Send Message">
+            </form>
         </div>
 
-        <div class="contact-info">
-            <p>Alternatively, you can reach me at:</p>
-            <p><strong>Email:</strong> <a href="mailto:arunneupane0000@gmail.com">arunneupane0000@gmail.com</a></p>
+        <!-- Follow Me Section with Profile Photo and Social Icons -->
+        <div class="follow-me-section">
+            <p class="catchphrase">"Connecting with you is just the beginning. Let's turn your ideas into reality!"</p>
+            <img src="./images/me-in-the-pool.jpg" alt="Profile Photo" class="profile-photo">
+            <h3>Follow Me On</h3>
+            <div class="social-icons">
+                <div class="socials">
+                    <img src="./images/socials/instagram.png" alt="Instagram" class="icon"
+                        onclick="window.open('https://www.instagram.com/arundada9000', '_blank')">
+                    <img src="./images/socials/facebook.png" alt="Facebook" class="icon"
+                        onclick="window.open('https://www.facebook.com/arunneupane9000/', '_blank')">
+                    <img src="./images/socials/youtube.png" alt="YouTube" class="icon"
+                        onclick="window.open('https://www.youtube.com/@code_with_ease', '_blank')">
+                    <img src="./images/socials/github.png" alt="GitHub" class="icon"
+                        onclick="window.open('https://github.com/arundada9000', '_blank')">
+                </div>
+                <div class="socials">
+                    <p>Email me</p>
+                    <img src="./images/socials/email.png" alt="Email" class="icon"
+                        onclick="window.open('mailto:arunneupane0000@gmail.com', '_blank')">
+                    <p>Whatsapp me</p>
+                    <img src="./images/socials/whatsapp.png" alt="WhatsApp" class="icon"
+                        onclick="window.open('tel:+9779811420975', '_blank')">
+                </div>
+
+            </div>
         </div>
     </div>
-
     <footer>
         <div class="footer-container">
             <div class="footer-info">
                 <p>&copy; 2024 Arun Neupane. All rights reserved.</p>
                 <p>Made with ❤️ by Arun Neupane</p>
+                <p>For Learning and Development</p>
             </div>
             <div class="footer-links">
                 <a href="./about.html">About</a>
@@ -180,8 +286,6 @@
             </div>
         </div>
     </footer>
-
-
     <script src="./nav.js"></script>
 </body>
 

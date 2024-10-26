@@ -34,6 +34,10 @@ body {
   transform: translateY(-5px);
 }
 
+.card img {
+  width: 50px;
+  margin-bottom: 15px;
+}
 .card a {
   text-decoration: none;
   color: #007bff;
