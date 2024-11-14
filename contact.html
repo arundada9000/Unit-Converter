@@ -222,29 +222,22 @@
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-        <div class="nav-links1">
-            <a href="./index.html">Home</a>
-            <a href="./data.html">Data</a>
-            <a href="./length.html">Length</a>
-            <a href="./time.html">Time</a>
-            <a href="./mass.html">Mass</a>
-            <a href="./temperature.html">Temperature</a>
-            <a href="./numbersystem.html">Number System</a>
-            <a href="./discount.html">Discount</a>
-            <a href="./power.html">Power mod</a>
-            <a href="./text.html">Text</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data Converter</a>
-            <a href="./length.html">Length Converter</a>
-            <a href="./time.html">Time Converter</a>
-            <a href="./mass.html">Mass Converter</a>
-            <a href="./temperature.html">Temperature Converter</a>
-            <a href="./numbersystem.html">Number System Converter</a>
-            <a href="./discount.html">Discount Calculator</a>
-            <a href="./power.html">Power mod Calculator</a>
+            <a href="./data.html">Data <span id="converterText">Converter</span></a>
+            <a href="./length.html">Length <span id="converterText">Converter</span></a>
+            <a href="./time.html">Time <span id="converterText">Converter</span></a>
+            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
+            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
+            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
+            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
+            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
             <a href="./text.html">Text Styler</a>
         </div>
     </nav>
@@ -256,24 +249,28 @@
                 <img src="./images/animated/phone-contact.gif" alt="Contact" class="description-image">
             </div>
             <p>Feel free to reach out through this form for any inquiries or support requests!</p>
-            <form action="mailto:arunneupane0000@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <form action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="a70b99ba-e904-480f-9f8b-e420787fbc0d">
 
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="name" class="scroll-animate">Your Name:</label>
+                <input type="text" class="scroll-animate" id="name" name="name" placeholder="Enter your name" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                <label for="email" class="scroll-animate">Your Email:</label>
+                <input type="email" class="scroll-animate" id="email" name="email" placeholder="Enter your email"
+                    required>
 
-                <input type="submit" value="Send Message">
+                <label for="message" class="scroll-animate">Message:</label>
+                <textarea id="message" class="scroll-animate" name="message" placeholder="Write your message here"
+                    required></textarea>
+
+                <input type="submit" class="scroll-animate" value="Send Message">
             </form>
         </div>
 
         <!-- Follow Me Section with Profile Photo and Social Icons -->
         <div class="follow-me-section">
             <p class="catchphrase">"Connecting with you is just the beginning. Let's turn your ideas into reality!"</p>
-            <img src="./images/me-in-the-pool.jpg" alt="Profile Photo" class="profile-photo">
+            <img src="./images/me-in-the-pool-300-by-597.png" alt="Profile Photo" class="profile-photo">
 
             <div class="convert-logo-div">
                 <img src="./images/animated/add.gif" alt="Contact" class="description-image">
@@ -318,6 +315,46 @@
         </div>
     </footer>
     <script src="./nav.js"></script>
+    <script>
+        const form = document.querySelector('form');
+        const submitButton = form.querySelector('input[type="submit"]');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            submitButton.value = 'Sending...';
+
+            const formData = new FormData(form);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => {
+                    if (response.ok) {
+                        submitButton.value = 'Message Sent';
+                        setTimeout(() => {
+                            submitButton.value = 'Send Message'; // Reset button text
+                        }, 5000);
+
+                        form.reset();
+                    } else {
+                        submitButton.value = 'Error, Try Again';
+                        setTimeout(() => {
+                            submitButton.value = 'Send Message';
+                        }, 5000);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                    submitButton.value = 'Error, Try Again';
+                    setTimeout(() => {
+                        submitButton.value = 'Send Message';
+                    }, 5000);
+                });
+        });
+
+    </script>
 </body>
 
 </html>

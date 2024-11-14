@@ -10,43 +10,36 @@
     <meta name="keywords"
         content="power mod calculator, modulo calculator, exponent mod, fast mod calculation, power calculator, online mod calculator, online power mod calculator,real time calculator" />
 
-        <link rel="shortcut icon" href="./images/power-mod.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/power-mod.webp" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./footer.css">
     <style>
-        @media (max-width:768px) {
-            .container {
-                margin-top: 3rem;
-            }
+        #result {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            width: min(100%, 500px);
         }
     </style>
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-        <div class="nav-links1">
-            <a href="./index.html">Home</a>
-            <a href="./data.html">Data</a>
-            <a href="./length.html">Length</a>
-            <a href="./time.html">Time</a>
-            <a href="./mass.html">Mass</a>
-            <a href="./temperature.html">Temperature</a>
-            <a href="./numbersystem.html">Number System</a>
-            <a href="./discount.html">Discount</a>
-            <a href="./power.html" class="bb">Power mod</a>
-            <a href="./text.html">Text</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data Converter</a>
-            <a href="./length.html">Length Converter</a>
-            <a href="./time.html">Time Converter</a>
-            <a href="./mass.html">Mass Converter</a>
-            <a href="./temperature.html">Temperature Converter</a>
-            <a href="./numbersystem.html">Number System Converter</a>
-            <a href="./discount.html">Discount Calculator</a>
-            <a href="./power.html">Power mod Calculator</a>
+            <a href="./data.html">Data <span id="converterText">Converter</span></a>
+            <a href="./length.html">Length <span id="converterText">Converter</span></a>
+            <a href="./time.html">Time <span id="converterText">Converter</span></a>
+            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
+            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
+            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
+            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
+            <a href="./power.html" class="bb">Power mod <span id="converterText">Calculator</span></a>
             <a href="./text.html">Text Styler</a>
         </div>
     </nav>
@@ -97,63 +90,78 @@
         const exponent = document.getElementById("exponent");
         const mode = document.getElementById('mod');
         const result = document.getElementById("result");
+        const x = document.getElementById("x");
+        const y = document.getElementById("y");
+        const n = document.getElementById("n");
+        const resultText = document.getElementById("res");
 
-        base.addEventListener("keyup", () => {
-            handleInput();
-        });
+        base.addEventListener("keyup", handleInput);
 
-        exponent.addEventListener("keyup", () => {
-            handleInput();
-        });
+        exponent.addEventListener("keyup", handleInput);
 
-        mode.addEventListener("keyup", () => {
-            handleInput();
-        });
+        mode.addEventListener("keyup", handleInput);
 
         function handleInput() {
-            const b = parseFloat(base.value);
-            const exp = parseFloat(exponent.value);
-            const m = parseFloat(mode.value);
+            let b, m, exp;
+            if (base.value != "")
+                b = BigInt(base.value);
+            if (exponent.value != "")
+                exp = BigInt(exponent.value);
+            if (mode.value != "")
+                m = BigInt(mode.value);
 
-            if (isNaN(b)) {
-                result.innerHTML = `<span id="x">x</span> <sup><span id="y">y</span></sup> <span id="n">mod n</span> <span id="res">= res</span>`;
+
+            if (base.value !== "") {
                 updateDisplay(base.value, exponent.value, mode.value);
-            } else {
-                if (!isNaN(exp) && isNaN(m)) {
-                    let res = Math.pow(b, exp);
-                    result.innerHTML = `${b}<sup>${exp}</sup> = ${res}`;
-                } else if (isNaN(exp) && !isNaN(m)) {
+                if (exponent.value !== "" && mode.value === "") {
+                    let res = b ** exp;
+                    n.style.visibility = "hidden";
+                    resultText.textContent = " = " + res;
+                } else if (exponent.value === "" && mode.value !== "") {
                     let res = b % m;
-                    result.innerHTML = `${b} mod ${m} = ${res}`;
-                } else if (!isNaN(exp) && !isNaN(m)) {
-                    let res = Math.pow(b, exp);
+                    y.style.visibility = "hidden";
+                    resultText.textContent = " = " + res;
+                } else if (exponent.value !== "" && mode.value !== "") {
+                    let res = b ** exp;
                     let modResult = res % m;
-                    result.innerHTML = `${b}<sup>${exp}</sup> mod ${m} = ${modResult}`;
-                } else {
+                    n.style.visibility = "visible";
+                    n.style.visibility = "visible";
+                    resultText.textContent = " = " + modResult;
+                }
+                else {
+                    resultText.textContent = " =  res";
                     updateDisplay(base.value, exponent.value, mode.value);
                 }
             }
+            else {
+                resultText.textContent = " = res";
+                updateDisplay(base.value, exponent.value, mode.value);
+
+            }
+
         }
 
         function updateDisplay(baseVal, expVal, modVal) {
             if (baseVal !== "") {
-                document.getElementById("x").textContent = baseVal;
+                x.textContent = baseVal;
             } else {
-                document.getElementById("x").textContent = "x";
+                x.textContent = "x";
             }
 
             if (expVal !== "") {
-                document.getElementById("y").textContent = expVal;
+                y.textContent = expVal;
             } else {
-                document.getElementById("y").textContent = "y";
+                y.textContent = "y";
             }
 
             if (modVal !== "") {
-                document.getElementById("n").textContent = "mod " + modVal;
+                n.textContent = "mod " + modVal;
             } else {
-                document.getElementById("n").textContent = "mod n";
+                n.textContent = "mod n";
             }
-
+            x.style.visibility = "visible";
+            y.style.visibility = "visible";
+            n.style.visibility = "visible";
         }
     </script>
 
