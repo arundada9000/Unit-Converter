@@ -15,18 +15,18 @@
     <style>
         body {
             background-color: #f7f7f7;
-            color: #333;
+            color: #000000;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding-top: 12vh;
         }
 
         .container {
             width: 80%;
             max-width: 600px;
             margin: 0 auto;
-            background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,8 +35,8 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 24px;
-            color: #444;
+            font-size: 2rem;
+            color: #1051f7;
         }
 
         textarea {
@@ -121,6 +121,15 @@
         @media (max-width: 768px) {
             select {
                 min-width: 10ch !important;
+            }
+
+            body {
+                padding: 0;
+                padding-top: 2rem;
+            }
+
+            .container {
+                width: 100%;
             }
         }
     </style>
