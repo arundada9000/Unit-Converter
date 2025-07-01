@@ -1,97 +1,133 @@
-﻿# All Unit Converter
+# All Unit Converter
 
-Welcome to **All Unit Converter**! This is a simple, real-time, user-friendly tool that allows you to convert between various units seamlessly. Whether you need to convert between units of length, weight, temperature, or more, **All Unit Converter** has got you covered.
+**Fast, real-time unit conversion for everything that has a number in it.**
 
----
+Convert length, mass, temperature, time, data, number systems, power, discount, and text - all in one clean, responsive web app. No installs, no plugins, no math homework required. Just type and watch the answers appear.
 
-## Features
+## Screenshots
 
-- **Instant Conversion:** Real-time results as you type.
-- **Wide Range of Units:** Convert between a variety of units like:
-  - Length (meters, kilometers, inches, feet, etc.)
-  - Weight (kilograms, grams, pounds, ounces, etc.)
-  - Temperature (Celsius, Fahrenheit, Kelvin)
-  - Power, Time and more!
-- **Clean & Simple UI:** Easy-to-use interface with a modern and minimalist design.
-- **Responsive Design:** Works seamlessly across desktops, tablets, and mobile devices.
+<p align="center">
+  <img src="screenshots/converter-desktop.png" alt="All Unit Converter - desktop view" width="720">
+</p>
 
----
+<p align="center">
+  <img src="screenshots/converter-mobile.png" alt="All Unit Converter - mobile view" width="280">
+</p>
 
 ## Live Demo
 
-Try out the live version of the Unit Converter here: [All Unit Converter](https://allunitconverter.netlify.app)
+Try it live: [All Unit Converter](https://allunitconverter.netlify.app)
 
----
+Works as an installable PWA - add it to your home screen and use it offline.
 
-<p align="center">
-<img src = "./assets/images/og-image.png" width=300>
-<img src = "./assets/images/og-mass.png" width=300>
-<img src = "./assets/images/og-length.png" width=300>
-<img src = "./assets/images/og-temperature.png" width=300>
-<img src = "./assets/images/og-power.png" width=300>
-<img src = "./assets/images/og-data.png" width=300>
-<img src = "./assets/images/og-discount.png" width=300>
-<img src = "./assets/images/og-number.png" width=300>
-<img src = "./assets/images/og-temperature.png" width=300>
-<img src = "./assets/images/og-time.png" width=300>
-<img src = "./assets/images/og-text.png" width=300>
-<img src = "./assets/images/og-about.png" width=300>
-<img src = "./assets/images/og-contact.png" width=300>
-<img src = "./assets/images/og-privacy.png" width=300>
-</p>
+## Converters
 
----
+| Converter | What it does |
+| --- | --- |
+| [Length](length.html) | Meters, kilometers, inches, feet, miles and more |
+| [Mass](mass.html) | Kilograms, grams, pounds, ounces and more |
+| [Temperature](temperature.html) | Celsius, Fahrenheit, Kelvin and more |
+| [Time](time.html) | Seconds, minutes, hours, days and more |
+| [Data](data.html) | Bytes, kilobytes, megabytes, gigabytes and more |
+| [Number System](numbersystem.html) | Decimal, binary, octal, hexadecimal and more |
+| [Discount](discount.html) | Find discounted prices and savings in seconds |
+| [Power](power.html) | Power and energy calculations made easy |
+| [Text](text.html) | A handy text editor and counter |
 
-##  Tech Stack
+## Features
 
-**All Unit Converter** is built with the following technologies:
+- **Instant conversion** - results update in real time as you type
+- **Wide unit coverage** - nine converters under one roof
+- **Clean, modern UI** - glass-morphism design that looks good on any screen
+- **Fully responsive** - mobile, tablet, and desktop friendly
+- **PWA ready** - installable and works offline via service worker
+- **Zero dependencies** - pure HTML, CSS, and JavaScript, no build step
 
-- **Frontend:**
-  - HTML
-  - CSS
-  - JavaScript
+## Tech Stack
 
----
+- **HTML** - structure
+- **CSS** - modern styling with CSS variables and glass effects
+- **JavaScript** - all conversion logic, navigation, and PWA features
+- **Service Worker** - offline support and caching
+- **Netlify** - hosting, redirects, and deployment
 
-## Contributing
+## Getting Started
 
-If you want to contribute, feel free to fork the repository, make changes, and submit a pull request. Here’s how you can contribute:
+This is a static site. No build step, no package manager, no server needed.
 
-1. Fork the repo to your GitHub account.
-2. Create a new branch for your changes (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push your changes to the branch (`git push origin feature-name`).
-5. Open a pull request and let me know what you've changed!
+**Option 1:** Open `index.html` directly in any browser.
 
----
+**Option 2:** Run a local server:
 
-## Contact Me
+```bash
+python -m http.server 8000
+```
 
-Hello!   
-I’m **Arun Neupane** from **Nepal **.  
-Open to collaboration, coding discussions, projects, or just a friendly hello.
+Then open [http://localhost:8000](http://localhost:8000).
 
----
+## Project Structure
+
+```
+.
+|-- assets/          Icons, images, and social assets
+|-- images/          Page images and Open Graph images
+|-- screenshots/     README screenshots
+|-- about.html       About page
+|-- contact.html     Contact page
+|-- data.html        Data converter
+|-- discount.html    Discount calculator
+|-- index.html       Home / converter hub
+|-- length.html      Length converter
+|-- mass.html        Mass converter
+|-- numbersystem.html  Number system converter
+|-- power.html       Power calculator
+|-- privacy.html     Privacy policy
+|-- sw.js            Service worker (PWA offline support)
+|-- manifest.json    PWA manifest
+|-- styles.css       Main stylesheet
+|-- nav.js           Navigation and PWA install logic
+```
+
+## Contact
+
+**Arun Neupane** - Frontend Developer, CTO and Lead Architect.
+
+**"I like to code till I don't like to code. (It never happens.)"**
 
 ### Connect with Me
 
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/9779811420975)
-[![Facebook](https://img.shields.io/badge/Facebook-arundada9000-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/arundada9000)
-[![Instagram](https://img.shields.io/badge/Instagram-arundada9000-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/arundada9000)
-[![GitHub](https://img.shields.io/badge/GitHub-arundada9000-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arundada9000)
-[![YouTube](https://img.shields.io/badge/YouTube-arundada9000-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@arundada9000)
-[![Email](https://img.shields.io/badge/Email-arunneupane0000@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arunneupane0000@gmail.com)
+- **Website:** [arunneupane.vercel.app](https://arunneupane.vercel.app)
+- **GitHub:** [github.com/arundada9000](https://github.com/arundada9000)
+- **LinkedIn:** [linkedin.com/in/arundada9000](https://www.linkedin.com/in/arundada9000)
+- **X / Twitter:** [x.com/arundada9000](https://x.com/arundada9000)
+- **YouTube:** [youtube.com/@arundada9000](https://youtube.com/@arundada9000)
+- **Instagram:** [instagram.com/arundada9000](https://instagram.com/arundada9000)
+- **Facebook:** [facebook.com/arundada9000](https://facebook.com/arundada9000)
+- **Phone / WhatsApp:** [+977 9811420975](https://wa.me/9779811420975)
+- **Email:** [arunneupane0000@gmail.com](mailto:arunneupane0000@gmail.com)
 
----
+Open to collaboration, coding discussions, projects, or just a friendly hello.
 
-**Location:** Nepal  
-_Let’s build something awesome together!_
+## Contributing
 
----
+This project is proprietary software. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before doing anything.
 
-_Thank you for checking out **All Unit Converter**! I hope it makes your conversions easy and efficient!_ 
----
+## Security
+
+Found a vulnerability? Please read [SECURITY.md](SECURITY.md) and report it privately - do not open a public issue.
 
 ## License
 
-This project is for educational and personal learning purposes only. Commercial use, public deployment, or any revenue-generating use requires explicit written permission from the author. See [LICENSE](LICENSE) for details.
+All rights reserved. This project is **not free for use** and every use requires explicit written permission from the copyright holder. See [LICENSE](LICENSE) for full terms.
+
+---
+
+*The only conversion that never fails: effort into results.*
+
+*Converts every unit. Except the one for love. And money. Working on it.*
+
+*Measure twice, convert once.*
+
+---
+
+**Built by Arun Neupane - © 2026 All Rights Reserved**
