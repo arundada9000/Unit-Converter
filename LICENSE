@@ -1,36 +1,62 @@
-﻿Custom Non-Commercial Educational License
+﻿ALL UNIT CONVERTER LICENSE
+Version 1.0, 2026
+Copyright (c) 2026 Arun Neupane (arundada9000)
 
-Copyright (c) 2026 Arun Neupane
+ALL RIGHTS RESERVED - PROPRIETARY SOFTWARE
+==========================================
 
-Permission is granted to any person to use, copy, modify, and study this software
-for educational and personal learning purposes only, provided that the following
-conditions are met:
+This software is NOT free for use. EVERY use of this software requires
+explicit written permission from the copyright holder.
 
-1. Educational Use Only
-   This software may be used, studied, and modified for non-commercial, educational,
-   or personal learning purposes only.
+1. GRANT OF RIGHTS
+------------------
+No rights are granted by this license. Without prior written permission
+from the copyright holder, you may NOT:
 
-2. No Commercial Use
-   This software, or any derivative works based on it, may NOT be used for any
-   commercial purpose, including but not limited to:
-   - Selling, licensing, or distributing the software or its derivatives for money
-   - Using the software to generate revenue, directly or indirectly
-   - Incorporating the software into a commercial product or service
-   - Using the software in a business or organizational setting for profit
+   a. Clone, copy, download, or otherwise obtain the source code for
+      any purpose other than personal review.
+   b. Use, execute, run, host, or deploy this software in any
+      environment - personal, educational, academic, or commercial.
+   c. Modify, adapt, translate, reverse-engineer, decompile, or create
+      derivative works based on this software, in whole or in part.
+   d. Redistribute, publish, sublicense, sell, lend, or otherwise
+      transfer this software or any derivative of it, in any form.
+   e. Use this software or its code to build, power, or improve any
+      product, service, or project.
 
-3. Public Use Requires Permission
-   Any public deployment, hosting, or distribution of this software, whether modified
-   or unmodified, requires explicit written permission from the copyright holder.
+2. PERMISSION REQUESTS
+----------------------
+The copyright holder may grant exceptions at their sole and absolute
+discretion, on a case-by-case basis, and for any reason or no reason.
+Requests for permission must be submitted in writing to:
 
-4. Attribution
-   Any use of this software must retain this license notice and attribute the
-   original author.
+   Arun Neupane (arundada9000)
+   Email: arunneupane0000@gmail.com
+   GitHub: https://github.com/arundada9000
 
-5. No Warranty
-   This software is provided "as is", without warranty of any kind, express or
-   implied. The author is not liable for any claims or damages related to the use
-   of this software.
+Permission granted for one specific use does NOT constitute blanket
+permission for other uses. Each use requires separate written approval
+unless the approval explicitly states otherwise.
 
-For commercial licensing inquiries, contact:
-Arun Neupane
-Email: arunneupane0000@gmail.com
+3. ATTRIBUTION
+--------------
+Where permission is granted, any use must visibly credit the original
+author and this project, including the copyright notice above, unless
+the permission explicitly waives this requirement.
+
+4. NO WARRANTY
+--------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+5. GOVERNING LAW
+----------------
+This license shall be governed by and construed in accordance with the
+laws of Nepal, and any dispute arising under it shall be subject to the
+exclusive jurisdiction of the courts of Nepal.
