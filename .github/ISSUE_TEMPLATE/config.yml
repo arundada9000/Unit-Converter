@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+ - name: All Unit Converter website
+   url: https://allunitconverter.netlify.app
+   about: Try the live app first - your question may already be answered there.
+ - name: Security vulnerability
+   url: https://github.com/arundada9000/Unit-Converter/blob/main/SECURITY.md
+   about: Report vulnerabilities privately to the maintainer - do NOT open a public issue.
