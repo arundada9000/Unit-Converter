@@ -1,4 +1,4 @@
-const CACHE_NAME = 'unit-converter-cache-v1';
+const CACHE_NAME = 'unit-converter-cache-v2';
 const PRECACHE_URLS = [
   "./",
   "./about.html",
@@ -148,7 +148,7 @@ self.addEventListener('fetch', (event) => {
       if (cachedResponse) {
         return cachedResponse;
       }
-      
+
       // If not in cache, fetch from network and dynamically cache it
       return fetch(event.request).then((networkResponse) => {
         // Don't cache non-successful responses or cross-origin requests unless they are opaque
