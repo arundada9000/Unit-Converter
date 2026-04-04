@@ -32,88 +32,7 @@
 
     <link rel="shortcut icon" href="./images/about.webp" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #f4f4f9;
-            color: #333;
-        }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-            flex: 1;
-        }
-
-        .container h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #0044cc;
-        }
-
-        .container p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-
-        .signature {
-            height: 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            color: #333;
-            font-style: italic;
-        }
-
-        .signature p {
-            padding: 18px 0;
-        }
-
-        .signature span {
-            font-weight: bold;
-        }
-
-        .code-link {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
-
-        .code-link a {
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        @media (max-width:768px) {
-            body {
-                padding: 0;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-                padding: 0rem 0;
-            }
-
-            .container {
-                padding: 20px;
-            }
-        }
-    </style>
     <link rel="stylesheet" href="./footer.css">
 
     <script type="application/ld+json">
@@ -140,11 +59,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -152,19 +75,20 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
-    <div class="container">
+    <article class="seo-content">
         <div class="convert-logo-div">
             <h1>About This App</h1>
             <img src="./images/animated/about.gif" alt="Convert" class="description-image">
@@ -195,12 +119,14 @@
             <p> by <span>Arun Neupane</span></p>
         </div>
 
-    </div>
+    </article>
 
     <div class="code-link">
         <img src="./images/animated/software.gif" alt="Source code" class="description-image">
         <p>Source code available <a href="https://github.com/arundada9000/Unit-Converter">Here</a></p>
     </div>
+    </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-info">

@@ -61,11 +61,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -73,23 +77,24 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html" class="bb">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html" class="bb">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/mass.webp" alt="Data" class="description-image">
         <h1>Mass Converter</h1>
-        <input type="number" name="input-value" id="input-value" placeholder="Enter mass" title="Enter desired mass">
-        <select name="input-type" id="input-type" title="Select mass type">
+        <input type="number" name="input-value" id="input-value" placeholder="Enter mass" title="Enter desired mass" aria-label="Value to convert">
+        <select name="input-type" id="input-type" title="Select mass type" aria-label="From Unit">
             <option value="mmg">Microgram(mmg)</option>
             <option value="mg">Milligram(mg)</option>
             <option value="g">Gram(g)</option>
@@ -107,8 +112,8 @@
         <div class="convert-logo-div">
             <img src="./images/animated/convert.gif" alt="Convert" class="description-image">
         </div>
-        <input type="number" id="output-value" placeholder="Result" name="output-value" title="Result box" readonly>
-        <select name="output-type" id="output-type" title="Select mass type">
+        <input type="number" id="output-value" placeholder="Result" name="output-value" title="Result box" readonly aria-label="Converted value">
+        <select name="output-type" id="output-type" title="Select mass type" aria-label="To Unit">
             <option value="mmg">Microgram(mmg)</option>
             <option value="mg">Milligram(mg)</option>
             <option value="g">Gram(g)</option>
@@ -123,6 +128,80 @@
             <option value="gr">Grain (gr)</option>
         </select>
     </div>
+
+    <article class="seo-content">
+        <h2>The Ultimate Mass & Weight Conversion Guide</h2>
+        <p>Welcome to our fast, intuitive, and highly accurate <strong>Mass Converter</strong>. Whether you are baking a cake with a European recipe, calculating your baggage weight for an international flight, or measuring precious metals in carats, translating between different units of mass and weight is a daily necessity. Our tool instantly bridges the gap between everyday weights, industrial tonnages, and microscopic masses.</p>
+        
+        <h3>Mass vs. Weight: What's the Difference?</h3>
+        <p>In everyday language, "mass" and "weight" are used interchangeably, but scientifically, they represent different concepts:</p>
+        <ul>
+            <li><strong>Mass:</strong> A measurement of how much matter an object contains. Mass remains constant regardless of where you are in the universe. It is generally measured in Kilograms or Grams.</li>
+            <li><strong>Weight:</strong> A measurement of the gravitational force pulling on that mass. Your weight changes depending on gravity (you weigh less on the moon!). However, for terrestrial purposes, weighing scales display mass equivalent measurements like Pounds and Kilograms.</li>
+        </ul>
+
+        <h3>Common Everyday Mass Conversions</h3>
+        <p>Different cultures and industries have established varying standards for weighing matter. Our tool automatically accounts for these conversions. Below are the most frequently calculated mass ratios:</p>
+        
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>From Unit</th>
+                    <th>To Unit</th>
+                    <th>Approximate Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kilograms (kg)</td>
+                    <td>Pounds (lbs)</td>
+                    <td>2.20462 lbs</td>
+                </tr>
+                <tr>
+                    <td>Pounds (lbs)</td>
+                    <td>Kilograms (kg)</td>
+                    <td>0.45359 kg</td>
+                </tr>
+                <tr>
+                    <td>Grams (g)</td>
+                    <td>Ounces (oz)</td>
+                    <td>0.03527 oz</td>
+                </tr>
+                <tr>
+                    <td>Stone (st)</td>
+                    <td>Pounds (lbs)</td>
+                    <td>14 lbs</td>
+                </tr>
+                <tr>
+                    <td>Tonne (t)</td>
+                    <td>Kilograms (kg)</td>
+                    <td>1000 kg</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Specialized Units of Mass</h3>
+        <p>We don't just calculate basic groceries. Our tool spans across highly specialized fields:</p>
+        <ul>
+            <li><strong>Carat (ct):</strong> Predominantly used in gemology to measure the mass of diamonds and precious stones. One carat is equal to exactly 200 milligrams (0.2 grams).</li>
+            <li><strong>Grain (gr):</strong> Originally based on the mass of a single seed of cereal. It is widely used today to measure the mass of bullets, gunpowder, and archery arrows. One grain is exactly 64.79891 milligrams.</li>
+            <li><strong>Troy Ounce:</strong> Often used for precious metals like gold and silver. Note that a Troy Ounce is slightly heavier than a standard Avoirdupois Ounce.</li>
+        </ul>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>How many pounds make up one Stone?</h4>
+        <p>A "Stone" is a traditional British unit of weight. Exactly <strong>14 pounds</strong> make up one Stone. If someone weighs 10 Stone, they weigh 140 pounds.</p>
+
+        <h4>What is the difference between a Short Ton and a Long Ton?</h4>
+        <p>This is a common source of industrial confusion! A <strong>Short Ton (US)</strong> is perfectly equal to 2,000 pounds. A <strong>Long Ton (UK)</strong> is equal to 2,240 pounds. The metric <strong>Tonne</strong> (often called a metric ton) is equal to 1,000 kilograms (approximately 2,204.6 pounds).</p>
+
+        <h4>How accurately does the converter measure micro-units?</h4>
+        <p>Our algorithm supports precision down to <strong>Micrograms (mcg)</strong>, which is one-millionth of a gram. This level of accuracy is actively used in medical pharmacology for dosage distributions.</p>
+
+        <p>Save yourself the headache of manual arithmetic. Bookmark the <strong>All Unit Converter Mass Tool</strong> for flawless weight measurement conversions at any scale!</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

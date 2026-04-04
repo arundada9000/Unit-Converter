@@ -59,11 +59,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -71,24 +75,25 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html" class="bb">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html" class="bb">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/data.webp" alt="Data" class="description-image">
         <h1>Data Converter</h1>
 
-        <input type="number" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired data">
-        <select name="input-type" id="input-type" title="Select data type">
+        <input type="number" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired data" aria-label="Value to convert">
+        <select name="input-type" id="input-type" title="Select data type" aria-label="From Unit">
             <option value="bit">Bit</option>
             <option value="b">Byte (b)</option>
             <option value="kb">Kilobytes (kb)</option>
@@ -101,8 +106,8 @@
         <div class="convert-logo-div">
             <img src="./images/animated/convert.gif" alt="Convert" class="description-image">
         </div>
-        <input type="number" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
-        <select name="output-type" id="output-type" title="Select data type">
+        <input type="number" id="output-value" placeholder="Converted value" name="output-value" title="Result box" aria-label="Converted value">
+        <select name="output-type" id="output-type" title="Select data type" aria-label="To Unit">
             <option value="bit">Bit</option>
             <option value="b">Byte (b)</option>
             <option value="kb">Kilobytes (kb)</option>
@@ -112,6 +117,91 @@
             <option value="pb">Petabyte (pb)</option>
         </select>
     </div>
+
+    <article class="seo-content">
+        <h2>The Complete Digital Data Conversion Guide</h2>
+        <p>In our modern cloud-based, hyper-connected world, understanding digital storage sizes and transmission speeds is practically mandatory. Whether you are buying a new smartphone, purchasing iCloud storage, allocating server space, or wondering how long an 80GB game will take to download, our free <strong>Data Converter</strong> translates complex digital jargon into understandable figures instantly.</p>
+        
+        <h3>Understanding Binary vs. Decimal Storage</h3>
+        <p>There is a widespread discrepancy in how digital storage is marketed versus how computers actually read it. Have you ever bought a "1 Terabyte" hard drive, only to plug it in and see your computer reports 931 Gigabytes? This is due to the difference between Decimal and Binary counting systems.</p>
+        <ul>
+            <li><strong>The Decimal System (Usage: Manufacturers):</strong> Hard drive manufacturers use base-10 mathematics. In this system, 1 Kilobyte equals exactly 1,000 Bytes.</li>
+            <li><strong>The Binary System (Usage: Computers/OS):</strong> Computers run on base-2 mathematics. In a computer memory system, 1 Kilobyte (technically called a Kibibyte) equals 1,024 Bytes.</li>
+        </ul>
+        <p>Our converter bridges this gap effortlessly, giving you the actual computed figures for whatever device or operating system you're using.</p>
+
+        <h3>The Digital Hierarchy</h3>
+        <p>Here is exactly how data scales up from a single piece of code to massive server loads:</p>
+        
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>Data Unit</th>
+                    <th>Abbreviation</th>
+                    <th>Equivalent Value (Binary Scale)</th>
+                    <th>Real-World Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bit</td>
+                    <td>b</td>
+                    <td>Smallest Unit (1 or 0)</td>
+                    <td>A single boolean text character</td>
+                </tr>
+                <tr>
+                    <td>Byte</td>
+                    <td>B</td>
+                    <td>8 Bits</td>
+                    <td>A single alphabet letter</td>
+                </tr>
+                <tr>
+                    <td>Kilobyte</td>
+                    <td>KB</td>
+                    <td>1,024 Bytes</td>
+                    <td>A short email or text document</td>
+                </tr>
+                <tr>
+                    <td>Megabyte</td>
+                    <td>MB</td>
+                    <td>1,024 Kilobytes</td>
+                    <td>A high-quality MP3 song (approx. 4MB)</td>
+                </tr>
+                <tr>
+                    <td>Gigabyte</td>
+                    <td>GB</td>
+                    <td>1,024 Megabytes</td>
+                    <td>A full-length HD movie (approx. 3-5GB)</td>
+                </tr>
+                <tr>
+                    <td>Terabyte</td>
+                    <td>TB</td>
+                    <td>1,024 Gigabytes</td>
+                    <td>A modern gaming console's internal drive</td>
+                </tr>
+                <tr>
+                    <td>Petabyte</td>
+                    <td>PB</td>
+                    <td>1,024 Terabytes</td>
+                    <td>Massive corporate cloud arrays</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>What is the difference between a Bit (b) and a Byte (B)?</h4>
+        <p>This is the most common point of tech confusion! Note the capitalization: a lowercase 'b' stands for bit, and an uppercase 'B' stands for Byte. There are exactly <strong>8 bits in 1 Byte</strong>. Internet Service Providers (ISPs) typically advertise speeds in Mega<em>bits</em> per second (Mbps). To find out your actual download max speed in Mega<em>bytes</em> (MB/s), you must divide the ISP number by 8. (E.g., 100 Mbps = 12.5 MB/s).</p>
+
+        <h4>How many photos can 1 Gigabyte (GB) hold?</h4>
+        <p>While this heavily depends on the camera quality, an average 12-megapixel smartphone photo uses roughly 3 to 4 Megabytes. Therefore, a single Gigabyte (1,024 MB) can store approximately 250 to 300 photos.</p>
+
+        <h4>What lies beyond a Petabyte?</h4>
+        <p>As internet reliance aggressively grows, so do the units. Beyond a Petabyte (PB) lies the Exabyte (EB), followed by the Zettabyte (ZB), and finally the Yottabyte (YB)—which is equivalent to one trillion Terabytes.</p>
+
+        <p>Stop guessing your cloud limits. Save the <strong>All Unit Converter Data Tool</strong> and manage your storage intelligently!</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

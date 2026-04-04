@@ -34,68 +34,7 @@
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./styles.css">
 
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #f4f4f9;
-            color: #100f0f;
-        }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-            flex: 1;
-        }
-
-        .container h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #0044cc;
-        }
-
-        .container p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-
-        .container h2 {
-            color: #333;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .container ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .convert-logo-div h2 {
-            padding-top: 15px;
-        }
-
-        @media(max-width:768px) {
-            .container {
-                padding: 1rem;
-                margin: 0;
-            }
-
-            body {
-                padding: 0;
-            }
-        }
-    </style>
 
     <script type="application/ld+json">
 {
@@ -121,11 +60,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -133,19 +76,20 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
-    <div class="container">
+    <article class="seo-content">
         <div class="convert-logo-div">
             <img src="./images/animated/privacy-policy.gif" alt="Contact" class="description-image">
             <h1>Privacy Policy</h1>
@@ -220,7 +164,9 @@
             If you have any questions or concerns about this Privacy Policy or our practices, please contact us at
             <a href="mailto:arunneupane0000@gmail.com">arunneupane0000@gmail.com</a>.
         </p>
-    </div>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

@@ -61,11 +61,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -73,23 +77,24 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data<span id="converterText">Converter</span></a>
-            <a href="./length.html">Length<span id="converterText">Converter</span></a>
-            <a href="./time.html">Time<span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass<span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature<span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html" class="bb">Number System<span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount<span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod<span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html" class="bb">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/number-system.webp" alt="Data" class="description-image">
         <h1>Number System Converter</h1>
-        <input type="text" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired mass">
-        <select name="input-type" id="input-type" title="Select number type">
+        <input type="text" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired mass" aria-label="Value to convert">
+        <select name="input-type" id="input-type" title="Select number type" aria-label="From Unit">
             <option value="10">Decimal</option>
             <option value="2">Binary</option>
             <option value="8">Octal</option>
@@ -99,14 +104,64 @@
         <div class="convert-logo-div">
             <img src="./images/animated/convert.gif" alt="Convert" class="description-image">
         </div>
-        <input type="text" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
-        <select name="output-type" id="output-type" title="Select number type">
+        <input type="text" id="output-value" placeholder="Converted value" name="output-value" title="Result box" aria-label="Converted value">
+        <select name="output-type" id="output-type" title="Select number type" aria-label="To Unit">
             <option value="2">Binary</option>
             <option value="10">Decimal</option>
             <option value="8">Octal</option>
             <option value="16">Hexa-Decimal</option>
         </select>
     </div>
+
+    <article class="seo-content">
+        <h2>The Complete Base Number System Converter Guide</h2>
+        <p>Welcome to our incredibly fast and highly accurate <strong>Number System Converter</strong>. If you are a computer science student learning boolean algebra, a frontend developer selecting CSS color codes, or a hardware engineer interacting with microprocessors, quickly and accurately converting numbers between Decimal, Binary, Octal, and Hexadecimal systems is an absolute necessity. Our tool executes these base-system translations in real-time without pageloads.</p>
+        
+        <h3>The Core Number Systems</h3>
+        <p>To fully grasp how computers compute, you must understand the foundational bases they operate on. We seamlessly bridge the gap between human linguistics and machine logic:</p>
+        <ul>
+            <li><strong>Decimal (Base-10):</strong> The standard system used in everyday human counting, utilizing ten digits from 0 through 9.</li>
+            <li><strong>Binary (Base-2):</strong> The absolute foundation of modern electronics and computing. It acts purely on two states: 0 (Off) and 1 (On).</li>
+            <li><strong>Octal (Base-8):</strong> Once a popular system in early mainframe computers (like the PDP-8), utilizing digits 0 through 7. Today it is predominantly used in UNIX file permissions.</li>
+            <li><strong>Hexadecimal (Base-16):</strong> A highly compact numbering system heavily utilized by software developers. It uses sixteen symbols: 0-9 and the letters A-F (where A=10 and F=15).</li>
+        </ul>
+
+        <h3>Common Number Conversions Matrix</h3>
+        <p>How do these numbers relate to one another? Below is a quick cheat sheet for the primary integer relationships across all four bases:</p>
+        
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>Decimal (Base-10)</th>
+                    <th>Binary (Base-2)</th>
+                    <th>Octal (Base-8)</th>
+                    <th>Hexadecimal (Base-16)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0000</td><td>0</td><td>0</td></tr>
+                <tr><td>5</td><td>0101</td><td>5</td><td>5</td></tr>
+                <tr><td>10</td><td>1010</td><td>12</td><td>A</td></tr>
+                <tr><td>15</td><td>1111</td><td>17</td><td>F</td></tr>
+                <tr><td>16</td><td>10000</td><td>20</td><td>10</td></tr>
+                <tr><td>255</td><td>11111111</td><td>377</td><td>FF</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>Why do programmers use Hexadecimal instead of Binary?</h4>
+        <p>While computers only physically read Binary (1s and 0s), long binary strings are visually exhausting and prone to human error. Hexadecimal strings compress massive binary values into highly readable, compact representations. For example, the binary string "1111 1111 1111 1111" perfectly translates to just "FFFF" in Hexadecimal.</p>
+
+        <h4>Where will I encounter these bases in the real world?</h4>
+        <p>You interact with base conversions constantly! If you design a website, CSS colors use Hexadecimal (e.g., #FFFFFF for white). If you troubleshoot an internet connection, your IPv4 address operates on 8-bit octets. If you set permissions on a Linux server via command line, you utilize Octal mathematics.</p>
+
+        <h4>Does the converter support letters?</h4>
+        <p>Yes, when converting to or from Hexadecimal, you must use characters A through F. Our script natively parses these characters into mathematical integers before rendering the respective target base.</p>
+
+        <p>Never rely on painful manual division and remainder calculations again. Bookmark the <strong>All Unit Converter Number System Tool</strong> for flawlessly executing nested logic math within milliseconds.</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

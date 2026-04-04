@@ -1,12 +1,13 @@
 footer {
-  background-color: #000000;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
-  bottom: 0;
   width: 100%;
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+  background: var(--surface-color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  padding: 3rem 0;
+  text-align: center;
+  margin-top: auto;
 }
 
 .footer-container {
@@ -14,25 +15,74 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .footer-info p {
-  margin: 5px 0;
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-main);
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+.footer-info p:last-child {
+  margin-top: 4px;
   font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 .footer-links {
-  margin-top: 10px;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-links a {
-  color: #00b4d8;
-  margin: 0 10px;
+  color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: var(--primary-blue);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.install-btn {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary));
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.install-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
 }

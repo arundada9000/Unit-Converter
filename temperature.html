@@ -61,11 +61,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -73,24 +77,25 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html" class="bb">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html" class="bb">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/temperature.webp" alt="Data" class="description-image">
         <h1>Temperature Converter</h1>
         <input type="number" name="input-value" id="input-value" placeholder="Enter temperature"
-            title="Enter desired type">
-        <select name="input-type" id="input-type" title="Select temperature type">
+            title="Enter desired type" aria-label="Value to convert">
+        <select name="input-type" id="input-type" title="Select temperature type" aria-label="From Unit">
             <option value="c">Celsius (&deg;c)</option>
             <option value="f">Fahrenheit (&deg;F)</option>
             <option value="K">Kelvin (&deg;K)</option>
@@ -101,8 +106,8 @@
         <div class="convert-logo-div">
             <img src="./images/animated/convert.gif" alt="Convert" class="description-image">
         </div>
-        <input type="number" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
-        <select name="output-type" id="output-type" title="Select temperature type">
+        <input type="number" id="output-value" placeholder="Converted value" name="output-value" title="Result box" aria-label="Converted value">
+        <select name="output-type" id="output-type" title="Select temperature type" aria-label="To Unit">
             <option value="c">Celsius (&deg;c)</option>
             <option value="f">Fahrenheit (&deg;F)</option>
             <option value="K">Kelvin (&deg;K)</option>
@@ -110,6 +115,80 @@
             <option value="Re">Reaumur (&deg;Re)</option>
         </select>
     </div>
+
+    <article class="seo-content">
+        <h2>Expert Guide to Temperature Conversion</h2>
+        <p>Welcome to our fast and highly precise online <strong>Temperature Converter</strong>. While measuring length or mass can be straightforward, temperature involves multiple wildly differing foundational scales based on the properties of water, the human body, and absolute zero. Whether you're tracking weather variations, traveling, preheating an oven for a British recipe, or analyzing thermodynamic physics, flawless temperature conversion is essential.</p>
+        
+        <h3>The Three Core Temperature Scales</h3>
+        <p>Understanding not just *how* to convert, but *why* these scales exist, helps demystify thermal equations. Our tool handles these scales instantly:</p>
+        <ul>
+            <li><strong>Celsius (&deg;C):</strong> The global standard metric for measuring everyday temperature. Invented by Anders Celsius in 1742, it scales precisely around the freezing point of water (0&deg;C) and the boiling point of water (100&deg;C) at sea level.</li>
+            <li><strong>Fahrenheit (&deg;F):</strong> The primary scale utilized exclusively by the United States and a handful of other regions. Proposed in 1724 by physicist Daniel Gabriel Fahrenheit, the scale sets the freezing point of water at 32&deg;F and the boiling point at 212&deg;F, creating exactly 180 degrees of separation.</li>
+            <li><strong>Kelvin (K):</strong> The base unit of thermodynamic temperature in the SI system, used heavily by scientists, physicists, and engineers. It starts at Absolute Zero (0K), which is the theoretical absolute absence of all thermal energy (equivalent to -273.15&deg;C).</li>
+        </ul>
+
+        <h3>Additional Archaic & Specialized Scales</h3>
+        <p>Our advanced calculator doesn't stop at the big three. We also support historical and highly specialized thermal scales:</p>
+        <ul>
+            <li><strong>Rankine (&deg;R):</strong> An absolute scale tied to the Fahrenheit degree instead of the Celsius degree. Used historically in US engineering fields.</li>
+            <li><strong>Reaumur (&deg;Re):</strong> A scale where the freezing and boiling points of water are defined as 0 and 80 degrees respectively. It was widely used in Europe before adopting Celsius.</li>
+        </ul>
+
+        <h3>Crucial Temperature Milestones</h3>
+        <p>It helps to know common physiological and natural thermal points as reference markers:</p>
+        
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>Milestone Event</th>
+                    <th>Celsius (&deg;C)</th>
+                    <th>Fahrenheit (&deg;F)</th>
+                    <th>Kelvin (K)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Absolute Zero</td>
+                    <td>-273.15&deg;C</td>
+                    <td>-459.67&deg;F</td>
+                    <td>0 K</td>
+                </tr>
+                <tr>
+                    <td>Freezing Point of Water</td>
+                    <td>0&deg;C</td>
+                    <td>32&deg;F</td>
+                    <td>273.15 K</td>
+                </tr>
+                <tr>
+                    <td>Average Human Body Temp</td>
+                    <td>37&deg;C</td>
+                    <td>98.6&deg;F</td>
+                    <td>310.15 K</td>
+                </tr>
+                <tr>
+                    <td>Boiling Point of Water</td>
+                    <td>100&deg;C</td>
+                    <td>212&deg;F</td>
+                    <td>373.15 K</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>Is there a temperature where Celsius and Fahrenheit are exactly the same?</h4>
+        <p>Yes! At exactly <strong>-40 degrees</strong>, both scales converge. Therefore, -40&deg;C is equal to -40&deg;F. It is the only point where the two prominent scales meet.</p>
+
+        <h4>Why doesn't Kelvin use the degree symbol?</h4>
+        <p>By international scientific convention, Kelvin is not measured in "degrees." Since it is an absolute scale starting authentically from zero (rather than an arbitrary point like water freezing), it acts as a standalone unit of measure. You say "300 Kelvin," not "300 degrees Kelvin."</p>
+
+        <h4>How do I quickly estimate Fahrenheit to Celsius in my head?</h4>
+        <p>If you don’t have our calculator handy, a quick mental shortcut to get an approximate Celsius value from Fahrenheit is: <em>Subtract 30 from the Fahrenheit number, and then halve the result.</em> For example, if it's 80&deg;F: (80 - 30 = 50), divided by 2 is roughly 25&deg;C (the exact answer is 26.6&deg;C).</p>
+
+        <p>Take the friction out of thermal differences. Save the <strong>All Unit Converter Temperature Tool</strong> to your device and execute robust decimal-point conversions instantly!</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

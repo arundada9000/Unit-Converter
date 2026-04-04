@@ -68,11 +68,15 @@
 </script>
 
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -80,17 +84,18 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html" class="bb">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html" class="bb">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/power-mod.webp" alt="Data" class="description-image">
@@ -115,6 +120,71 @@
                 res</span>
         </p>
     </div>
+
+    <article class="seo-content">
+        <h2>The Definitive Guide to Modular Exponentiation</h2>
+        <p>Welcome to our incredibly precise <strong>Power Mod Calculator</strong>. While standard calculators are great for balancing a checkbook, they fail entirely when calculating astronomical numbers used in advanced mathematics and computer science. Our modular exponentiation algorithm bypasses traditional overflow limits, allowing you to compute results for expressions in the format of <em>(Base<sup>Exponent</sup>) % Modulus = Remainder</em> securely and instantly.</p>
+        
+        <h3>What is Modular Arithmetic?</h3>
+        <p>Often referred to as "clock arithmetic," modulo arithmetic is a mathematical system wherein numbers wrap around upon reaching a certain value—the modulus. The easiest way to visualize this is reading a standard 12-hour analog clock. If it is 10:00 AM, and you add 4 hours, it doesn't become "14:00 AM". The clock resets at 12, making the answer 2:00 PM. In mathematical terms, this is expressed as <code>(10 + 4) mod 12 = 2</code>.</p>
+
+        <h3>Why Calculate Modular Exponents?</h3>
+        <p>Modular exponentiation is not just an academic exercise; it is the absolute foundation of modern digital security. Here is where you utilize it:</p>
+        <ul>
+            <li><strong>Cryptography (RSA Encryption):</strong> Whenever you log into your bank or securely message a friend, your browser utilizes public key cryptography. This encryption relies completely on the mathematical difficulty of factoring massive prime numbers using modular exponentiation.</li>
+            <li><strong>Computer Science & Hashing:</strong> Essential for generating secure hash functions and distributing data evenly across server clusters.</li>
+            <li><strong>Pseudorandom Number Generators:</strong> Video games and digital lotteries utilize modular mathematics to generate highly secure random numbers.</li>
+        </ul>
+
+        <h3>How Does Our Calculator Prevent Overflows?</h3>
+        <p>If you ask a standard calculator to compute <code>5<sup>100</sup> mod 7</code>, it will likely return an error (or infinity) because <code>5<sup>100</sup></code> is a gargantuan number that exceeds the physical transistor limit of standard 64-bit processors. Our calculator utilizes a <strong>memory-efficient iterative exponentiation algorithm</strong>. Instead of calculating the massive exponent first, it applies the modulo operation at every step of the multiplication. This keeps the numbers small, memory usage practically zero, and the final answer 100% accurate.</p>
+        
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>Equation Structure</th>
+                    <th>Example Values</th>
+                    <th>Mathematical Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Base (x)</strong></td>
+                    <td>5</td>
+                    <td>The core number you will multiply.</td>
+                </tr>
+                <tr>
+                    <td><strong>Exponent (y)</strong></td>
+                    <td>3</td>
+                    <td>How many times the base multiplies itself. (5 &times; 5 &times; 5 = 125).</td>
+                </tr>
+                <tr>
+                    <td><strong>Modulus (n)</strong></td>
+                    <td>10</td>
+                    <td>The limit number. You divide 125 by 10. The <em>remainder</em> is the answer.</td>
+                </tr>
+                <tr>
+                    <td><strong>Result</strong></td>
+                    <td>5</td>
+                    <td>125 divided by 10 is 12, with a remainder of 5.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>What happens if I leave the Exponent field blank?</h4>
+        <p>Our tool adapts dynamically! If you leave the exponent blank, the calculator assumes you simply want to perform a standard modulo calculation: <code>Base mod N</code>. </p>
+
+        <h4>What happens if I leave the Mod field blank?</h4>
+        <p>Similarly, if you leave the mod field blank, the calculator will perform standard exponentiation: <code>Base<sup>Exponent</sup></code>. However, be cautious with massive exponents, as standard browsers may throw an overflow error if the modulus wrapper is missing!</p>
+
+        <h4>Is this running on a server or locally?</h4>
+        <p>This entire calculation runs locally right inside your browser window using Javascript's <code>BigInt</code> objects. This means it is blazing fast and works 100% offline!</p>
+
+        <p>Stop crashing your physical calculators. Bookmark the <strong>All Unit Converter Power Mod Tool</strong> for instantaneous, highly secure modulo mathematics on the fly!</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

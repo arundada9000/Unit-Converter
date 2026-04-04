@@ -62,11 +62,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -74,23 +78,24 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html" class="bb">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html" class="bb">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/time.webp" alt="Data" class="description-image">
         <h1>Time Converter</h1>
-        <input type="number" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired mass">
-        <select name="input-type" id="input-type" title="Select time type">
+        <input type="number" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired mass" aria-label="Value to convert">
+        <select name="input-type" id="input-type" title="Select time type" aria-label="From Unit">
             <option value="fs">femtosecond (fs)</option>
             <option value="ns">Nanosecond (ns)</option>
             <option value="ps">Picosecond</option>
@@ -111,8 +116,8 @@
         <div class="convert-logo-div">
             <img src="./images/animated/convert.gif" alt="Convert" class="description-image">
         </div>
-        <input type="number" id="output-value" placeholder="Converted value" name="output-value" title="Result box">
-        <select name="output-type" id="output-type" title="Select time type">
+        <input type="number" id="output-value" placeholder="Converted value" name="output-value" title="Result box" aria-label="Converted value">
+        <select name="output-type" id="output-type" title="Select time type" aria-label="To Unit">
             <option value="fs">femtosecond (fs)</option>
             <option value="ns">Nanosecond (ns)</option>
             <option value="ps">Picosecond</option>
@@ -131,6 +136,81 @@
             <option value="millennium">Millennium</option>
         </select>
     </div>
+
+    <article class="seo-content">
+        <h2>Complete Guide to Time Conversion</h2>
+        <p>Welcome to our incredibly fast and accurate online <strong>Time Converter</strong>. In our modern, fast-paced world, time is the ultimate currency. Whether you're tracking billable hours for freelance work, studying quantum mechanics scaling down to nanoseconds, or looking back into history over millennia and centuries, switching between different units of time seamlessly is essential. Our tool offers unparalleled precision across microscopic and macrocosmic spans of time.</p>
+        
+        <h3>Practical Applications of Time Conversion</h3>
+        <p>When does scaling and converting time become critical in daily life and specialized fields? Here are a few core examples:</p>
+        <ul>
+            <li><strong>Freelancers & Independent Contractors:</strong> You’ve worked exactly 254 minutes on a given project. How many billable hours is that? Entering 254 into our minutes-to-hours converter gives you the precise fractional amount (4.23 hours) to invoice.</li>
+            <li><strong>Athletics and Professional Sports:</strong> Endurance runners and swimmers often calculate split times. Changing marathon times from hours to total minutes or seconds allows for hyper-accurate pacing metrics.</li>
+            <li><strong>Computer Science & Networking:</strong> When measuring ping, latency, and algorithmic execution times, engineers rely heavily on microscopic time divisions such as milliseconds, microseconds, and nanoseconds.</li>
+        </ul>
+        
+        <h3>Understanding Universal Time Units</h3>
+        <p>Time scale is standardized across the globe, rooted in historical astronomical models. Here is a breakdown of the standard conversion variables extending upward from a single second:</p>
+        
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>Base Unit</th>
+                    <th>To Unit</th>
+                    <th>Exact Conversion Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 Minute (m)</td>
+                    <td>Seconds (s)</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>1 Hour (h)</td>
+                    <td>Minutes (m)</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>1 Day (d)</td>
+                    <td>Hours (h)</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>1 Week (w)</td>
+                    <td>Days (d)</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>1 Year (y)</td>
+                    <td>Days (d)</td>
+                    <td>365 (366 in leap years)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Micro-Time: Beyond the Second</h3>
+        <p>Modern technology requires granular precision well below what a human can manually track. Our Time Converter natively supports the following microscopic increments:</p>
+        <ul>
+            <li><strong>Millisecond (ms):</strong> One-thousandth of a second. Standard measurement for internet latency (ping) and shutter speeds on cameras.</li>
+            <li><strong>Microsecond (μs):</strong> One-millionth of a second. Essential in microprocessor clock cycles and high-frequency algorithmic trading.</li>
+            <li><strong>Nanosecond (ns):</strong> One-billionth of a second. Used by physicists and computer hardware architects. Light travels roughly one foot per nanosecond.</li>
+        </ul>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>How many hours are in exactly one week?</h4>
+        <p>A standard week possesses precisely <strong>168 hours</strong> (24 hours per day multiplied by 7 days). </p>
+
+        <h4>What is a Fortnight?</h4>
+        <p>A fortnight is a unit of time equal to exactly 14 days, or two weeks. Originally derived from the Old English term "fēowertyne niht" (fourteen nights), it remains frequently used in British English today, especially for payroll and standard holiday scheduling.</p>
+
+        <h4>Why do leap years exist?</h4>
+        <p>The time it takes Earth to completely orbit the sun isn't exactly 365 days—it is approximately 365.24 days. To keep our calendar aligned with the astronomical seasons, we inject one extra "leap day" (February 29th) into the calendar approximately every four years.</p>
+
+        <p>Stop risking miscalculations. Bookmark the <strong>All Unit Converter Time Tool</strong> to execute complex historical, contemporary, and microscopic time equations with guaranteed precision on the fly!</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

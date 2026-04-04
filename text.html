@@ -182,12 +182,16 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
 
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -195,17 +199,18 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html" class="bb">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html" class="bb">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/animated/text.gif" alt="Data" class="description-image">
@@ -230,6 +235,71 @@
         <p class="count-status"></p>
 
     </div>
+
+    <article class="seo-content">
+        <h2>The Ultimate Online Text Editor & Formatting Styler</h2>
+        <p>Welcome to our incredibly versatile online <strong>Text Editor & Styler</strong>. Have you ever copied a wall of text from a PDF or a website, only to find the casing is completely ruined or the formatting is broken? Instead of manually retyping paragraphs or wrestling with clunky desktop word processors, our free browser-based text tool lets you clean, style, and structure your copy instantaneously.</p>
+        
+        <h3>Why Use a Browser-Based Text Formatter?</h3>
+        <p>In a world of complex document editing software, sometimes you just need a lightweight, distraction-free environment to heavily manipulate text. Our tool operates strictly on the client side (in your browser), which guarantees three things:</p>
+        <ul>
+            <li><strong>Zero Latency:</strong> Because data is not sent to a server, formatting changes happen in real time.</li>
+            <li><strong>Absolute Privacy:</strong> Your text never leaves your computer. We do not store, track, or index the essays, emails, or code you paste into the editor.</li>
+            <li><strong>No Formatting Remnants:</strong> Have you ever copied text into an email and accidentally pasted the background color and weird fonts from the source? Our editor strips out invisible HTML tags so you are left with pure, stylized text.</li>
+        </ul>
+
+        <h3>Core Casing Utilities Explained</h3>
+        <p>Casing errors are the most common issue when scraping or drafting text. Our dropdown menu fixes these errors in a single click:</p>
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>Feature Name</th>
+                    <th>What it Does</th>
+                    <th>Example Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>UPPERCASE</strong></td>
+                    <td>Converts every single character to a capital letter. Excellent for headers and strong warnings.</td>
+                    <td>THE QUICK BROWN FOX.</td>
+                </tr>
+                <tr>
+                    <td><strong>lowercase</strong></td>
+                    <td>Forces every character down to a small letter. Great for cleaning up erratic typing.</td>
+                    <td>the quick brown fox.</td>
+                </tr>
+                <tr>
+                    <td><strong>Capitalize (Title Case)</strong></td>
+                    <td>Capitalizes the very first letter of every individual word. Perfect for blog titles.</td>
+                    <td>The Quick Brown Fox.</td>
+                </tr>
+                <tr>
+                    <td><strong>Sentence case</strong></td>
+                    <td>Capitalizes only the first letter of the first word in a sentence, leaving the rest lowercase.</td>
+                    <td>The quick brown fox.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Visual Styling Capabilities</h3>
+        <p>Beyond casing, our tool acts as a rapid visual styler:</p>
+        <ul>
+            <li><strong>Bold & Italicizer:</strong> Highlight your most critical sentences or citations to see how they scan visually before copying them to a publishing platform.</li>
+            <li><strong>Text Alignment Engine:</strong> Clean up the presentation of your drafting board by justifying, centering, or aligning text to either margin. It mimics professional typesetting instantly.</li>
+        </ul>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>Does this tool auto-save my work?</h4>
+        <p>Because privacy is our priority, this tool does not leave cookies or save logic on a backend server. If you refresh the page or close your browser tab, your drafted text will be cleared. Always copy your finalized text to your clipboard before exiting!</p>
+
+        <h4>Can I use this for social media posts?</h4>
+        <p>Absolutely! It is the perfect scratchpad for drafting long-form Facebook posts, Twitter threads, or LinkedIn articles, allowing you to ensure the casing and styling are pristine before you publish to the world.</p>
+
+        <p>Stop wasting hours retyping broken paragraphs. Bookmark the <strong>All Unit Converter Text Styler</strong> and sanitize your copy in seconds!</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

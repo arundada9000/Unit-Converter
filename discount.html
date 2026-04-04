@@ -61,11 +61,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -73,17 +77,18 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html" class="bb">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html" class="bb">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/discount.webp" alt="Data" class="description-image">
@@ -105,6 +110,57 @@
         </div>
         <p id="after-amount">Save amount : 0.00<br> Amount after discount : 0.00</p>
     </div>
+
+    <article class="seo-content">
+        <h2>The Complete Guide to Calculating Discounts & Shopping Savings</h2>
+        <p>Never get confused during a Black Friday sale or clearance event again! Our lightning-fast online <strong>Discount Calculator</strong> is designed to help shoppers, bulk wholesale purchasers, and retail business owners instantly figure out the ultimate price of marked-down items. By typing in your base price and the advertised percent-off, you will instantly discover how much cash you keep in your wallet.</p>
+        
+        <h3>Why You Need a Dedicated Discount Calculator</h3>
+        <p>While calculating 10% or 50% off a round number is easy to do mentally, real-world shopping is rarely that clean. Imagine you are eyeing a television marked at $849.99 with a bizarre "33% off clearance plus an extra 5% at register" sticker. Standard mental math fails quickly in these scenarios. Our web app eliminates the guesswork, showing both the total monetary discount and the final required payment.</p>
+
+        <h3>The Math Behind the Discount</h3>
+        <p>If you find yourself without internet connection and need to manually verify the math on a physical calculator, you can deduce the final price using this standard two-step formula:</p>
+        <ul>
+            <li><strong>Step 1 (Find the Discount Amount):</strong> Multiply the Original Price by the Discount Percentage, then divide by 100.<br><em>e.g., ($50 &times; 20) / 100 = $10 Discount</em></li>
+            <li><strong>Step 2 (Find Final Price):</strong> Subtract the Discount Amount from the Original Price.<br><em>e.g., $50 - $10 = $40 Final Price</em></li>
+        </ul>
+        <p><strong>Pro-Tip (The Quick Method):</strong> If an item is 20% off, that means you are paying 80% of its original value. Simply multiply the price by 0.80 to get the final price instantly! ($50 &times; 0.80 = $40).</p>
+
+        <h3>Common Discount Reference Table</h3>
+        <p>Keep this quick reference guide in mind for standard shopping discounts applied to a standard $100 price tag:</p>
+        
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>Advertised Discount</th>
+                    <th>What You Save (Discount Amount)</th>
+                    <th>What You Pay (Final Amount)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>10% OFF</td><td>$10.00</td><td>$90.00</td></tr>
+                <tr><td>15% OFF</td><td>$15.00</td><td>$85.00</td></tr>
+                <tr><td>20% OFF</td><td>$20.00</td><td>$80.00</td></tr>
+                <tr><td>25% OFF</td><td>$25.00</td><td>$75.00</td></tr>
+                <tr><td>50% OFF (Half Price)</td><td>$50.00</td><td>$50.00</td></tr>
+                <tr><td>75% OFF</td><td>$75.00</td><td>$25.00</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>How do "Double Discounts" work? (e.g., 20% off, plus an extra 10% off)</h4>
+        <p>Retailers purposely use double discounts because it sounds better than it actually is mathematically! If an item is 20% off with an extra 10% applied at the register, <strong>it is NOT 30% off</strong>. The 10% is applied to the <em>already discounted</em> price. For a $100 item, 20% off brings it to $80. Then, 10% is taken off the $80, dropping it by $8. Your final price is $72 (which is realistically a 28% total discount, not 30%).</p>
+
+        <h4>Are taxes included in the discount?</h4>
+        <p>In almost all jurisdictions, governmental sales tax is applied to the <strong>Final Discounted Price</strong>, not the original retail price. You should calculate your discount first before applying your local tax rate.</p>
+
+        <h4>Can businesses use this to calculate markdown margins?</h4>
+        <p>Absolutely. Small business owners can simulate pricing strategies, promotional events, and holiday sales brackets by testing different variables against their wholesale costs.</p>
+
+        <p>Stop fumbling with your phone's built-in calculator app in the checkout line. Bookmark the <strong>All Unit Converter Discount Tool</strong> to seamlessly compute sales prices and protect your budget!</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

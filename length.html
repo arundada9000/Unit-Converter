@@ -61,11 +61,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -73,23 +77,24 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html" class="bb">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html" class="bb">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
 
     <div class="container">
         <img src="./images/length.webp" alt="Data" class="description-image">
         <h1>Length Converter</h1>
-        <input type="number" title="Enter length" name="input-value" id="input-value" placeholder="Enter length">
-        <select name="input-type" id="input-type" title="Click to select">
+        <input type="number" title="Enter length" name="input-value" id="input-value" placeholder="Enter length" aria-label="Value to convert">
+        <select name="input-type" id="input-type" title="Click to select" aria-label="From Unit">
             <option value="nm">Nanometer</option>
             <option value="mmm">Micrometer</option>
             <option value="mm">Millimeter (mm)</option>
@@ -112,9 +117,9 @@
         <div class="convert-logo-div">
             <img src="./images/animated/convert.gif" alt="Convert" class="description-image">
         </div>
-        <input type="number" name="output-value" id="output-value" title="Output" placeholder="Converted Length">
+        <input type="number" name="output-value" id="output-value" title="Output" placeholder="Converted Length" aria-label="Converted value">
 
-        <Select name="output-type" id="output-type" title="Click to select">
+        <Select name="output-type" id="output-type" title="Click to select" aria-label="To Unit">
             <option value="nm">Nanometer</option>
             <option value="mmm">Micrometer</option>
             <option value="mm">Millimeter (mm)</option>
@@ -134,6 +139,79 @@
             <option value="A">Angstrom</option>
         </select>
     </div>
+
+    <article class="seo-content">
+        <h2>Complete Guide to Length Conversion</h2>
+        <p>Welcome to our free, lightning-fast <strong>Length Converter</strong>. Whether you are an engineer scaling architectural blueprints, a student completing physics homework, or a traveler trying to make sense of foreign highway signs, converting between different units of length and distance is an unavoidable task. Our tool instantly bridges the gap between the Metric system, the Imperial system, and advanced astronomical measurements.</p>
+        
+        <h3>Why Accurate Length Conversion Matters</h3>
+        <p>In a globalized world, not everyone uses the same measuring stick. The United States heavily relies on the Imperial System (inches, feet, yards, miles), whereas nearly the rest of the world utilizes the Metric System (millimeters, centimeters, meters, kilometers). Mixing these up can lead to disastrous architectural failures, botched DIY projects, or simply missing a highway exit abroad.</p>
+        
+        <h3>How to Use Our Length Converter?</h3>
+        <p>Our tool is designed for maximum speed—no page reloads, no complicated sub-menus. Follow these simple steps:</p>
+        <ol>
+            <li><strong>Select the Base Unit:</strong> Click the first drop-down menu and choose the unit you want to convert from (e.g., Meters).</li>
+            <li><strong>Input Your Value:</strong> Type the number into the topmost text field.</li>
+            <li><strong>Select the Target Unit:</strong> Choose your desired outcome unit from the bottom drop-down menu (e.g., Feet).</li>
+            <li><strong>Instant Results:</strong> The script dynamically calculates the output down to highly precise decimals.</li>
+        </ol>
+
+        <h3>Common Conversion Formulas & Rules</h3>
+        <p>Understanding the math behind the magic can be incredibly helpful for mental estimations:</p>
+        <table class="seo-table">
+            <thead>
+                <tr>
+                    <th>From Unit</th>
+                    <th>To Unit</th>
+                    <th>Multiplication Factor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Meters (m)</td>
+                    <td>Centimeters (cm)</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Kilometers (km)</td>
+                    <td>Miles (mi)</td>
+                    <td>0.621371</td>
+                </tr>
+                <tr>
+                    <td>Inches (in)</td>
+                    <td>Centimeters (cm)</td>
+                    <td>2.54</td>
+                </tr>
+                <tr>
+                    <td>Feet (ft)</td>
+                    <td>Meters (m)</td>
+                    <td>0.3048</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Exploring Astronomical Measurements</h3>
+        <p>Our converter isn't just for everyday terrestrial distances. We also support deep-space physics measurements used by astronomers:</p>
+        <ul>
+            <li><strong>Light Year (ly):</strong> The distance light travels in one Earth year (roughly 9.46 trillion kilometers). Used to measure interstellar distances.</li>
+            <li><strong>Astronomical Unit (AU):</strong> The average distance from the Earth to the Sun (about 149.6 million kilometers).</li>
+            <li><strong>Parsec (pc):</strong> A unit of length used in astronomy, equal to about 3.26 light-years.</li>
+        </ul>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <h4>How many centimeters are in an inch?</h4>
+        <p>There are exactly <strong>2.54 centimeters</strong> in one inch. This is a defined international standard.</p>
+
+        <h4>What is the difference between a mile and a nautical mile?</h4>
+        <p>A standard land mile is 5,280 feet (1,609.34 meters). A nautical mile is based on the Earth's circumference and is slightly longer, equaling exactly 1,852 meters. Nautical miles are primarily used in maritime and aviation navigation.</p>
+
+        <h4>Why does the US use feet and miles instead of meters?</h4>
+        <p>The US Customary System is a derivative of the English units used by the British Empire. Although there have been multiple attempts to metricate the United States, infrastructure, legacy manufacturing, and cultural momentum have kept the imperial-style system heavily entrenched in everyday American life.</p>
+        
+        <p>Never let long division ruin your workflow again. Bookmark the <strong>All Unit Converter Length Tool</strong> and perform thousands of complex conversions in mere seconds!</p>
+    </article>
+
+    </main>
 
     <footer>
         <div class="footer-container">

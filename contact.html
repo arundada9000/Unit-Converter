@@ -35,211 +35,181 @@
     <link rel="stylesheet" href="./footer.css">
 
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #f7f9fc, #cfe0f7);
-        }
-
         .contact-page {
             display: flex;
             flex-direction: row;
             max-width: 1000px;
-            width: 100%;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            margin: 2rem auto;
+            background: var(--surface-color);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--glass-shadow);
             overflow: hidden;
+            animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Contact Form Section */
         .contact-form {
-            flex: 1;
-            padding: 2rem;
+            flex: 1.2;
+            padding: 3.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background-color: #f1f7ff;
         }
 
         .contact-form h1 {
-            font-size: 2.5rem;
-            color: #0044cc;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-form p, .catchphrase {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .catchphrase {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
             margin-bottom: 1rem;
         }
 
-        .contact-form p,
-        .catchphrase {
-            font-size: 1rem;
-            color: #000000;
-            margin-bottom: 2rem;
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeSlideIn 1s ease-out forwards;
-        }
-
-        .catchphrase {
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-
         @keyframes fadeSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 1.5rem;
         }
 
         label {
-            font-size: 1.1rem;
-            color: #333;
-        }
-
-        input,
-        input[type="text"],
-        textarea {
-            padding: 0.8rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
             font-size: 1rem;
-            width: 100%;
-            outline: none;
-            background-color: white;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: -0.5rem;
         }
 
         input[type="submit"] {
-            background-color: #0044cc;
+            background-color: var(--primary-blue);
             color: white;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all var(--transition-speed);
             border: none;
-            padding: 0.8rem;
-            border-radius: 5px;
+            padding: 1.1rem;
+            border-radius: 12px;
             font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
         }
 
         input[type="submit"]:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
         }
 
         textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 160px;
         }
 
-        /* Follow Me Section */
         .follow-me-section {
-            flex: 0.7;
-            padding: 2rem;
+            flex: 0.8;
+            padding: 3.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #e3ecff;
+            background: rgba(79, 70, 229, 0.02);
+            border-left: 1px solid var(--glass-border);
             text-align: center;
-            position: relative;
         }
 
         .profile-photo {
-            width: 300px;
-            height: 300px;
+            width: 260px;
+            height: 260px;
             border-radius: 50%;
             margin: 1.5rem 0;
             object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            transition: transform var(--transition-speed) cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 6px solid #ffffff;
         }
 
         .profile-photo:hover {
-            transform: translateY(-5px);
+            transform: scale(1.04) rotate(2deg);
         }
 
         .follow-me-section h3 {
             font-size: 1.8rem;
-            color: #0044cc;
-            margin-bottom: 1rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
         }
 
         .social-icons {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
             flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
         }
 
         .socials {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.2rem;
+            flex-wrap: wrap;
         }
 
         .icon {
-            width: 45px;
-            height: 45px;
+            width: 54px;
+            height: 54px;
             cursor: pointer;
-            transition: transform 0.3s ease;
-            border-radius: 50%;
-            background-color: white;
-            padding: 0.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: all var(--transition-speed);
+            border-radius: 14px;
+            background-color: #ffffff;
+            padding: 0.8rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15);
+            background: var(--primary-blue);
+            filter: brightness(0) invert(1);
         }
 
-        .contact-form button:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .convert-logo-div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .convert-logo-div h3 {
-            padding-top: 15px;
-        }
-
-        .convert-logo-div img {
-            border-radius: 50%;
-        }
-
-        @media (max-width:768px) {
+        @media (max-width: 900px) {
             .contact-page {
                 flex-direction: column-reverse;
+                width: 95%;
+                margin-top: 1rem;
             }
-
             .follow-me-section {
-                padding: 0;
+                border-left: none;
+                border-bottom: 1px solid var(--glass-border);
+                padding: 3rem 1.5rem;
             }
-
-            body {
-                padding: 0;
-                margin: 0;
+            .contact-form {
+                padding: 3rem 1.5rem;
             }
-
-            .contact-page {
-                margin-top: 2rem;
-                padding-top: 2rem;
-                background-color: transparent;
+            .profile-photo {
+                width: 200px;
+                height: 200px;
             }
         }
     </style>
@@ -277,11 +247,15 @@
 }
 </script>
 
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#4f46e5">
 </head>
 
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -289,17 +263,18 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./data.html">Data <span id="converterText">Converter</span></a>
-            <a href="./length.html">Length <span id="converterText">Converter</span></a>
-            <a href="./time.html">Time <span id="converterText">Converter</span></a>
-            <a href="./mass.html">Mass <span id="converterText">Converter</span></a>
-            <a href="./temperature.html">Temperature <span id="converterText">Converter</span></a>
-            <a href="./numbersystem.html">Number System <span id="converterText">Converter</span></a>
-            <a href="./discount.html">Discount <span id="converterText">Calculator</span></a>
-            <a href="./power.html">Power mod <span id="converterText">Calculator</span></a>
-            <a href="./text.html">Text Styler</a>
+            <a href="./data.html">Data</a>
+            <a href="./length.html">Length</a>
+            <a href="./time.html">Time</a>
+            <a href="./mass.html">Mass</a>
+            <a href="./temperature.html">Temperature</a>
+            <a href="./numbersystem.html">Numbers</a>
+            <a href="./discount.html">Discount</a>
+            <a href="./power.html">Power</a>
+            <a href="./text.html">Text</a>
         </div>
     </nav>
+    <main role="main">
     <div class="contact-page">
         <!-- Contact Form Section -->
         <div class="contact-form">
@@ -359,6 +334,8 @@
             </div>
         </div>
     </div>
+    </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-info">
