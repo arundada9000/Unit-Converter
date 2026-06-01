@@ -1,4 +1,4 @@
-# All Unit Converter
+﻿# All Unit Converter
 
 Welcome to **All Unit Converter**! This is a simple, real-time, user-friendly tool that allows you to convert between various units seamlessly. Whether you need to convert between units of length, weight, temperature, or more, **All Unit Converter** has got you covered.
 
@@ -42,7 +42,7 @@ Try out the live version of the Unit Converter here: [All Unit Converter](https:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **All Unit Converter** is built with the following technologies:
 
@@ -67,8 +67,8 @@ If you want to contribute, feel free to fork the repository, make changes, and s
 
 ## Contact Me
 
-Hello! 👋  
-I’m **Arun Neupane** from **Nepal 🇳🇵**.  
+Hello!   
+I’m **Arun Neupane** from **Nepal **.  
 Open to collaboration, coding discussions, projects, or just a friendly hello.
 
 ---
@@ -89,4 +89,9 @@ _Let’s build something awesome together!_
 
 ---
 
-_Thank you for checking out **All Unit Converter**! I hope it makes your conversions easy and efficient!_ 🌟
+_Thank you for checking out **All Unit Converter**! I hope it makes your conversions easy and efficient!_ 
+---
+
+## License
+
+This project is for educational and personal learning purposes only. Commercial use, public deployment, or any revenue-generating use requires explicit written permission from the author. See [LICENSE](LICENSE) for details.
