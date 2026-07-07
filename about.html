@@ -54,7 +54,7 @@
     ]
   },
   "datePublished": "2026-01-10",
-  "dateModified": "2026-01-10",
+  "dateModified": "2026-07-22",
   "inLanguage": "en"
 }
 </script>
@@ -93,32 +93,38 @@
 
     <article class="seo-content">
         <div class="convert-logo-div">
-            <h1>About This App</h1>
-            <img src="./images/animated/about.gif" alt="Convert" class="description-image">
+            <h1>About All Unit Converter</h1>
+            <img src="./images/animated/about.gif" alt="About" class="description-image">
         </div>
 
-        <p>
-            Welcome to the Unit Converter App! This application is designed to simplify conversions across various units
-            of measurement, making it easier for you to switch between different systems—whether you're working with
-            length, mass, time, temperature, or other units.
-        </p>
+        <p>All Unit Converter is a free, independent web tool that handles the everyday conversions people actually need &mdash; length, mass, temperature, time, digital storage, number systems and more &mdash; without accounts, uploads, or page reloads. It is built and maintained by one person, and this page explains who that is, why the site exists, and how the numbers behind it are kept accurate.</p>
 
-        <p>
-            With an intuitive interface and quick calculation results, our goal is to enhance your productivity and
-            ensure you have the most accurate information at your fingertips. Whether you're a student, engineer, or
-            just someone who deals with measurements regularly, this app is here to assist you.
-        </p>
+        <h2>Who is behind this site</h2>
+        <p>My name is <strong>Arun Neupane</strong>. I'm a Computer Science and Information Technology (CSIT) student and self-taught web developer from <strong>Parbat, Nepal</strong>. I build small, focused web tools in plain HTML, CSS and JavaScript &mdash; no heavy frameworks &mdash; because I like software that loads instantly and does one job well. All Unit Converter is one of those projects, and I maintain it personally.</p>
+        <p>You can verify who I am and see my other work through my public profiles: <a href="https://github.com/arundada9000" rel="author noopener" target="_blank">GitHub</a>, <a href="https://www.youtube.com/@arundada9000" rel="noopener" target="_blank">YouTube</a>, and <a href="https://www.instagram.com/arundada9000" rel="noopener" target="_blank">Instagram</a>. The full source code for this site is open and public (linked below), so anyone can inspect exactly how each conversion is calculated.</p>
 
-        <p>
-            The app supports a wide range of unit conversions, all within one simple platform. It was created with the
-            user in mind, and we're always looking for ways to improve it, so feel free to provide feedback!
-            <br>
-            Technology Used : Vanilla html , css , js.
-        </p>
+        <h2>Why I built it</h2>
+        <p>I kept running into the same frustration: I'd search for something simple like "cups to grams" or "hex to decimal," land on a converter site, and have to wait through a page reload and dodge full-screen ads just to read one number. So I built the tool I wanted &mdash; every calculation runs instantly in your browser as you type, the layout stays out of the way, and the answer is the first thing you see. It started as a personal utility and a way to sharpen my own JavaScript, and it grew into the nine tools on the site today.</p>
+
+        <h2>How I keep the conversions accurate</h2>
+        <p>A converter is only worth using if you can trust the number it gives back. My standards for this site:</p>
+        <ul>
+            <li><strong>Defined constants are used exactly.</strong> Where a conversion has an internationally agreed value &mdash; for example 1&nbsp;inch = 2.54&nbsp;cm, 1&nbsp;foot = 0.3048&nbsp;m, or 1&nbsp;pound = 453.59237&nbsp;g &mdash; the tool uses the full defined value, not a rounded shortcut.</li>
+            <li><strong>Digital storage is handled honestly.</strong> The Data converter distinguishes binary units (1&nbsp;KiB = 1,024 bytes) from decimal units (1&nbsp;KB = 1,000 bytes), because conflating them is the single most common cause of "wrong" storage numbers.</li>
+            <li><strong>Reported problems get fixed.</strong> When a user has flagged an error in the past, I've corrected the calculation and redeployed. If you spot something off, tell me &mdash; see the note below.</li>
+        </ul>
+
+        <h2>Your privacy</h2>
+        <p>This site does not ask you to sign in and does not send what you type to any server. All conversions are computed locally in your browser, which also means the tools keep working offline once the page has loaded. Details are on the <a href="./privacy.html">Privacy Policy</a> page.</p>
+
+        <h2>Found a mistake? Tell me.</h2>
+        <p>I would genuinely rather hear about a wrong result than have it sit there misleading people. If a conversion looks incorrect, a unit is missing, or something is broken on your device, please reach me through the <a href="./contact.html">contact page</a>. Corrections and suggestions are always welcome, and I read every message myself.</p>
+
+        <p><strong>Technology:</strong> hand-written HTML, CSS and vanilla JavaScript, delivered as an installable Progressive Web App. No trackers, no third-party analytics beyond what is disclosed in the privacy policy.</p>
 
         <div class="signature">
             <p>Made with </p>
-            <img src="./images/animated/heart.gif" alt="Convert" class="description-image">
+            <img src="./images/animated/heart.gif" alt="love" class="description-image">
             <p> by <span>Arun Neupane</span></p>
         </div>
 
@@ -133,7 +139,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-info">
-                <p>&copy; 2024 Arun Neupane. All rights reserved.</p>
+                <p>&copy; 2024&ndash;<span class="current-year">2026</span> Arun Neupane. All rights reserved.</p>
                 <p>Made with ❤️ by Arun Neupane</p>
             </div>
             <div class="footer-links">
