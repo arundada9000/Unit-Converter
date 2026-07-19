@@ -102,3 +102,8 @@ function showUpdateToast(newWorker) {
     newWorker.postMessage({ type: 'SKIP_WAITING' });
   };
 }
+
+// Keep the footer copyright year current automatically
+document.querySelectorAll(".current-year").forEach((el) => {
+  el.textContent = new Date().getFullYear();
+});
