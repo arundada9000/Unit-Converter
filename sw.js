@@ -1,4 +1,4 @@
-const CACHE_NAME = 'unit-converter-cache-v2';
+const CACHE_NAME = 'unit-converter-cache-v3';
 const PRECACHE_URLS = [
   "./",
   "./about.html",
