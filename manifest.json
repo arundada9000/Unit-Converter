@@ -2,7 +2,7 @@
   "name": "All Unit Converter",
   "short_name": "Converter",
   "description": "Convert length, mass, time, data, numbers, temperature, and more.",
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#f8fafc",
   "theme_color": "#4f46e5",
