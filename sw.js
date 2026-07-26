@@ -1,7 +1,7 @@
 const CACHE_NAME = 'unit-converter-cache-v4';
 const PRECACHE_URLS = [
   "./",
-  "./about.html",
+  "./about",
   "./ads.txt",
   "./assets/icons/icon-128x128.png",
   "./assets/icons/icon-144x144.png",
@@ -26,9 +26,9 @@ const PRECACHE_URLS = [
   "./assets/images/og-temperature.png",
   "./assets/images/og-text.png",
   "./assets/images/og-time.png",
-  "./contact.html",
-  "./data.html",
-  "./discount.html",
+  "./contact",
+  "./data",
+  "./discount",
   "./footer.css",
   "./googlee96642ac7e0a4cdd.html",
   "./images/about.png",
@@ -87,20 +87,19 @@ const PRECACHE_URLS = [
   "./images/time.png",
   "./images/time.webp",
   "./index.css",
-  "./index.html",
-  "./length.html",
+  "./length",
   "./manifest.json",
-  "./mass.html",
+  "./mass",
   "./nav.js",
-  "./numbersystem.html",
-  "./power.html",
-  "./privacy.html",
+  "./numbersystem",
+  "./power",
+  "./privacy",
   "./robots.txt",
   "./sitemap.xml",
   "./styles.css",
-  "./temperature.html",
-  "./text.html",
-  "./time.html"
+  "./temperature",
+  "./text",
+  "./time"
 ];
 
 // Allow active client to prompt skip waiting
