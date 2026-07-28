@@ -137,7 +137,7 @@
 
 <body>
     <nav>
-        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="nav-brand" onclick="window.location.href='./'">Converter</div>
         <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -145,22 +145,24 @@
         </div>
 
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./data.html" class="bb">Data</a>
-            <a href="./length.html">Length</a>
-            <a href="./time.html">Time</a>
-            <a href="./mass.html">Mass</a>
-            <a href="./temperature.html">Temperature</a>
-            <a href="./numbersystem.html">Numbers</a>
-            <a href="./discount.html">Discount</a>
-            <a href="./power.html">Power</a>
-            <a href="./text.html">Text</a>
+            <a href="./">Home</a>
+            <a href="./data" class="bb">Data</a>
+            <a href="./length">Length</a>
+            <a href="./time">Time</a>
+            <a href="./mass">Mass</a>
+            <a href="./temperature">Temperature</a>
+            <a href="./numbersystem">Numbers</a>
+            <a href="./discount">Discount</a>
+            <a href="./power">Power</a>
+            <a href="./text">Text</a>
         </div>
     </nav>
     <main role="main">
 
+    <!-- AD: After AdSense approval, enable Auto ads (AdSense dashboard > Settings > Auto ads) or paste your ad unit snippet here. -->
+
     <div class="container">
-        <img src="./images/data.webp" alt="Data" class="description-image">
+        <img src="./images/data.webp" alt="Data storage converter: hard drive and storage units" class="description-image" loading="lazy">
         <h1>Data Converter</h1>
 
         <input type="number" name="input-value" id="input-value" placeholder="Enter number" title="Enter desired data" aria-label="Value to convert">
@@ -190,26 +192,26 @@
     </div>
 
     <article class="seo-content">
-        <h2>Digital storage &amp; data conversion</h2>
-        <p>Digital storage causes more confusion than almost any other unit, mostly because the same word &mdash; "gigabyte" &mdash; is used for two different amounts. This guide explains the binary-versus-decimal gap that makes a "1&nbsp;TB" drive show up as 931&nbsp;GB on your computer, the bit-versus-byte difference that decides your real download speed, and how the units scale from a single bit to a petabyte. The tool above converts across all of them.</p>
-        
-        <h3>Understanding Binary vs. Decimal Storage</h3>
-        <p>There is a widespread discrepancy in how digital storage is marketed versus how computers actually read it. Have you ever bought a "1 Terabyte" hard drive, only to plug it in and see your computer reports 931 Gigabytes? This is due to the difference between Decimal and Binary counting systems.</p>
-        <ul>
-            <li><strong>The Decimal System (Usage: Manufacturers):</strong> Hard drive manufacturers use base-10 mathematics. In this system, 1 Kilobyte equals exactly 1,000 Bytes.</li>
-            <li><strong>The Binary System (Usage: Computers/OS):</strong> Computers run on base-2 mathematics. In a computer memory system, 1 Kilobyte (technically called a Kibibyte) equals 1,024 Bytes.</li>
-        </ul>
-        <p>Our converter bridges this gap effortlessly, giving you the actual computed figures for whatever device or operating system you're using.</p>
+        <h2>Why a "1&nbsp;TB" drive shows up as 931&nbsp;GB</h2>
+        <p>Digital storage is the rare unit system where the marketing label and the measurement are two different things. A drive sold as "1&nbsp;TB" reports 931&nbsp;GB on your computer &mdash; not because it's defective, but because manufacturers count in decimal (1,000&nbsp;=&nbsp;1&nbsp;kilo) while operating systems count in binary (1,024&nbsp;=&nbsp;1&nbsp;kilo). This page explains that gap, the bit-versus-byte difference behind your real download speed, and how the units stack up from a single bit to a petabyte. The tool above converts between all of them in both scales.</p>
 
-        <h3>The Digital Hierarchy</h3>
-        <p>Here is exactly how data scales up from a single piece of code to massive server loads:</p>
-        
+        <h3>The bit-versus-byte trap that decides your download speed</h3>
+        <p>Your internet plan is sold in <strong>megabits per second (Mbps)</strong>, but download managers and browsers show progress in <strong>megabytes per second (MB/s)</strong>. The two are separated by a factor of exactly 8 &mdash; one byte is 8 bits. So a 100&nbsp;Mbps fibre plan can deliver at most 100 &divide; 8 = <strong>12.5&nbsp;MB/s</strong>. When a 5&nbsp;GB game shows an estimated download time, the app has already done this division for you. If a speed test reports 94&nbsp;Mbps, your real file-download rate is about 11.75&nbsp;MB/s &mdash; the same number the Data tool returns when you convert 94 megabits to megabytes.</p>
+
+        <h3>Binary vs decimal: who counts which way</h3>
+        <ul>
+            <li><strong>Decimal (base 10, used by manufacturers):</strong> 1&nbsp;KB = 1,000 bytes, 1&nbsp;MB = 1,000,000 bytes, 1&nbsp;GB = 1,000,000,000 bytes. This is how storage capacity is advertised on boxes.</li>
+            <li><strong>Binary (base 2, used by operating systems):</strong> 1&nbsp;KiB = 1,024 bytes, 1&nbsp;MiB = 1,048,576 bytes, 1&nbsp;GiB = 1,073,741,824 bytes. Windows and macOS report in these, though they still label them "KB", "MB" and "GB".</li>
+        </ul>
+        <p>The result: a "500&nbsp;GB" drive is 500,000,000,000 bytes = 465.66&nbsp;GiB, which Windows displays as "465&nbsp;GB". Neither party is wrong; they are using different reference points. That 931&nbsp;GB "missing" from a 1&nbsp;TB drive is the same phenomenon at a bigger scale.</p>
+
+        <h3>The digital hierarchy, bit to petabyte</h3>
         <table class="seo-table">
             <thead>
                 <tr>
-                    <th>Data Unit</th>
+                    <th>Unit</th>
                     <th>Abbreviation</th>
-                    <th>Equivalent Value (Binary Scale)</th>
+                    <th>Binary Equivalent</th>
                     <th>Real-World Example</th>
                 </tr>
             </thead>
@@ -217,59 +219,69 @@
                 <tr>
                     <td>Bit</td>
                     <td>b</td>
-                    <td>Smallest Unit (1 or 0)</td>
-                    <td>A single boolean text character</td>
+                    <td>Smallest unit (1 or 0)</td>
+                    <td>A single binary signal</td>
                 </tr>
                 <tr>
                     <td>Byte</td>
                     <td>B</td>
-                    <td>8 Bits</td>
-                    <td>A single alphabet letter</td>
+                    <td>8 bits</td>
+                    <td>One letter of text</td>
                 </tr>
                 <tr>
                     <td>Kilobyte</td>
                     <td>KB</td>
-                    <td>1,024 Bytes</td>
-                    <td>A short email or text document</td>
+                    <td>1,024 bytes</td>
+                    <td>A short email</td>
                 </tr>
                 <tr>
                     <td>Megabyte</td>
                     <td>MB</td>
-                    <td>1,024 Kilobytes</td>
-                    <td>A high-quality MP3 song (approx. 4MB)</td>
+                    <td>1,024 KB</td>
+                    <td>A high-quality MP3 (~4&nbsp;MB)</td>
                 </tr>
                 <tr>
                     <td>Gigabyte</td>
                     <td>GB</td>
-                    <td>1,024 Megabytes</td>
-                    <td>A full-length HD movie (approx. 3-5GB)</td>
+                    <td>1,024 MB</td>
+                    <td>An HD movie (~3&ndash;5&nbsp;GB)</td>
                 </tr>
                 <tr>
                     <td>Terabyte</td>
                     <td>TB</td>
-                    <td>1,024 Gigabytes</td>
-                    <td>A modern gaming console's internal drive</td>
+                    <td>1,024 GB</td>
+                    <td>A modern gaming console drive</td>
                 </tr>
                 <tr>
                     <td>Petabyte</td>
                     <td>PB</td>
-                    <td>1,024 Terabytes</td>
-                    <td>Massive corporate cloud arrays</td>
+                    <td>1,024 TB</td>
+                    <td>Large cloud data centres</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>Frequently Asked Questions (FAQ)</h3>
-        <h4>What is the difference between a Bit (b) and a Byte (B)?</h4>
-        <p>This is the most common point of tech confusion! Note the capitalization: a lowercase 'b' stands for bit, and an uppercase 'B' stands for Byte. There are exactly <strong>8 bits in 1 Byte</strong>. Internet Service Providers (ISPs) typically advertise speeds in Mega<em>bits</em> per second (Mbps). To find out your actual download max speed in Mega<em>bytes</em> (MB/s), you must divide the ISP number by 8. (E.g., 100 Mbps = 12.5 MB/s).</p>
+        <h3>How much actually fits where</h3>
+        <p>Real-world estimates vary with quality, but these are useful planning numbers:</p>
+        <ul>
+            <li>A 12-megapixel phone photo is roughly 3&ndash;4&nbsp;MB, so 1&nbsp;GB holds about 250&ndash;300 photos.</li>
+            <li>A 4K (not compressed) minute of video runs about 375&nbsp;MB &mdash; a 1&nbsp;TB drive fits roughly 45 hours.</li>
+            <li>A typical song is 3&ndash;5&nbsp;MB in MP3, so 1&nbsp;GB is about 250 songs.</li>
+            <li>Text is tiny: a 100-page novel is around 300&ndash;400&nbsp;KB, meaning a 4&nbsp;GB flash drive holds thousands of them.</li>
+        </ul>
 
-        <h4>How many photos can 1 Gigabyte (GB) hold?</h4>
-        <p>While this heavily depends on the camera quality, an average 12-megapixel smartphone photo uses roughly 3 to 4 Megabytes. Therefore, a single Gigabyte (1,024 MB) can store approximately 250 to 300 photos.</p>
+        <h3>Data unit questions that keep coming up</h3>
+        <h4>Is my 1&nbsp;TB drive actually faulty?</h4>
+        <p>Almost certainly not. Check the decimal-vs-binary gap above: 1&nbsp;TB advertised = 1,000,000,000,000 bytes = 931.32&nbsp;GiB. A drive reporting 931&nbsp;GB in Windows is behaving exactly as designed.</p>
 
-        <h4>What lies beyond a Petabyte?</h4>
-        <p>As internet reliance aggressively grows, so do the units. Beyond a Petabyte (PB) lies the Exabyte (EB), followed by the Zettabyte (ZB), and finally the Yottabyte (YB)—which is equivalent to one trillion Terabytes.</p>
+        <h4>Why do I need to divide Mbps by 8?</h4>
+        <p>Because "Mbps" is megabits and "MB/s" is megabytes, and there are 8 bits in every byte. Divide any Mbps figure by 8 to get the theoretical maximum MB/s &mdash; real-world speeds are lower due to overhead, so treat it as a ceiling.</p>
 
-        <p>Working with number bases too? The <a href="./numbersystem.html">Number System converter</a> handles binary, octal and hexadecimal. All nine tools are listed on the <a href="./index.html">home page</a>.</p>
+        <h4>What comes after a petabyte?</h4>
+        <p>In order: exabyte (1,024&nbsp;PB), zettabyte (1,024&nbsp;EB), then yottabyte (1,024&nbsp;ZB). Internet providers and big-tech clouds are the only organisations dealing in these today.</p>
+
+        <h4>Is a kibibyte the same as a kilobyte?</h4>
+        <p>Not exactly. A kilobyte (KB) is 1,000 bytes; a kibibyte (KiB) is 1,024 bytes. The binary names (&ndash;bi&ndash;) exist precisely to remove this ambiguity &mdash; this tool converts in both scales so you can pick whichever your software reports.</p>
     </article>
 
     </main>
@@ -281,9 +293,9 @@
                 <p>Made with ❤️ by Arun Neupane</p>
             </div>
             <div class="footer-links">
-                <a href="./about.html">About</a>
-                <a href="./privacy.html">Privacy Policy</a>
-                <a href="./contact.html">Contact</a>
+                <a href="./about">About</a>
+                <a href="./privacy">Privacy Policy</a>
+                <a href="./contact">Contact</a>
             </div>
         </div>
     </footer>
