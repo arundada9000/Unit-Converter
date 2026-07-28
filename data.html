@@ -5,27 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Data Unit Converter - All Unit Converter App</title>
+    <title>Data Storage Converter - Convert KB, MB, GB, TB Online</title>
     <meta name="description"
-        content="Easily convert data units such as bytes, kilobytes, megabytes, gigabytes, and more online for free.">
+        content="Convert bytes, KB, MB, GB, TB and PB instantly. Understand the 1 TB vs 931 GB difference, binary vs decimal, and Mbps to MB/s conversions.">
     <meta name="keywords"
-        content="data converter, byte converter, kilobyte, megabyte, gigabyte, online unit conversion, all unit converter">
-    <meta name="robots" content="index, follow">
+        content="data converter, MB to GB, GB to TB, bytes to megabytes, binary vs decimal storage, Mbps to MB/s, 1 TB in GB, free data unit converter">
+    <meta name="author" content="Arun Neupane">
+    <meta name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <link rel="canonical" href="https://allunitconverter.netlify.app/data">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Data Unit Converter - All Unit Converter App">
-    <meta property="og:description"
-        content="Convert data units like bytes, KB, MB, GB easily online and instantly. Free and simple to use.">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="All Unit Converter">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Data Storage Converter - Convert KB, MB, GB, TB Online">
+    <meta property="og:description"
+        content="Convert bytes, KB, MB, GB, TB and PB instantly. Understand why a 1 TB drive shows 931 GB.">
     <meta property="og:url" content="https://allunitconverter.netlify.app/data">
     <meta property="og:image" content="https://allunitconverter.netlify.app/assets/images/og-data.png">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Data Unit Converter - All Unit Converter App">
-    <meta name="twitter:description" content="Convert bytes, KB, MB, GB, and more easily online for free.">
+    <meta name="twitter:title" content="Data Storage Converter - Convert KB, MB, GB, TB Online">
+    <meta name="twitter:description" content="Convert bytes, KB, MB, GB, TB and PB instantly, with binary and decimal scales.">
     <meta name="twitter:image" content="https://allunitconverter.netlify.app/assets/images/og-data.png">
 
     <link rel="stylesheet" href="./styles.css">
@@ -35,27 +39,91 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Data Converter",
-  "url": "https://allunitconverter.netlify.app/data",
-  "description": "Convert data units like bytes, kilobytes, megabytes, gigabytes, and more with our online Data Converter tool.",
-  "applicationCategory": "Calculator",
-  "operatingSystem": "Web",
-  "author": {
-    "@type": "Person",
-    "name": "Arun Neupane",
-    "sameAs": [
-      "https://github.com/arundada9000",
-      "https://www.facebook.com/arundada9000",
-      "https://www.instagram.com/arundada9000",
-      "https://www.youtube.com/@arundada9000",
-      "https://wa.me/9779811420975"
-    ]
-  },
-  "image": "https://allunitconverter.netlify.app/assets/images/og-data.png",
-  "datePublished": "2026-01-10",
-  "dateModified": "2026-07-22",
-  "inLanguage": "en"
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Data Converter",
+      "url": "https://allunitconverter.netlify.app/data",
+      "description": "Convert data units like bits, bytes, kilobytes, megabytes, gigabytes, terabytes and petabytes in both binary and decimal scales.",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "Web",
+      "author": {
+        "@type": "Person",
+        "name": "Arun Neupane",
+        "sameAs": [
+          "https://github.com/arundada9000",
+          "https://www.facebook.com/arundada9000",
+          "https://www.instagram.com/arundada9000",
+          "https://www.youtube.com/@arundada9000",
+          "https://wa.me/9779811420975"
+        ]
+      },
+      "image": "https://allunitconverter.netlify.app/assets/images/og-data.png",
+      "datePublished": "2026-01-10",
+      "dateModified": "2026-08-05",
+      "inLanguage": "en",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://allunitconverter.netlify.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Data Converter",
+          "item": "https://allunitconverter.netlify.app/data"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my 1 TB drive actually faulty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost certainly not. A 1 TB advertised drive is 1,000,000,000,000 bytes, which equals 931.32 GiB. A drive reporting 931 GB in Windows is behaving exactly as designed due to the decimal-vs-binary counting gap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I need to divide Mbps by 8?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because Mbps is megabits per second and MB/s is megabytes per second, and there are 8 bits in every byte. Divide any Mbps figure by 8 to get the theoretical maximum MB/s - real-world speeds are lower due to overhead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What comes after a petabyte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In order: exabyte (1,024 PB), zettabyte (1,024 EB), then yottabyte (1,024 ZB). Internet providers and big-tech clouds are the only organisations dealing in these today."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a kibibyte the same as a kilobyte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not exactly. A kilobyte (KB) is 1,000 bytes; a kibibyte (KiB) is 1,024 bytes. The binary names exist precisely to remove this ambiguity, and this tool converts in both scales."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 
