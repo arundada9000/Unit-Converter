@@ -139,7 +139,7 @@
 
 <body>
     <nav>
-        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="nav-brand" onclick="window.location.href='./'">Converter</div>
         <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -147,22 +147,24 @@
         </div>
 
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./data.html">Data</a>
-            <a href="./length.html" class="bb">Length</a>
-            <a href="./time.html">Time</a>
-            <a href="./mass.html">Mass</a>
-            <a href="./temperature.html">Temperature</a>
-            <a href="./numbersystem.html">Numbers</a>
-            <a href="./discount.html">Discount</a>
-            <a href="./power.html">Power</a>
-            <a href="./text.html">Text</a>
+            <a href="./">Home</a>
+            <a href="./data">Data</a>
+            <a href="./length" class="bb">Length</a>
+            <a href="./time">Time</a>
+            <a href="./mass">Mass</a>
+            <a href="./temperature">Temperature</a>
+            <a href="./numbersystem">Numbers</a>
+            <a href="./discount">Discount</a>
+            <a href="./power">Power</a>
+            <a href="./text">Text</a>
         </div>
     </nav>
     <main role="main">
 
+    <!-- AD: After AdSense approval, enable Auto ads (AdSense dashboard > Settings > Auto ads) or paste your ad unit snippet here. -->
+
     <div class="container">
-        <img src="./images/length.webp" alt="Data" class="description-image">
+        <img src="./images/length.webp" alt="Length converter: ruler and units of measurement" class="description-image" loading="lazy">
         <h1>Length Converter</h1>
         <input type="number" title="Enter length" name="input-value" id="input-value" placeholder="Enter length" aria-label="Value to convert">
         <select name="input-type" id="input-type" title="Click to select" aria-label="From Unit">
@@ -212,14 +214,14 @@
     </div>
 
     <article class="seo-content">
-        <h2>Length and distance conversion</h2>
-        <p>Length is where the metric and imperial systems collide most often &mdash; centimetres against inches, metres against feet, kilometres against miles. This guide gives the exact conversion factors, explains the difference between a land mile and a nautical mile, includes a quick height chart (the "170&nbsp;cm in feet" question people always ask), and even covers the astronomical units the tool supports. Enter a value above and the result updates instantly.</p>
-        
-        <h3>Why Accurate Length Conversion Matters</h3>
-        <p>In a globalized world, not everyone uses the same measuring stick. The United States heavily relies on the Imperial System (inches, feet, yards, miles), whereas nearly the rest of the world utilizes the Metric System (millimeters, centimeters, meters, kilometers). Mixing these up can lead to disastrous architectural failures, botched DIY projects, or simply missing a highway exit abroad.</p>
-        
+        <h2>Inches, feet, metres and miles: the length conversions people actually make</h2>
+        <p>Nearly every country in the world measures distance in metres and kilometres. The United States, and to some degree the UK, still uses inches, feet and miles. So the conversions below are the ones that show up in daily life &mdash; on furniture listings, gym apps, running routes, school forms and hardware stores &mdash; not just in a textbook. Type any value into the tool above and the answer updates as you type, in either direction.</p>
+
+        <h3>A worked example you can copy</h3>
+        <p>Say a shop lists a desk as 5&nbsp;feet 6&nbsp;inches wide, but you measure your room in centimetres. Convert the feet-and-inches to inches first: (5 &times; 12) + 6 = 66 inches. Then multiply by the exact factor &mdash; 66 &times; 2.54 = 167.6&nbsp;cm. That is the same number the tool returns, because 1 inch is defined as exactly 2.54&nbsp;cm by international agreement; nothing is rounded. The reverse is equally common: a 10&nbsp;km run is 10 &times; 0.621371 = 6.21 miles.</p>
+
         <h3>Height conversion chart (feet &amp; inches to centimetres)</h3>
-        <p>By far the most common length search is converting a person's height between feet-and-inches and centimetres &mdash; for forms, sports profiles, or comparing with friends abroad. Here are the everyday values:</p>
+        <p>Converting a person's height between feet-and-inches and centimetres is one of the most-searched length questions &mdash; for visa forms, fitness profiles, or comparing heights with friends abroad. Here are the everyday values:</p>
         <table class="seo-table">
             <thead>
                 <tr><th>Feet &amp; inches</th><th>Total inches</th><th>Centimetres</th></tr>
@@ -235,61 +237,75 @@
                 <tr><td>6'2"</td><td>74"</td><td>188.0 cm</td></tr>
             </tbody>
         </table>
-        <p>The maths: each inch is exactly 2.54&nbsp;cm, so multiply total inches by 2.54. For example, 5'9" is 69&nbsp;inches &times; 2.54 = 175.3&nbsp;cm. To go the other way, divide centimetres by 2.54 to get total inches, then divide by 12 for feet.</p>
+        <p>The maths: 1 inch is exactly 2.54&nbsp;cm, so multiply total inches by 2.54. For example, 5'9" is 69&nbsp;inches &times; 2.54 = 175.3&nbsp;cm. Going the other way, divide centimetres by 2.54 to get total inches, then divide by 12 to separate feet from inches.</p>
 
-        <h3>Common Conversion Formulas & Rules</h3>
-        <p>Understanding the math behind the magic can be incredibly helpful for mental estimations:</p>
+        <h3>Paper sizes and screens: conversions hiding in plain sight</h3>
+        <p>Two everyday things use odd units: paper and screens. An A4 sheet is 210&nbsp;&times;&nbsp;297&nbsp;mm (8.27&nbsp;&times;&nbsp;11.69&nbsp;in), while the US "Letter" size is 8.5&nbsp;&times;&nbsp;11&nbsp;in (215.9&nbsp;&times;&nbsp;279.4&nbsp;mm) &mdash; close enough that both print nearly interchangeably, but not identical. Screens are sized by their diagonal in inches: a 27-inch monitor has a 68.58&nbsp;cm diagonal, and the phone in your pocket is likely 6.1&ndash;6.7 inches (15.5&ndash;17&nbsp;cm). If you buy a desk or monitor from another country, checking these dimensions against your space in centimetres saves a return trip.</p>
+
+        <h3>Every unit on this tool, and when you'd use it</h3>
+        <ul>
+            <li><strong>Everyday metric:</strong> millimetres and centimetres for small objects and fabric, metres for rooms and heights, kilometres for roads and runs.</li>
+            <li><strong>Everyday imperial:</strong> inches for screens and hardware, feet for height and room dimensions, yards for fabric and sports fields, miles for distance.</li>
+            <li><strong>Micron and atomic scale:</strong> micrometres, nanometres and angstroms for engineering tolerances, chip manufacturing and wavelengths of light.</li>
+            <li><strong>Survey and navigation:</strong> the nautical mile (exactly 1,852&nbsp;m) for aviation and shipping, the fathom (1.8288&nbsp;m) for water depth, and the furlong for horse racing.</li>
+            <li><strong>Astronomical:</strong> the astronomical unit (Earth&ndash;Sun distance, ~149.6 million km), the light-year (~9.46 trillion km), and the parsec (~3.26 light-years) for space.</li>
+        </ul>
+
+        <h3>Common conversion factors worth remembering</h3>
         <table class="seo-table">
             <thead>
                 <tr>
                     <th>From Unit</th>
                     <th>To Unit</th>
-                    <th>Multiplication Factor</th>
+                    <th>Exact Factor</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Meters (m)</td>
-                    <td>Centimeters (cm)</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>Kilometers (km)</td>
-                    <td>Miles (mi)</td>
-                    <td>0.621371</td>
-                </tr>
-                <tr>
                     <td>Inches (in)</td>
-                    <td>Centimeters (cm)</td>
+                    <td>Centimetres (cm)</td>
                     <td>2.54</td>
                 </tr>
                 <tr>
                     <td>Feet (ft)</td>
-                    <td>Meters (m)</td>
+                    <td>Metres (m)</td>
                     <td>0.3048</td>
+                </tr>
+                <tr>
+                    <td>Yards (yd)</td>
+                    <td>Metres (m)</td>
+                    <td>0.9144</td>
+                </tr>
+                <tr>
+                    <td>Miles (mi)</td>
+                    <td>Kilometres (km)</td>
+                    <td>1.609344</td>
+                </tr>
+                <tr>
+                    <td>Metres (m)</td>
+                    <td>Feet (ft)</td>
+                    <td>3.280840</td>
+                </tr>
+                <tr>
+                    <td>Kilometres (km)</td>
+                    <td>Miles (mi)</td>
+                    <td>0.621371</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>Exploring Astronomical Measurements</h3>
-        <p>Our converter isn't just for everyday terrestrial distances. We also support deep-space physics measurements used by astronomers:</p>
-        <ul>
-            <li><strong>Light Year (ly):</strong> The distance light travels in one Earth year (roughly 9.46 trillion kilometers). Used to measure interstellar distances.</li>
-            <li><strong>Astronomical Unit (AU):</strong> The average distance from the Earth to the Sun (about 149.6 million kilometers).</li>
-            <li><strong>Parsec (pc):</strong> A unit of length used in astronomy, equal to about 3.26 light-years.</li>
-        </ul>
+        <h3>Length questions that come up again and again</h3>
+        <h4>How tall is 170 cm in feet and inches?</h4>
+        <p>Divide 170 by 2.54 to get 66.93 inches, then split by 12: that's 5 feet with 6.93 inches left over &mdash; so 170&nbsp;cm is about <strong>5'7"</strong>. The chart above covers the full range.</p>
 
-        <h3>Frequently Asked Questions (FAQ)</h3>
-        <h4>How many centimeters are in an inch?</h4>
-        <p>There are exactly <strong>2.54 centimeters</strong> in one inch. This is a defined international standard.</p>
+        <h4>Is an American mile the same as a mile elsewhere?</h4>
+        <p>Yes, the statute mile is 5,280 feet (1,609.344&nbsp;m) everywhere. The thing people confuse is the <strong>nautical mile</strong>, which is 1,852&nbsp;m and is used in aviation and shipping because it corresponds to one minute of latitude.</p>
 
-        <h4>What is the difference between a mile and a nautical mile?</h4>
-        <p>A standard land mile is 5,280 feet (1,609.34 meters). A nautical mile is based on the Earth's circumference and is slightly longer, equaling exactly 1,852 meters. Nautical miles are primarily used in maritime and aviation navigation.</p>
+        <h4>What is a light-year exactly?</h4>
+        <p>A light-year is a distance, not a time: the distance light travels in one Earth year, about 9.46 trillion kilometres. The nearest star, Proxima Centauri, is about 4.24 light-years away. The parsec is related &mdash; 1 parsec &asymp; 3.26 light-years.</p>
 
-        <h4>Why does the US use feet and miles instead of meters?</h4>
-        <p>The US Customary System is a derivative of the English units used by the British Empire. Although there have been multiple attempts to metricate the United States, infrastructure, legacy manufacturing, and cultural momentum have kept the imperial-style system heavily entrenched in everyday American life.</p>
-        
-        <p>For weight and temperature conversions to go with your project or recipe, see the <a href="./mass.html">Mass converter</a> and <a href="./temperature.html">Temperature converter</a>. All nine tools are on the <a href="./index.html">home page</a>.</p>
+        <h4>Why does the US still use feet and miles?</h4>
+        <p>The US customary system descends from the British imperial units. There have been several attempts to metricate since the 1970s, but the cost of changing roads, machinery, packaging and habits has kept it entrenched &mdash; so the two systems will keep meeting on this page.</p>
     </article>
 
     </main>
@@ -301,9 +317,9 @@
                 <p>Made with ❤️ by Arun Neupane</p>
             </div>
             <div class="footer-links">
-                <a href="./about.html">About</a>
-                <a href="./privacy.html">Privacy Policy</a>
-                <a href="./contact.html">Contact</a>
+                <a href="./about">About</a>
+                <a href="./privacy">Privacy Policy</a>
+                <a href="./contact">Contact</a>
             </div>
         </div>
     </footer>
