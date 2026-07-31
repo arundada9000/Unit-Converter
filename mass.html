@@ -139,7 +139,7 @@
 
 <body>
     <nav>
-        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="nav-brand" onclick="window.location.href='./'">Converter</div>
         <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -147,22 +147,24 @@
         </div>
 
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./data.html">Data</a>
-            <a href="./length.html">Length</a>
-            <a href="./time.html">Time</a>
-            <a href="./mass.html" class="bb">Mass</a>
-            <a href="./temperature.html">Temperature</a>
-            <a href="./numbersystem.html">Numbers</a>
-            <a href="./discount.html">Discount</a>
-            <a href="./power.html">Power</a>
-            <a href="./text.html">Text</a>
+            <a href="./">Home</a>
+            <a href="./data">Data</a>
+            <a href="./length">Length</a>
+            <a href="./time">Time</a>
+            <a href="./mass" class="bb">Mass</a>
+            <a href="./temperature">Temperature</a>
+            <a href="./numbersystem">Numbers</a>
+            <a href="./discount">Discount</a>
+            <a href="./power">Power</a>
+            <a href="./text">Text</a>
         </div>
     </nav>
     <main role="main">
 
+    <!-- AD: After AdSense approval, enable Auto ads (AdSense dashboard > Settings > Auto ads) or paste your ad unit snippet here. -->
+
     <div class="container">
-        <img src="./images/mass.webp" alt="Data" class="description-image">
+        <img src="./images/mass.webp" alt="Mass and weight converter: weighing scale with units" class="description-image" loading="lazy">
         <h1>Mass Converter</h1>
         <input type="number" name="input-value" id="input-value" placeholder="Enter mass" title="Enter desired mass" aria-label="Value to convert">
         <select name="input-type" id="input-type" title="Select mass type" aria-label="From Unit">
@@ -201,75 +203,58 @@
     </div>
 
     <article class="seo-content">
-        <h2>Mass and weight conversion, without the guesswork</h2>
-        <p>Weight is one of the conversions people get wrong most often, usually because a rough "times two" for kilograms-to-pounds quietly undercounts by about 10%. This guide gives the exact factors, explains the units that genuinely trip people up &mdash; short ton versus long ton, a standard ounce versus a troy ounce &mdash; and shows where each is actually used. The tool above converts between all of them as you type.</p>
-        
-        <h3>Mass vs. Weight: What's the Difference?</h3>
-        <p>In everyday language, "mass" and "weight" are used interchangeably, but scientifically, they represent different concepts:</p>
+        <h2>Grams, kilos and pounds: the weight conversions that matter</h2>
+        <p>The rule of thumb "kilograms &times; 2 = pounds" is close &mdash; but wrong enough to matter. The real factor is 2.20462, so on a 30&nbsp;kg suitcase the shortcut undercounts by about 6&nbsp;lb, which is exactly the margin airlines charge for. The tool above uses the exact constants and converts in both directions as you type, including the units people actually hit: grams and ounces for recipes, stone and pounds for body weight, tonnes and tons for freight.</p>
+
+        <h3>Mass versus weight: why the words differ</h3>
+        <p>In everyday speech the two are interchangeable, but they are different physical ideas. Mass is how much matter an object contains and never changes, wherever it is. Weight is the gravitational pull on that mass &mdash; the same 60&nbsp;kg astronaut weighs about 10&nbsp;kg-equivalent on the Moon. Scales in daily life effectively measure mass in units like kilograms and pounds, so the distinction only really matters in physics and space travel.</p>
+
+        <h3>Baggage, body weight and gym plates: three worked examples</h3>
         <ul>
-            <li><strong>Mass:</strong> A measurement of how much matter an object contains. Mass remains constant regardless of where you are in the universe. It is generally measured in Kilograms or Grams.</li>
-            <li><strong>Weight:</strong> A measurement of the gravitational force pulling on that mass. Your weight changes depending on gravity (you weigh less on the moon!). However, for terrestrial purposes, weighing scales display mass equivalent measurements like Pounds and Kilograms.</li>
+            <li><strong>Airline luggage:</strong> A 23&nbsp;kg checked-bag limit is 50.7&nbsp;lb. Your 48&nbsp;lb suitcase is 21.77&nbsp;kg &mdash; under the limit, but only just.</li>
+            <li><strong>Body weight:</strong> A UK person weighing 12 stone 6 lb is 174 lb &mdash; multiply by 0.453592 for 78.9&nbsp;kg. The "12 stone" habit is why the tool includes stone.</li>
+            <li><strong>Gym plates:</strong> An Olympic bar with two 25&nbsp;kg plates is 20 + 50 = 70&nbsp;kg, or 154.3&nbsp;lb. If the gym labels plates in pounds instead, 45&nbsp;lb plates give a 155&nbsp;lb bar.</li>
         </ul>
 
-        <h3>Common Everyday Mass Conversions</h3>
-        <p>Different cultures and industries have established varying standards for weighing matter. Our tool automatically accounts for these conversions. Below are the most frequently calculated mass ratios:</p>
-        
+        <h3>Everyday conversion factors</h3>
         <table class="seo-table">
             <thead>
                 <tr>
                     <th>From Unit</th>
                     <th>To Unit</th>
-                    <th>Approximate Value</th>
+                    <th>Value</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Kilograms (kg)</td>
-                    <td>Pounds (lbs)</td>
-                    <td>2.20462 lbs</td>
-                </tr>
-                <tr>
-                    <td>Pounds (lbs)</td>
-                    <td>Kilograms (kg)</td>
-                    <td>0.45359 kg</td>
-                </tr>
-                <tr>
-                    <td>Grams (g)</td>
-                    <td>Ounces (oz)</td>
-                    <td>0.03527 oz</td>
-                </tr>
-                <tr>
-                    <td>Stone (st)</td>
-                    <td>Pounds (lbs)</td>
-                    <td>14 lbs</td>
-                </tr>
-                <tr>
-                    <td>Tonne (t)</td>
-                    <td>Kilograms (kg)</td>
-                    <td>1000 kg</td>
-                </tr>
+                <tr><td>Kilograms (kg)</td><td>Pounds (lb)</td><td>2.20462</td></tr>
+                <tr><td>Pounds (lb)</td><td>Kilograms (kg)</td><td>0.453592</td></tr>
+                <tr><td>Grams (g)</td><td>Ounces (oz)</td><td>0.035274</td></tr>
+                <tr><td>Stone (st)</td><td>Pounds (lb)</td><td>14</td></tr>
+                <tr><td>Ounces (oz)</td><td>Grams (g)</td><td>28.3495</td></tr>
+                <tr><td>Tonne (t)</td><td>Kilograms (kg)</td><td>1,000</td></tr>
             </tbody>
         </table>
 
-        <h3>Specialized Units of Mass</h3>
-        <p>We don't just calculate basic groceries. Our tool spans across highly specialized fields:</p>
+        <h3>Where the specialist units show up</h3>
         <ul>
-            <li><strong>Carat (ct):</strong> Predominantly used in gemology to measure the mass of diamonds and precious stones. One carat is equal to exactly 200 milligrams (0.2 grams).</li>
-            <li><strong>Grain (gr):</strong> Originally based on the mass of a single seed of cereal. It is widely used today to measure the mass of bullets, gunpowder, and archery arrows. One grain is exactly 64.79891 milligrams.</li>
-            <li><strong>Troy Ounce:</strong> Often used for precious metals like gold and silver. Note that a Troy Ounce is slightly heavier than a standard Avoirdupois Ounce.</li>
+            <li><strong>Carat (ct):</strong> Gemstones. One carat is exactly 200&nbsp;mg (0.2&nbsp;g) &mdash; a 1-carat diamond is therefore 0.2&nbsp;g.</li>
+            <li><strong>Grain (gr):</strong> Ammunition, gunpowder and arrows. One grain is exactly 64.79891&nbsp;mg, originally tied to a single cereal seed.</li>
+            <li><strong>Troy ounce:</strong> Gold and silver. Heavier than the everyday (avoirdupois) ounce &mdash; 31.1035&nbsp;g vs 28.3495&nbsp;g &mdash; which is why a "1&nbsp;oz" gold bar weighs more than 28&nbsp;g. This tool uses the everyday ounce; precious-metals dealers work in troy ounces.</li>
+            <li><strong>Short vs long ton:</strong> The US short ton is 2,000&nbsp;lb, the UK long ton is 2,240&nbsp;lb, and the metric tonne is 1,000&nbsp;kg (&asymp;2,204.6&nbsp;lb). Freight contracts always specify which one.</li>
         </ul>
 
-        <h3>Frequently Asked Questions (FAQ)</h3>
-        <h4>How many pounds make up one Stone?</h4>
-        <p>A "Stone" is a traditional British unit of weight. Exactly <strong>14 pounds</strong> make up one Stone. If someone weighs 10 Stone, they weigh 140 pounds.</p>
+        <h3>Weight questions that keep coming up</h3>
+        <h4>How many pounds make up one stone?</h4>
+        <p>Exactly 14. Someone weighing 10 stone weighs 140&nbsp;lb, or 63.5&nbsp;kg.</p>
 
-        <h4>What is the difference between a Short Ton and a Long Ton?</h4>
-        <p>This is a common source of industrial confusion! A <strong>Short Ton (US)</strong> is perfectly equal to 2,000 pounds. A <strong>Long Ton (UK)</strong> is equal to 2,240 pounds. The metric <strong>Tonne</strong> (often called a metric ton) is equal to 1,000 kilograms (approximately 2,204.6 pounds).</p>
+        <h4>Is "times 2" good enough for kilograms to pounds?</h4>
+        <p>For a rough sense, yes. The exact factor is 2.20462, so "&times;2" undercounts by about 9%. At airport weight limits or for precise dosing, use the tool &mdash; the difference is real.</p>
 
-        <h4>How accurately does the converter measure micro-units?</h4>
-        <p>Our algorithm supports precision down to <strong>Micrograms (mcg)</strong>, which is one-millionth of a gram. This level of accuracy is actively used in medical pharmacology for dosage distributions.</p>
+        <h4>Why do I see both kg and lb on the same product?</h4>
+        <p>Dual labelling exists because the US uses pounds while most of the world uses kilograms. The tool's job is to reconcile the two when a listing only gives one.</p>
 
-        <p>Cooking from a recipe written for another country? Pair this with the <a href="./temperature.html">Temperature converter</a> for the right oven setting. All nine tools are listed on the <a href="./index.html">home page</a>.</p>
+        <h4>How small do the units go?</h4>
+        <p>Down to micrograms (one-millionth of a gram), the scale used in pharmacology for vitamin doses and compounding. The tool converts microgram, milligram and gram together with the everyday units.</p>
     </article>
 
     </main>
@@ -281,9 +266,9 @@
                 <p>Made with ❤️ by Arun Neupane</p>
             </div>
             <div class="footer-links">
-                <a href="./about.html">About</a>
-                <a href="./privacy.html">Privacy Policy</a>
-                <a href="./contact.html">Contact</a>
+                <a href="./about">About</a>
+                <a href="./privacy">Privacy Policy</a>
+                <a href="./contact">Contact</a>
             </div>
         </div>
     </footer>
