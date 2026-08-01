@@ -139,7 +139,7 @@
 
 <body>
     <nav>
-        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="nav-brand" onclick="window.location.href='./'">Converter</div>
         <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -147,22 +147,24 @@
         </div>
 
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./data.html">Data</a>
-            <a href="./length.html">Length</a>
-            <a href="./time.html">Time</a>
-            <a href="./mass.html">Mass</a>
-            <a href="./temperature.html" class="bb">Temperature</a>
-            <a href="./numbersystem.html">Numbers</a>
-            <a href="./discount.html">Discount</a>
-            <a href="./power.html">Power</a>
-            <a href="./text.html">Text</a>
+            <a href="./">Home</a>
+            <a href="./data">Data</a>
+            <a href="./length">Length</a>
+            <a href="./time">Time</a>
+            <a href="./mass">Mass</a>
+            <a href="./temperature" class="bb">Temperature</a>
+            <a href="./numbersystem">Numbers</a>
+            <a href="./discount">Discount</a>
+            <a href="./power">Power</a>
+            <a href="./text">Text</a>
         </div>
     </nav>
     <main role="main">
 
+    <!-- AD: After AdSense approval, enable Auto ads (AdSense dashboard > Settings > Auto ads) or paste your ad unit snippet here. -->
+
     <div class="container">
-        <img src="./images/temperature.webp" alt="Data" class="description-image">
+        <img src="./images/temperature.webp" alt="Temperature converter: thermometer with Celsius, Fahrenheit and Kelvin scales" class="description-image" loading="lazy">
         <h1>Temperature Converter</h1>
         <input type="number" name="input-value" id="input-value" placeholder="Enter temperature"
             title="Enter desired type" aria-label="Value to convert">
@@ -188,74 +190,46 @@
     </div>
 
     <article class="seo-content">
-        <h2>Temperature conversion, explained clearly</h2>
-        <p>Temperature is trickier than most conversions because the scales don't share a zero point &mdash; 0&deg;C and 0&deg;F mean completely different things, so you can't just multiply by a single factor the way you can with metres and feet. This page gives you the exact formulas, a reference chart of the temperatures that come up most (weather, body temperature, cooking), and the mental shortcuts worth memorising. The tool above handles Celsius, Fahrenheit, Kelvin, and two historical scales instantly as you type.</p>
+        <h2>Temperature conversions for weather, ovens and food safety</h2>
+        <p>Temperature is the one conversion you can't shortcut with a single multiplier, because the scales don't share a zero point &mdash; 0&deg;C and 0&deg;F are completely different amounts of heat. The tool above handles Celsius, Fahrenheit and Kelvin (plus two historical scales) instantly in both directions. Below are the formulas it uses, the temperatures that actually matter in daily life, and the oven and food-safety charts that are the most common reasons people convert temperature at all.</p>
 
         <h3>The exact formulas</h3>
-        <p>If you want to do it by hand, these are the conversions the calculator uses:</p>
         <ul>
             <li><strong>Celsius to Fahrenheit:</strong> &deg;F = (&deg;C &times; 9/5) + 32</li>
             <li><strong>Fahrenheit to Celsius:</strong> &deg;C = (&deg;F &minus; 32) &times; 5/9</li>
             <li><strong>Celsius to Kelvin:</strong> K = &deg;C + 273.15</li>
-        </ul>
-        
-        <h3>The Three Core Temperature Scales</h3>
-        <p>Understanding not just *how* to convert, but *why* these scales exist, helps demystify thermal equations. Our tool handles these scales instantly:</p>
-        <ul>
-            <li><strong>Celsius (&deg;C):</strong> The global standard metric for measuring everyday temperature. Invented by Anders Celsius in 1742, it scales precisely around the freezing point of water (0&deg;C) and the boiling point of water (100&deg;C) at sea level.</li>
-            <li><strong>Fahrenheit (&deg;F):</strong> The primary scale utilized exclusively by the United States and a handful of other regions. Proposed in 1724 by physicist Daniel Gabriel Fahrenheit, the scale sets the freezing point of water at 32&deg;F and the boiling point at 212&deg;F, creating exactly 180 degrees of separation.</li>
-            <li><strong>Kelvin (K):</strong> The base unit of thermodynamic temperature in the SI system, used heavily by scientists, physicists, and engineers. It starts at Absolute Zero (0K), which is the theoretical absolute absence of all thermal energy (equivalent to -273.15&deg;C).</li>
+            <li><strong>Kelvin to Celsius:</strong> &deg;C = K &minus; 273.15</li>
         </ul>
 
-        <h3>Additional Archaic & Specialized Scales</h3>
-        <p>Our advanced calculator doesn't stop at the big three. We also support historical and highly specialized thermal scales:</p>
+        <h3>What the three main scales actually are</h3>
         <ul>
-            <li><strong>Rankine (&deg;R):</strong> An absolute scale tied to the Fahrenheit degree instead of the Celsius degree. Used historically in US engineering fields.</li>
-            <li><strong>Reaumur (&deg;Re):</strong> A scale where the freezing and boiling points of water are defined as 0 and 80 degrees respectively. It was widely used in Europe before adopting Celsius.</li>
+            <li><strong>Celsius (&deg;C):</strong> The global everyday scale. Set by Anders Celsius in 1742, it anchors on the freezing (0&deg;C) and boiling (100&deg;C) points of water at sea level.</li>
+            <li><strong>Fahrenheit (&deg;F):</strong> Used in the US and a few small territories. Set by Daniel Fahrenheit in 1724, it puts water's freezing point at 32&deg;F and boiling at 212&deg;F &mdash; exactly 180 degrees apart, which is why &deg;F is "finer-grained" than &deg;C for weather.</li>
+            <li><strong>Kelvin (K):</strong> The SI base unit, used in science. It starts at absolute zero (0&nbsp;K = &minus;273.15&deg;C), the theoretical point of zero thermal energy.</li>
         </ul>
+        <p>Two rarer scales are included for completeness: <strong>Rankine</strong> (&deg;R), an absolute scale using Fahrenheit-sized degrees, and <strong>R&eacute;aumur</strong> (&deg;Re), where water freezes at 0&deg; and boils at 80&deg; &mdash; common in 18th-century Europe.</p>
 
-        <h3>Crucial Temperature Milestones</h3>
-        <p>It helps to know common physiological and natural thermal points as reference markers:</p>
-        
+        <h3>Milestones worth memorising</h3>
         <table class="seo-table">
             <thead>
                 <tr>
-                    <th>Milestone Event</th>
-                    <th>Celsius (&deg;C)</th>
-                    <th>Fahrenheit (&deg;F)</th>
-                    <th>Kelvin (K)</th>
+                    <th>Milestone</th>
+                    <th>Celsius</th>
+                    <th>Fahrenheit</th>
+                    <th>Kelvin</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Absolute Zero</td>
-                    <td>-273.15&deg;C</td>
-                    <td>-459.67&deg;F</td>
-                    <td>0 K</td>
-                </tr>
-                <tr>
-                    <td>Freezing Point of Water</td>
-                    <td>0&deg;C</td>
-                    <td>32&deg;F</td>
-                    <td>273.15 K</td>
-                </tr>
-                <tr>
-                    <td>Average Human Body Temp</td>
-                    <td>37&deg;C</td>
-                    <td>98.6&deg;F</td>
-                    <td>310.15 K</td>
-                </tr>
-                <tr>
-                    <td>Boiling Point of Water</td>
-                    <td>100&deg;C</td>
-                    <td>212&deg;F</td>
-                    <td>373.15 K</td>
-                </tr>
+                <tr><td>Absolute zero</td><td>&minus;273.15&deg;C</td><td>&minus;459.67&deg;F</td><td>0 K</td></tr>
+                <tr><td>Water freezes</td><td>0&deg;C</td><td>32&deg;F</td><td>273.15 K</td></tr>
+                <tr><td>Room temperature</td><td>~21&deg;C</td><td>~70&deg;F</td><td>~294 K</td></tr>
+                <tr><td>Normal body temperature</td><td>37&deg;C</td><td>98.6&deg;F</td><td>310.15 K</td></tr>
+                <tr><td>Water boils (sea level)</td><td>100&deg;C</td><td>212&deg;F</td><td>373.15 K</td></tr>
             </tbody>
         </table>
 
-        <h3>Oven temperature chart (Celsius, Fahrenheit &amp; gas mark)</h3>
-        <p>One of the most common real reasons people convert temperature is cooking with a recipe written for a different country's oven. Fan (convection) ovens run hotter, so the usual rule is to set a fan oven about 20&deg;C lower than a conventional oven for the same result. Here are the standard settings:</p>
+        <h3>Oven temperature chart</h3>
+        <p>Recipes from different countries quote different scales, and fan (convection) ovens run hotter than conventional ones &mdash; the usual rule is to set a fan oven about 20&deg;C lower. Here are the standard settings:</p>
         <table class="seo-table">
             <thead>
                 <tr><th>Conventional &deg;C</th><th>Fan &deg;C</th><th>Fahrenheit</th><th>Gas Mark</th><th>Description</th></tr>
@@ -272,17 +246,33 @@
             </tbody>
         </table>
 
-        <h3>Frequently Asked Questions (FAQ)</h3>
-        <h4>Is there a temperature where Celsius and Fahrenheit are exactly the same?</h4>
-        <p>Yes! At exactly <strong>-40 degrees</strong>, both scales converge. Therefore, -40&deg;C is equal to -40&deg;F. It is the only point where the two prominent scales meet.</p>
+        <h3>Safe internal temperatures for meat (USDA)</h3>
+        <p>A meat thermometer reading in one scale is the other common reason to convert. These are the widely used safe minimums:</p>
+        <table class="seo-table">
+            <thead>
+                <tr><th>Food</th><th>&deg;C</th><th>&deg;F</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Whole poultry &amp; ground poultry</td><td>74&deg;C</td><td>165&deg;F</td></tr>
+                <tr><td>Ground meat (beef, pork, lamb)</td><td>71&deg;C</td><td>160&deg;F</td></tr>
+                <tr><td>Beef, pork, lamb steaks/roasts</td><td>63&deg;C + 3 min rest</td><td>145&deg;F + 3 min rest</td></tr>
+                <tr><td>Fish</td><td>63&deg;C</td><td>145&deg;F</td></tr>
+                <tr><td>Egg dishes</td><td>71&deg;C</td><td>160&deg;F</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Temperature questions that keep coming up</h3>
+        <h4>Is there a temperature where Celsius and Fahrenheit are equal?</h4>
+        <p>Yes &mdash; exactly <strong>&minus;40 degrees</strong>. &minus;40&deg;C equals &minus;40&deg;F. It is the only point where the two scales agree.</p>
 
         <h4>Why doesn't Kelvin use the degree symbol?</h4>
-        <p>By international scientific convention, Kelvin is not measured in "degrees." Since it is an absolute scale starting authentically from zero (rather than an arbitrary point like water freezing), it acts as a standalone unit of measure. You say "300 Kelvin," not "300 degrees Kelvin."</p>
+        <p>Because Kelvin is an absolute scale that starts from true zero, not from an arbitrary anchor like water's freezing point. In scientific convention you write "300 K", not "300 &deg;K".</p>
 
-        <h4>How do I quickly estimate Fahrenheit to Celsius in my head?</h4>
-        <p>If you don’t have our calculator handy, a quick mental shortcut to get an approximate Celsius value from Fahrenheit is: <em>Subtract 30 from the Fahrenheit number, and then halve the result.</em> For example, if it's 80&deg;F: (80 - 30 = 50), divided by 2 is roughly 25&deg;C (the exact answer is 26.6&deg;C).</p>
+        <h4>How can I estimate Fahrenheit to Celsius in my head?</h4>
+        <p>Subtract 30, then halve: 80&deg;F &rarr; (80&minus;30)&divide;2 = 25&deg;C. The exact answer is 26.6&deg;C, so the shortcut is good for weather, not for cooking. For cooking, use the tool.</p>
 
-        <p>For related conversions, the <a href="./mass.html">Mass converter</a> pairs well with this one when you're scaling a recipe, and the <a href="./index.html">home page</a> lists all nine tools on the site.</p>
+        <h4>Why do European and US ovens use different numbers?</h4>
+        <p>Because the US sets ovens in &deg;F, Europe in &deg;C, and UK gas ovens in gas marks. All three point to the same heat &mdash; 180&deg;C, 350&deg;F and gas mark 4 are the same moderate oven.</p>
     </article>
 
     </main>
@@ -294,9 +284,9 @@
                 <p>Made with ❤️ by Arun Neupane</p>
             </div>
             <div class="footer-links">
-                <a href="./about.html">About</a>
-                <a href="./privacy.html">Privacy Policy</a>
-                <a href="./contact.html">Contact</a>
+                <a href="./about">About</a>
+                <a href="./privacy">Privacy Policy</a>
+                <a href="./contact">Contact</a>
             </div>
         </div>
     </footer>
