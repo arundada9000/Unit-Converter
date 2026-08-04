@@ -5,29 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Power Mod Calculator - Fast and Accurate Modulo Calculator</title>
+    <title>Power Mod Calculator - Modular Exponentiation Online</title>
     <meta name="description"
-        content="Use our Power Mod Calculator to calculate powers and modulos quickly and accurately. Free online tool for exponent modulo calculations.">
+        content="Free power mod calculator for modular exponentiation: x^y mod n computed instantly with BigInt. Works offline for huge exponents, ideal for crypto math.">
     <meta name="keywords"
-        content="power mod calculator, modulo calculator, exponent mod, fast mod calculation, power calculator, online mod calculator, online power mod calculator, real-time calculator">
-    <meta name="robots" content="index, follow">
+        content="power mod calculator, modulo calculator, modular exponentiation, exponentiation by squaring, x to the power y mod n, bigint mod calculator, free math tool">
+    <meta name="author" content="Arun Neupane">
+    <meta name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <link rel="canonical" href="https://allunitconverter.netlify.app/power.html">
+    <link rel="canonical" href="https://allunitconverter.netlify.app/power">
     <link rel="shortcut icon" href="./images/power-mod.webp" type="image/x-icon">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Power Mod Calculator - Fast and Accurate Modulo Calculator">
-    <meta property="og:description"
-        content="Calculate powers and modulo values easily with our online Power Mod Calculator. Fast, accurate, and free to use.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://allunitconverter.netlify.app/power.html">
+    <meta property="og:site_name" content="All Unit Converter">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Power Mod Calculator - Modular Exponentiation Online">
+    <meta property="og:description"
+        content="Compute x^y mod n instantly with our free modular exponentiation calculator. Handles huge numbers, works offline.">
+    <meta property="og:url" content="https://allunitconverter.netlify.app/power">
     <meta property="og:image" content="https://allunitconverter.netlify.app/assets/images/og-power.png">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Power Mod Calculator - Fast and Accurate Modulo Calculator">
+    <meta name="twitter:title" content="Power Mod Calculator - Modular Exponentiation Online">
     <meta name="twitter:description"
-        content="Use our Power Mod Calculator online to calculate powers and modulo values accurately. Free and fast tool.">
+        content="Free power mod calculator. Compute x^y mod n instantly, works offline with BigInt precision.">
     <meta name="twitter:image" content="https://allunitconverter.netlify.app/assets/images/og-power.png">
 
     <link rel="stylesheet" href="./styles.css">
@@ -43,27 +47,91 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Power Mod Calculator",
-  "url": "https://allunitconverter.netlify.app/power",
-  "description": "Use our Power Mod Calculator to calculate powers and modulos quickly and accurately. Free online tool for exponent modulo calculations.",
-  "applicationCategory": "Calculator",
-  "operatingSystem": "Web",
-  "author": {
-    "@type": "Person",
-    "name": "Arun Neupane",
-    "sameAs": [
-      "https://github.com/arundada9000",
-      "https://www.facebook.com/arundada9000",
-      "https://www.instagram.com/arundada9000",
-      "https://www.youtube.com/@arundada9000",
-      "https://wa.me/9779811420975"
-    ]
-  },
-  "image": "https://allunitconverter.netlify.app/assets/images/og-power.png",
-  "datePublished": "2026-01-10",
-  "dateModified": "2026-07-22",
-  "inLanguage": "en"
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Power Mod Calculator",
+      "url": "https://allunitconverter.netlify.app/power",
+      "description": "Compute x^y mod n using modular exponentiation with JavaScript BigInt - handles exponents and moduli far beyond 64-bit limits, entirely in the browser.",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "Web",
+      "author": {
+        "@type": "Person",
+        "name": "Arun Neupane",
+        "sameAs": [
+          "https://github.com/arundada9000",
+          "https://www.facebook.com/arundada9000",
+          "https://www.instagram.com/arundada9000",
+          "https://www.youtube.com/@arundada9000",
+          "https://wa.me/9779811420975"
+        ]
+      },
+      "image": "https://allunitconverter.netlify.app/assets/images/og-power.png",
+      "datePublished": "2026-01-10",
+      "dateModified": "2026-08-05",
+      "inLanguage": "en",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://allunitconverter.netlify.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Power Mod Calculator",
+          "item": "https://allunitconverter.netlify.app/power"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What if I leave the exponent blank?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It becomes a plain modulo calculation: base mod n - handy for quick remainder checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I leave the modulus blank?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It becomes ordinary exponentiation: base to the power of exponent. Careful with very large exponents - without a modulus to wrap the numbers, even the browser can hit a limit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How large a number can this handle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tool runs in JavaScript using BigInt, so it can work with exponents and moduli far beyond what a 64-bit processor or spreadsheet handles. Everything runs locally in your browser - nothing is sent to a server and it works offline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it support negative or fractional inputs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modular exponentiation with fractional exponents is not defined the way it is for integers, and negative exponents mean modular inverses rather than plain powers. This tool expects non-negative integers, covering the RSA-style use case it was built for."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 
@@ -78,7 +146,7 @@
 
 <body>
     <nav>
-        <div class="nav-brand" onclick="window.location.href='./index.html'">Converter</div>
+        <div class="nav-brand" onclick="window.location.href='./'">Converter</div>
         <div class="menu-toggle" role="button" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -86,22 +154,24 @@
         </div>
 
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./data.html">Data</a>
-            <a href="./length.html">Length</a>
-            <a href="./time.html">Time</a>
-            <a href="./mass.html">Mass</a>
-            <a href="./temperature.html">Temperature</a>
-            <a href="./numbersystem.html">Numbers</a>
-            <a href="./discount.html">Discount</a>
-            <a href="./power.html" class="bb">Power</a>
-            <a href="./text.html">Text</a>
+            <a href="./">Home</a>
+            <a href="./data">Data</a>
+            <a href="./length">Length</a>
+            <a href="./time">Time</a>
+            <a href="./mass">Mass</a>
+            <a href="./temperature">Temperature</a>
+            <a href="./numbersystem">Numbers</a>
+            <a href="./discount">Discount</a>
+            <a href="./power" class="bb">Power</a>
+            <a href="./text">Text</a>
         </div>
     </nav>
     <main role="main">
 
+    <!-- AD: After AdSense approval, enable Auto ads (AdSense dashboard > Settings > Auto ads) or paste your ad unit snippet here. -->
+
     <div class="container">
-        <img src="./images/power-mod.webp" alt="Data" class="description-image">
+        <img src="./images/power-mod.webp" alt="Power mod calculator: modular exponentiation" class="description-image" loading="lazy">
         <h1>Power Mod Calculator</h1>
         <p>Enter the terms as x to the power y mod n = res and it will automatically calculate the result.</p>
         <div>
@@ -125,66 +195,68 @@
     </div>
 
     <article class="seo-content">
-        <h2>The Definitive Guide to Modular Exponentiation</h2>
-        <p>Modular exponentiation &mdash; computing (base<sup>exponent</sup>) mod m &mdash; is a core operation in cryptography, including RSA and Diffie&ndash;Hellman key exchange. The difficulty is that raising a base to a large exponent produces numbers far too big for an ordinary calculator to hold. This tool uses the fast "exponentiation by squaring" method to return the remainder directly, without ever building the full power. Below is how that method works and why it matters.</p>
-        
-        <h3>What is Modular Arithmetic?</h3>
-        <p>Often referred to as "clock arithmetic," modulo arithmetic is a mathematical system wherein numbers wrap around upon reaching a certain value—the modulus. The easiest way to visualize this is reading a standard 12-hour analog clock. If it is 10:00 AM, and you add 4 hours, it doesn't become "14:00 AM". The clock resets at 12, making the answer 2:00 PM. In mathematical terms, this is expressed as <code>(10 + 4) mod 12 = 2</code>.</p>
+        <h2>Modular exponentiation: why huge powers stay small</h2>
+        <p>Computing (base<sup>exponent</sup>) mod m is a core operation in cryptography &mdash; it's what RSA and Diffie&ndash;Hellman key exchange are built on. The problem: raising a base to a large exponent produces numbers too big for an ordinary calculator to hold. This tool uses "exponentiation by squaring" to return the remainder directly, without ever constructing the full power. Here's how the method works and why a maths trick underpins modern encryption.</p>
 
-        <h3>Why Calculate Modular Exponents?</h3>
-        <p>Modular exponentiation is not just an academic exercise; it is the absolute foundation of modern digital security. Here is where you utilize it:</p>
+        <h3>Clock arithmetic in 30 seconds</h3>
+        <p>Modular arithmetic is often called clock arithmetic. On a 12-hour clock, 10:00 plus 4 hours is 2:00, not 14:00 &mdash; the numbers wrap around at 12. Written mathematically: <code>(10 + 4) mod 12 = 2</code>. A "mod" operation just returns the remainder after division: 14 &divide; 12 = 1 with remainder 2. Everything below follows from that single idea.</p>
+
+        <h3>A worked example, step by step</h3>
+        <p>Let's compute 7<sup>4</sup> mod 13 the naive way first: 7&sup2; = 49, 49&sup2; = 2,401, and 2,401 &divide; 13 = 184 remainder 9, so the answer is 9. Now the fast way, which keeps numbers tiny:</p>
         <ul>
-            <li><strong>Cryptography (RSA Encryption):</strong> Whenever you log into your bank or securely message a friend, your browser utilizes public key cryptography. This encryption relies completely on the mathematical difficulty of factoring massive prime numbers using modular exponentiation.</li>
-            <li><strong>Computer Science & Hashing:</strong> Essential for generating secure hash functions and distributing data evenly across server clusters.</li>
-            <li><strong>Pseudorandom Number Generators:</strong> Video games and digital lotteries utilize modular mathematics to generate highly secure random numbers.</li>
+            <li>7&sup2; = 49, and 49 mod 13 = 10 (keep only the remainder).</li>
+            <li>Square again: 10&sup2; = 100, and 100 mod 13 = 9.</li>
+            <li>Result: <strong>9</strong> &mdash; identical to the direct calculation, but the largest number we ever handled was 100, not 2,401.</li>
+        </ul>
+        <p>With a huge exponent like 5<sup>1000000</sup> mod 7, the same trick keeps every intermediate value below 7&sup2; &mdash; the calculator never builds the million-digit power.</p>
+
+        <h3>Why modular exponentiation matters</h3>
+        <ul>
+            <li><strong>Cryptography (RSA):</strong> Encryption like HTTPS relies on exponentiation under a modulus. The trapdoor is that doing it forward is easy, but reversing it (finding the private key) requires factoring enormous numbers &mdash; practically impossible.</li>
+            <li><strong>Hashing:</strong> Secure hash functions and data-sharding algorithms distribute values across buckets using modular operations.</li>
+            <li><strong>Pseudorandom generators:</strong> Many random-number generators and digital lotteries produce sequences via modular arithmetic.</li>
         </ul>
 
-        <h3>How Does Our Calculator Prevent Overflows?</h3>
-        <p>If you ask a standard calculator to compute <code>5<sup>100</sup> mod 7</code>, it will likely return an error (or infinity) because <code>5<sup>100</sup></code> is a gargantuan number that exceeds the physical transistor limit of standard 64-bit processors. Our calculator utilizes a <strong>memory-efficient iterative exponentiation algorithm</strong>. Instead of calculating the massive exponent first, it applies the modulo operation at every step of the multiplication. This keeps the numbers small, memory usage practically zero, and the final answer 100% accurate.</p>
-        
+        <h3>The three inputs and what they mean</h3>
         <table class="seo-table">
             <thead>
                 <tr>
-                    <th>Equation Structure</th>
-                    <th>Example Values</th>
-                    <th>Mathematical Meaning</th>
+                    <th>Input</th>
+                    <th>Example</th>
+                    <th>Meaning</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><strong>Base (x)</strong></td>
                     <td>5</td>
-                    <td>The core number you will multiply.</td>
+                    <td>The number being repeatedly multiplied.</td>
                 </tr>
                 <tr>
                     <td><strong>Exponent (y)</strong></td>
                     <td>3</td>
-                    <td>How many times the base multiplies itself. (5 &times; 5 &times; 5 = 125).</td>
+                    <td>How many times the base multiplies itself (5&sup3; = 125).</td>
                 </tr>
                 <tr>
                     <td><strong>Modulus (n)</strong></td>
                     <td>10</td>
-                    <td>The limit number. You divide 125 by 10. The <em>remainder</em> is the answer.</td>
-                </tr>
-                <tr>
-                    <td><strong>Result</strong></td>
-                    <td>5</td>
-                    <td>125 divided by 10 is 12, with a remainder of 5.</td>
+                    <td>What to divide by; the remainder is the answer (125 mod 10 = 5).</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>Frequently Asked Questions (FAQ)</h3>
-        <h4>What happens if I leave the Exponent field blank?</h4>
-        <p>Our tool adapts dynamically! If you leave the exponent blank, the calculator assumes you simply want to perform a standard modulo calculation: <code>Base mod N</code>. </p>
+        <h3>Questions about this tool</h3>
+        <h4>What if I leave the exponent blank?</h4>
+        <p>It becomes a plain modulo calculation: <code>base mod n</code> &mdash; handy for quick remainder checks.</p>
 
-        <h4>What happens if I leave the Mod field blank?</h4>
-        <p>Similarly, if you leave the mod field blank, the calculator will perform standard exponentiation: <code>Base<sup>Exponent</sup></code>. However, be cautious with massive exponents, as standard browsers may throw an overflow error if the modulus wrapper is missing!</p>
+        <h4>What if I leave the modulus blank?</h4>
+        <p>It becomes ordinary exponentiation: <code>base<sup>exponent</sup></code>. Careful with very large exponents &mdash; without a modulus to wrap the numbers, even the browser can hit a limit.</p>
 
-        <h4>Is this running on a server or locally?</h4>
-        <p>This entire calculation runs locally right inside your browser window using Javascript's <code>BigInt</code> objects. This means it is blazing fast and works 100% offline!</p>
+        <h4>How large a number can this handle?</h4>
+        <p>The tool runs in JavaScript using <code>BigInt</code>, so it can work with exponents and moduli far beyond what a 64-bit processor or spreadsheet handles. Everything runs locally in your browser &mdash; nothing is sent to a server and it works offline.</p>
 
-        <p>To explore the number bases behind cryptographic values, see the <a href="./numbersystem.html">Number System converter</a>. All nine tools are on the <a href="./index.html">home page</a>.</p>
+        <h4>Does it support negative or fractional inputs?</h4>
+        <p>Modular exponentiation with fractional exponents isn't defined the way it is for integers, and negative exponents mean modular inverses rather than plain powers. This tool expects non-negative integers, which covers the RSA-style use case it was built for.</p>
     </article>
 
     </main>
@@ -196,9 +268,9 @@
                 <p>Made with ❤️ by Arun Neupane</p>
             </div>
             <div class="footer-links">
-                <a href="./about.html">About</a>
-                <a href="./privacy.html">Privacy Policy</a>
-                <a href="./contact.html">Contact</a>
+                <a href="./about">About</a>
+                <a href="./privacy">Privacy Policy</a>
+                <a href="./contact">Contact</a>
             </div>
         </div>
     </footer>
