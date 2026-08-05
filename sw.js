@@ -1,4 +1,4 @@
-const CACHE_NAME = 'unit-converter-cache-v4';
+const CACHE_NAME = 'unit-converter-cache-v5';
 const PRECACHE_URLS = [
   "./",
   "./about",
